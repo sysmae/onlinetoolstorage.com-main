@@ -2,7 +2,6 @@ import React from 'react'
 
 import Script from 'next/script'
 import Footer from '@/components/Footer'
-import SideContent from '@/components/SideContent'
 import HeaderWithSideBar from '@/components/HeaderWithSideBar'
 
 import { appWithTranslation } from 'next-i18next'
@@ -24,7 +23,7 @@ function AppContent({ children }) {
     <>
       <Script
         id="adsbygoogle-script"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXX"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670089965415680"
         strategy="lazyOnload"
       ></Script>
 
@@ -48,7 +47,6 @@ function Layout({ children }) {
         <HeaderWithSideBar />
         {/* <main className="lg:ml-36 mr-0 lg:mr-32 lg:px-32 lg:pr-0 main-lg-width break-words"> */}
         <main className="main-lg-width break-words">{children}</main>
-        <SideContent />
       </div>
       <Footer />
     </div>

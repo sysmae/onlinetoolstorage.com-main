@@ -1,6 +1,6 @@
 import useLocalizedPage from '../../hooks/useLocalizedPage'
-// import ResponsiveAd from './adsense/ResponsiveAd'
-// import { SquareResponsive_dataAdSlot } from '../constants/adsense/data_ad_slot'
+import ResponsiveAd from './adsense/ResponsiveAd'
+import { SquareResponsive_dataAdSlot } from '../constants/adsense/data_ad_slot'
 
 function CustomContent({ category }) {
   const { t, pageKey } = useLocalizedPage(category)
@@ -29,13 +29,13 @@ function CustomContent({ category }) {
                 </p>
               )}
               {/* Conditionally render an ad after each section */}
-              {/* {SquareResponsive_dataAdSlot[index] && (
+              {SquareResponsive_dataAdSlot[index] && (
                 <ResponsiveAd
                   data_ad_slot={
                     SquareResponsive_dataAdSlot[index + 1].dataAdSlot
                   }
                 />
-              )} */}
+              )}
             </div>
           ),
         )}

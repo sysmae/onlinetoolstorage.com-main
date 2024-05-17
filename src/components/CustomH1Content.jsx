@@ -1,6 +1,6 @@
 import useLocalizedPage from '../../hooks/useLocalizedPage'
-// import ResponsiveAd from './adsense/ResponsiveAd'
-// import { SquareResponsive_dataAdSlot } from '../constants/adsense/data_ad_slot'
+import ResponsiveAd from './adsense/ResponsiveAd'
+import { SquareResponsive_dataAdSlot } from '../constants/adsense/data_ad_slot'
 
 function CustomH1Content({ category }) {
   const { t, pageKey } = useLocalizedPage(category)
@@ -14,9 +14,9 @@ function CustomH1Content({ category }) {
         <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
           {t(`${pageKey}.description`)}
         </p>
-        {/* <ResponsiveAd
+        <ResponsiveAd
           data_ad_slot={SquareResponsive_dataAdSlot[0].dataAdSlot}
-        /> */}
+        />
       </div>
     </div>
   )

@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 
 export default function ResponsiveAd({ data_ad_slot }) {
-  // useEffect(() => {
-  //   if (window.innerWidth > 0) {
-  //     window.adsbygoogle = window.adsbygoogle || []
-  //     window.adsbygoogle.push({})
-  //   }
-  // }, [])
+  useEffect(() => {
+    if (window.innerWidth > 0) {
+      window.adsbygoogle = window.adsbygoogle || []
+      window.adsbygoogle.push({})
+    }
+  }, [])
 
   useEffect(() => {
     if (window) {
