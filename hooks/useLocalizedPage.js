@@ -11,7 +11,7 @@ function useLocalizedPage(namespace) {
   const seoData = {
     title: t(`${pageKey}.title`),
     description: t(`${pageKey}.description`),
-    url: `https://onlinetoolstorage.com/${locale}${asPath}`,
+    url: `https://www.onlinetoolstorage.com/${locale}${asPath}`,
   }
 
   return { t, seoData, pageKey }
