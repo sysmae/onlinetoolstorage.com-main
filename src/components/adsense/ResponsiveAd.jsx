@@ -2,15 +2,8 @@ import React, { useEffect } from 'react'
 
 export default function ResponsiveAd({ data_ad_slot }) {
   useEffect(() => {
-    if (window.innerWidth > 0) {
-      window.adsbygoogle = window.adsbygoogle || []
-      window.adsbygoogle.push({})
-    }
-  }, [])
-
-  useEffect(() => {
-    if (window) {
-      window.adsbygoogle = window.adsbygoogle || []
+    // Ensure this runs only once and window is available
+    if (typeof window !== 'undefined' && window.adsbygoogle) {
       try {
         window.adsbygoogle.push({})
       } catch (error) {
@@ -18,6 +11,7 @@ export default function ResponsiveAd({ data_ad_slot }) {
       }
     }
   }, [])
+
   return (
     <ins
       className="adsbygoogle"
