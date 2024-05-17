@@ -1,0 +1,282 @@
+{
+  "csv_editor": {
+    "title": "CSV File Editor: Online CSV Editor - Ontoolmo",
+    "description": "An online CSV editor that allows you to easily edit and save CSV files online. You can upload a CSV file or enter data directly to edit it, and you can export it in various formats.",
+    "url": "/en/spreadsheet/csv_editor",
+    "sections": [
+      {
+        "title": "How to Use the CSV File Editor",
+        "content": [
+          "Upload CSV file: Click the 'Open File' button to upload a CSV file from your local computer. The uploaded file is displayed in the editor, and you can edit the data.",
+          "Direct input: Select the 'Direct Input' tab to directly enter data into the text box. Each column is separated by a comma (,), and each row is separated by a line break.",
+          "Edit data: You can click on the data in the table to modify it. You can also add or delete new rows or columns.",
+          "Sort data: You can click on the column title to sort the data in ascending or descending order.",
+          "Export data: Click the 'Export' button to export the edited data in various formats such as CSV, Excel, JSON, etc."
+        ]
+      },
+      {
+        "title": "CSV File Format",
+        "content": [
+          "CSV (Comma-Separated Values) files are a file format that stores data separated by commas (,). Each row represents a data record, and each column represents a data field. CSV files are saved as text files and are commonly used in spreadsheet programs.",
+          "CSV files are useful for structuring and storing data, and are often used to exchange or backup data in databases, websites, software, etc. CSV files can be opened with a text editor to check the data, and if opened in a spreadsheet program, the data can be edited and visualized."
+        ]
+      },
+      {
+        "title": "Use Cases for CSV Files",
+        "content": [
+          "Data transfer: Used when exporting data from a database or spreadsheet to a CSV file, or importing data from a CSV file to store in a database or spreadsheet.",
+          "Data backup: When backing up important data, it can be saved as a CSV file for restoration when needed.",
+          "Data analysis: Data can be saved as a CSV file and visualized or analyzed using data analysis tools.",
+          "Data sharing: When sharing data with other users, a CSV file can be attached for easy transmission or sharing."
+        ]
+      },
+      {
+        "title": "References",
+        "content": [
+          "CSV File Format - A Wikipedia page providing detailed information about the CSV file format. (https://en.wikipedia.org/wiki/Comma-separated_values)",
+          "CSV File Editor - A free tool that allows you to edit and save CSV files online. (https://www.ontoolmo.com/en/spreadsheet/csv-editor)"
+        ]
+      }
+    ]
+  },
+  "json_editor": {
+    "title": "JSON File Editor: Online JSON Editor - Ontoolmo",
+    "description": "An online JSON editor that allows you to easily edit and save JSON files online. You can upload a JSON file or enter data directly to edit it, and you can export it in various formats.",
+    "url": "/en/spreadsheet/json_editor",
+    "sections": [
+      {
+        "title": "How to Use the JSON File Editor",
+        "content": [
+          "Upload JSON file: Click the 'Open File' button to upload a JSON file from your local computer. The uploaded file is displayed in the editor, and you can edit the data.",
+          "Direct input: Select the 'Direct Input' tab to directly enter data into the text box. The JSON data should be in valid JSON format.",
+          "Edit data: You can click on the data in the editor to modify it. You can also add or delete new keys or values.",
+          "Export data: Click the 'Export' button to export the edited data in various formats such as JSON, CSV, etc."
+        ]
+      },
+      {
+        "title": "JSON File Format",
+        "content": [
+          "JSON (JavaScript Object Notation) files are a file format that stores data in key-value pairs. JSON data is represented as objects and arrays, and is commonly used for data exchange between web servers and web clients.",
+          "JSON files are saved as text files and are human-readable. They are often used to store configuration data, API responses, and other structured data.",
+          "JSON data is written in a format similar to JavaScript objects, with keys and values separated by a colon (:), and key-value pairs separated by commas (,). Objects are enclosed in curly braces ({}) and arrays are enclosed in square brackets ([])."
+        ]
+      },
+      {
+        "title": "Use Cases for JSON Files",
+        "content": [
+          "API responses: When interacting with web APIs, JSON data is commonly used to send and receive data between the server and client.",
+          "Configuration data: JSON files are used to store configuration settings for applications, websites, and services.",
+          "Data exchange: JSON files are used to exchange structured data between different systems or applications.",
+          "Data storage: JSON files are used to store structured data in a human-readable format for easy access and manipulation."
+        ]
+      },
+      {
+        "title": "References",
+        "content": [
+          "JSON File Format - A Wikipedia page providing detailed information about the JSON file format. (https://en.wikipedia.org/wiki/JSON)",
+          "JSON File Editor - A free tool that allows you to edit and save JSON files online. (https://www.ontoolmo.com/en/spreadsheet/json-editor)"
+        ]
+      }
+    ]
+  },
+  "excel_editor": {
+    "title": "Excel File Editor: Online Excel Editor - Ontoolmo",
+    "description": "An online Excel editor that allows you to easily edit and save Excel files online. You can upload an Excel file or enter data directly to edit it, and you can export it in various formats.",
+    "url": "/en/spreadsheet/excel_editor",
+    "sections": [
+      {
+        "title": "How to Use the Excel File Editor",
+        "content": [
+          "Upload Excel file: Click the 'Open File' button to upload an Excel file from your local computer. The uploaded file is displayed in the editor, and you can edit the data.",
+          "Direct input: Select the 'Direct Input' tab to directly enter data into the table. You can add or delete rows and columns as needed.",
+          "Edit data: You can click on the data in the table to modify it. You can also add or delete new rows or columns.",
+          "Sort data: You can click on the column title to sort the data in ascending or descending order.",
+          "Export data: Click the 'Export' button to export the edited data in various formats such as Excel, CSV, PDF, etc."
+        ]
+      },
+      {
+        "title": "Excel File Format",
+        "content": [
+          "Excel files are spreadsheet files created by Microsoft Excel or other spreadsheet software. They store data in rows and columns, and can contain formulas, charts, and other features.",
+          "Excel files are commonly used for data analysis, reporting, and visualization. They are saved in the .xls or .xlsx file format, and can be opened and edited in spreadsheet programs like Microsoft Excel, Google Sheets, and LibreOffice Calc.",
+          "Excel files can contain multiple sheets, each with its own data and formatting. They are often used to store and organize large amounts of data for business, finance, and other purposes."
+        ]
+      },
+      {
+        "title": "Use Cases for Excel Files",
+        "content": [
+          "Data analysis: Excel files are used to store and analyze data, create charts and graphs, and perform calculations.",
+          "Reporting: Excel files are used to create reports, financial statements, and other documents for business and finance.",
+          "Data visualization: Excel files are used to create visualizations of data using charts, graphs, and pivot tables.",
+          "Data storage: Excel files are used to store and organize data in a structured format for easy access and manipulation."
+        ]
+      },
+      {
+        "title": "References",
+        "content": [
+          "Excel File Format - A Wikipedia page providing detailed information about the Excel file format. (https://en.wikipedia.org/wiki/Microsoft_Excel)",
+          "Excel File Editor - A free tool that allows you to edit and save Excel files online. (https://www.ontoolmo.com/en/spreadsheet/excel-editor)"
+        ]
+      }
+    ]
+  },
+  "csv_convert": {
+    "title": "CSV Converter: Online CSV Converter - Ontoolmo",
+    "description": "An online CSV converter that allows you to convert CSV files to various formats such as Excel, JSON, SQL, and more. You can upload a CSV file or enter data directly to convert it.",
+    "url": "/en/spreadsheet/csv_converter",
+    "sections": [
+      {
+        "title": "How to Use the CSV Converter",
+        "content": [
+          "Upload CSV file: Click the 'Open File' button to upload a CSV file from your local computer. The uploaded file is displayed in the editor, and you can convert it to various formats.",
+          "Direct input: Select the 'Direct Input' tab to directly enter data into the text box. Each column is separated by a comma (,), and each row is separated by a line break.",
+          "Convert data: Select the desired output format from the dropdown menu, and click the 'Convert' button to convert the data.",
+          "Export data: Click the 'Export' button to download the converted data in the selected format."
+        ]
+      },
+      {
+        "title": "CSV File Format",
+        "content": [
+          "CSV (Comma-Separated Values) files are a file format that stores data separated by commas (,). Each row represents a data record, and each column represents a data field. CSV files are saved as text files and are commonly used in spreadsheet programs.",
+          "CSV files are useful for structuring and storing data, and are often used to exchange or backup data in databases, websites, software, etc. CSV files can be opened with a text editor to check the data, and if opened in a spreadsheet program, the data can be edited and visualized."
+        ]
+      },
+      {
+        "title": "Use Cases for CSV Files",
+        "content": [
+          "Data transfer: Used when exporting data from a database or spreadsheet to a CSV file, or importing data from a CSV file to store in a database or spreadsheet.",
+          "Data backup: When backing up important data, it can be saved as a CSV file for restoration when needed.",
+          "Data analysis: Data can be saved as a CSV file and visualized or analyzed using data analysis tools.",
+          "Data sharing: When sharing data with other users, a CSV file can be attached for easy transmission or sharing."
+        ]
+      },
+      {
+        "title": "References",
+        "content": [
+          "CSV File Format - A Wikipedia page providing detailed information about the CSV file format. (https://en.wikipedia.org/wiki/Comma-separated_values)",
+          "CSV Converter - A free tool that allows you to convert CSV files to various formats online. (https://www.ontoolmo.com/en/spreadsheet/csv-converter)"
+        ]
+      }
+    ]
+  },
+  "json_convert": {
+    "title": "JSON Converter: Online JSON Converter - Ontoolmo",
+    "description": "An online JSON converter that allows you to convert JSON files to various formats such as CSV, Excel, SQL, and more. You can upload a JSON file or enter data directly to convert it.",
+    "url": "/en/spreadsheet/json_converter",
+    "sections": [
+      {
+        "title": "How to Use the JSON Converter",
+        "content": [
+          "Upload JSON file: Click the 'Open File' button to upload a JSON file from your local computer. The uploaded file is displayed in the editor, and you can convert it to various formats.",
+          "Direct input: Select the 'Direct Input' tab to directly enter data into the text box. The JSON data should be in valid JSON format.",
+          "Convert data: Select the desired output format from the dropdown menu, and click the 'Convert' button to convert the data.",
+          "Export data: Click the 'Export' button to download the converted data in the selected format."
+        ]
+      },
+      {
+        "title": "JSON File Format",
+        "content": [
+          "JSON (JavaScript Object Notation) files are a file format that stores data in key-value pairs. JSON data is represented as objects and arrays, and is commonly used for data exchange between web servers and web clients.",
+          "JSON files are saved as text files and are human-readable. They are often used to store configuration data, API responses, and other structured data.",
+          "JSON data is written in a format similar to JavaScript objects, with keys and values separated by a colon (:), and key-value pairs separated by commas (,). Objects are enclosed in curly braces ({}) and arrays are enclosed in square brackets ([])."
+        ]
+      },
+      {
+        "title": "Use Cases for JSON Files",
+        "content": [
+          "API responses: When interacting with web APIs, JSON data is commonly used to send and receive data between the server and client.",
+          "Configuration data: JSON files are used to store configuration settings for applications, websites, and services.",
+          "Data exchange: JSON files are used to exchange structured data between different systems or applications.",
+          "Data storage: JSON files are used to store structured data in a human-readable format for easy access and manipulation."
+        ]
+      },
+      {
+        "title": "References",
+        "content": [
+          "JSON File Format - A Wikipedia page providing detailed information about the JSON file format. (https://en.wikipedia.org/wiki/JSON)",
+          "JSON Converter - A free tool that allows you to convert JSON files to various formats online. (https://www.ontoolmo.com/en/spreadsheet/json-converter)"
+        ]
+      }
+    ]
+  },
+  "xml_editor": {
+    "title": "XML File Editor: Online XML Editor - Ontoolmo",
+    "description": "An online XML editor that allows you to easily edit and save XML files online. You can upload an XML file or enter data directly to edit it, and you can export it in various formats.",
+    "url": "/en/spreadsheet/xml_editor",
+    "sections": [
+      {
+        "title": "How to Use the XML File Editor",
+        "content": [
+          "Upload XML file: Click the 'Open File' button to upload an XML file from your local computer. The uploaded file is displayed in the editor, and you can edit the data.",
+          "Direct input: Select the 'Direct Input' tab to directly enter data into the text box. The XML data should be in valid XML format.",
+          "Edit data: You can click on the data in the editor to modify it. You can also add or delete new elements or attributes.",
+          "Export data: Click the 'Export' button to export the edited data in various formats such as XML, JSON, etc."
+        ]
+      },
+      {
+        "title": "XML File Format",
+        "content": [
+          "XML (eXtensible Markup Language) files are a file format that stores data in a structured format using tags and attributes. XML data is commonly used for data exchange between web servers and web clients.",
+          "XML files are saved as text files and are human-readable. They are often used to store configuration data, API responses, and other structured data.",
+          "XML data is written in a format similar to HTML, with elements enclosed in tags (<>) and attributes specified within the tags. XML files can have a hierarchical structure with parent and child elements."
+        ]
+      },
+      {
+        "title": "Use Cases for XML Files",
+        "content": [
+          "API responses: When interacting with web APIs, XML data is commonly used to send and receive data between the server and client.",
+          "Configuration data: XML files are used to store configuration settings for applications, websites, and services.",
+          "Data exchange: XML files are used to exchange structured data between different systems or applications.",
+          "Data storage: XML files are used to store structured data in a human-readable format for easy access and manipulation."
+        ]
+      },
+      {
+        "title": "References",
+        "content": [
+          "XML File Format - A Wikipedia page providing detailed information about the XML file format. (https://en.wikipedia.org/wiki/XML)",
+          "XML File Editor - A free tool that allows you to edit and save XML files online. (https://www.ontoolmo.com/en/spreadsheet/xml-editor)"
+        ]
+      }
+    ]
+  },
+  "excel_convert": {
+    "title": "Excel Converter: Online Excel Converter - Ontoolmo",
+    "description": "An online Excel converter that allows you to convert Excel files to various formats such as CSV, JSON, PDF, and more. You can upload an Excel file or enter data directly to convert it.",
+    "url": "/en/spreadsheet/excel_converter",
+    "sections": [
+      {
+        "title": "How to Use the Excel Converter",
+        "content": [
+          "Upload Excel file: Click the 'Open File' button to upload an Excel file from your local computer. The uploaded file is displayed in the editor, and you can convert it to various formats.",
+          "Direct input: Select the 'Direct Input' tab to directly enter data into the table. You can add or delete rows and columns as needed.",
+          "Convert data: Select the desired output format from the dropdown menu, and click the 'Convert' button to convert the data.",
+          "Export data: Click the 'Export' button to download the converted data in the selected format."
+        ]
+      },
+      {
+        "title": "Excel File Format",
+        "content": [
+          "Excel files are spreadsheet files created by Microsoft Excel or other spreadsheet software. They store data in rows and columns, and can contain formulas, charts, and other features.",
+          "Excel files are commonly used for data analysis, reporting, and visualization. They are saved in the .xls or .xlsx file format, and can be opened and edited in spreadsheet programs like Microsoft Excel, Google Sheets, and LibreOffice Calc.",
+          "Excel files can contain multiple sheets, each with its own data and formatting. They are often used to store and organize large amounts of data for business, finance, and other purposes."
+        ]
+      },
+      {
+        "title": "Use Cases for Excel Files",
+        "content": [
+          "Data analysis: Excel files are used to store and analyze data, create charts and graphs, and perform calculations.",
+          "Reporting: Excel files are used to create reports, financial statements, and other documents for business and finance.",
+          "Data visualization: Excel files are used to create visualizations of data using charts, graphs, and pivot tables.",
+          "Data storage: Excel files are used to store and organize data in a structured format for easy access and manipulation."
+        ]
+      },
+      {
+        "title": "References",
+        "content": [
+          "Excel File Format - A Wikipedia page providing detailed information about the Excel file format. (https://en.wikipedia.org/wiki/Microsoft_Excel)",
+          "Excel Converter - A free tool that allows you to convert Excel files to various formats online. (https://www.ontoolmo.com/en/spreadsheet/excel-converter)"
+        ]
+      }
+    ]
+  }
+}

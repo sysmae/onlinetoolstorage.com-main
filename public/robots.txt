@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.onlinetoolstorage.com
+
+# Sitemaps
+Sitemap: https://www.onlinetoolstorage.com/sitemap.xml

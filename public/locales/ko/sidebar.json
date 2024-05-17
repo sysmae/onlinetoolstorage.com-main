@@ -1,0 +1,168 @@
+{
+  "categories": [
+    {
+      "name": "암호화 복호화",
+      "link": "/ko/crypto",
+      "subcategories": [
+        { "name": "비밀번호 생성", "link": "/ko/crypto/password" },
+        { "name": "UUID 생성", "link": "/ko/crypto/uuid" },
+        { "name": "AES", "link": "/ko/crypto/aes" },
+        { "name": "ASCII", "link": "/ko/crypto/ascii" },
+        { "name": "Base64", "link": "/ko/crypto/base64" },
+        { "name": "DES", "link": "/ko/crypto/des" },
+        { "name": "HEX", "link": "/ko/crypto/hex" },
+        { "name": "HMAC", "link": "/ko/crypto/hmac" },
+        { "name": "Latin1", "link": "/ko/crypto/latin1" },
+        { "name": "MD5", "link": "/ko/crypto/md5" },
+        { "name": "Morse", "link": "/ko/crypto/morse" },
+        { "name": "Rabbit", "link": "/ko/crypto/rabbit" },
+        { "name": "RC4", "link": "/ko/crypto/rc4" },
+        { "name": "RC4Drop", "link": "/ko/crypto/rc4drop" },
+        { "name": "RIPEMD160", "link": "/ko/crypto/ripemd160" },
+        { "name": "SHA1", "link": "/ko/crypto/sha1" },
+        { "name": "SHA256", "link": "/ko/crypto/sha256" },
+        { "name": "SHA3", "link": "/ko/crypto/sha3" },
+        { "name": "SHA512", "link": "/ko/crypto/sha512" },
+        { "name": "UTF16BE", "link": "/ko/crypto/utf16be" },
+        { "name": "UTF16LE", "link": "/ko/crypto/utf16le" },
+        { "name": "UTF8", "link": "/ko/crypto/utf8" }
+      ]
+    },
+    {
+      "name": "단위 변환기",
+      "link": "/ko/units",
+      "subcategories": [
+        { "name": "각도", "link": "/ko/units/angle" },
+        { "name": "표시 전력", "link": "/ko/units/apparent_power" },
+        { "name": "면적", "link": "/ko/units/area" },
+        { "name": "전류", "link": "/ko/units/current" },
+        { "name": "데이터", "link": "/ko/units/data" },
+        { "name": "에너지", "link": "/ko/units/energy" },
+        { "name": "주파수", "link": "/ko/units/frequency" },
+        { "name": "조도", "link": "/ko/units/illuminance" },
+        { "name": "길이", "link": "/ko/units/length" },
+        { "name": "질량", "link": "/ko/units/mass" },
+        { "name": "페이스", "link": "/ko/units/pace" },
+        { "name": "농도 단위", "link": "/ko/units/partsper" },
+        { "name": "전력", "link": "/ko/units/power" },
+        { "name": "압력", "link": "/ko/units/pressure" },
+        { "name": "무효 에너지", "link": "/ko/units/reactive_energy" },
+        { "name": "무효 전력", "link": "/ko/units/reactive_power" },
+        { "name": "속도", "link": "/ko/units/speed" },
+        { "name": "온도", "link": "/ko/units/temperature" },
+        { "name": "시간", "link": "/ko/units/time" },
+        { "name": "전압", "link": "/ko/units/voltage" },
+        { "name": "부피", "link": "/ko/units/volume" },
+        { "name": "유량", "link": "/ko/units/volume_flow_rate" }
+      ]
+    },
+    {
+      "name": "랜덤 생성기",
+      "link": "/ko/random",
+      "subcategories": [
+        { "name": "코인 토스", "link": "/ko/random/coin" },
+        { "name": "주사위", "link": "/ko/random/dice" },
+        { "name": "사다리 타기", "link": "/ko/random/ladder" },
+        { "name": "로렘 입숨", "link": "/ko/random/lorem" },
+        { "name": "로또 번호", "link": "/ko/random/lotto" },
+        { "name": "난수 생성", "link": "/ko/random/number" },
+        { "name": "가위바위보", "link": "/ko/random/rock_paper_scissors" },
+        { "name": "랜덤 영어 단어", "link": "/ko/random/word_en" },
+        { "name": "랜덤 한글 단어", "link": "/ko/random/word_ko" }
+      ]
+    },
+    {
+      "name": "계산기",
+      "link": "/ko/calculator",
+      "subcategories": [
+        { "name": "통계 계산기", "link": "/ko/calculator/statics" },
+        { "name": "BMI", "link": "/ko/calculator/BMI" },
+        { "name": "애드센스 수익 계산기", "link": "/ko/calculator/adsense" },
+        { "name": "유효이자율법 표 생성", "link": "/ko/calculator/EIR" },
+        {
+          "name": "복리 이자 계산기",
+          "link": "/ko/calculator/compound_interest"
+        },
+        {
+          "name": "대출 상환 계산기",
+          "link": "/ko/calculator/repayment_loan"
+        },
+        {
+          "name": "공학용 계산기",
+          "link": "/ko/calculator/engineering"
+        }
+      ]
+    },
+    {
+      "name": "변환기 생성기",
+      "link": "/ko/convert",
+      "subcategories": [
+        { "name": "색상 코드 변환기", "link": "/ko/convert/color" },
+        { "name": "바코드 생성기", "link": "/ko/convert/barcode" },
+        { "name": "QR 코드 생성기", "link": "/ko/convert/qrcode" },
+        { "name": "별자리 변환기", "link": "/ko/convert/birthdayToZodiac" },
+        { "name": "로마 숫자 변환기", "link": "/ko/convert/roman" },
+        { "name": "진법 변환기", "link": "/ko/convert/number" }
+      ]
+    },
+    {
+      "name": "특수 문자 모음",
+      "link": "/ko/charmap",
+      "subcategories": [
+        { "name": "이모지 모음", "link": "/ko/charmap/emojis" },
+        { "name": "유니코드 특수문자", "link": "/ko/charmap/unicode_special" }
+      ]
+    },
+    {
+      "name": "텍스트",
+      "link": "/ko/text",
+      "subcategories": [
+        { "name": "노트패드", "link": "/ko/text/notepad" },
+        { "name": "글자수 세기", "link": "/ko/text/charcount" }
+      ]
+    },
+    {
+      "name": "시간 관련 도구",
+      "link": "/ko/time",
+      "subcategories": [
+        { "name": "D-Day 계산기", "link": "/ko/time/d-day" },
+        { "name": "포모도로", "link": "/ko/time/pomodoro" },
+        { "name": "타이머", "link": "/ko/time/timer" },
+        { "name": "스탑워치", "link": "/ko/time/stopwatch" },
+        { "name": "카운트다운", "link": "/ko/time/countdown" },
+        { "name": "남은 시간 계산", "link": "/ko/time/lefttime" }
+      ]
+    },
+    {
+      "name": "네트워크",
+      "link": "/ko/network",
+      "subcategories": [{ "name": "IP 주소", "link": "/ko/network/ipaddress" }]
+    },
+    {
+      "name": "이미지",
+      "link": "/ko/image",
+      "subcategories": [
+        { "name": "이미지 색상 선택", "link": "/ko/image/color_picker" },
+        { "name": "이미지 압축", "link": "/ko/image/compress" },
+        { "name": "이미지 자르기", "link": "/ko/image/crop" },
+        { "name": "이미지 뒤집기", "link": "/ko/image/flip" },
+        { "name": "이미지 크기 조정", "link": "/ko/image/resize" },
+        { "name": "이미지 워터마크", "link": "/ko/image/watermark" }
+      ]
+    },
+    {
+      "name": "스프레드시트",
+      "link": "/ko/spreadsheet",
+      "subcategories": [
+        { "name": "CSV 편집기", "link": "/ko/spreadsheet/csv_editor" },
+        { "name": "JSON 편집기", "link": "/ko/spreadsheet/json_editor" },
+        { "name": "엑셀 편집기", "link": "/ko/spreadsheet/excel_editor" },
+        { "name": "XML 편집기", "link": "/ko/spreadsheet/xml_editor" },
+
+        { "name": "CSV 변환", "link": "/ko/spreadsheet/csv_convert" },
+        { "name": "JSON 변환", "link": "/ko/spreadsheet/json_convert" },
+        { "name": "엑셀 변환", "link": "/ko/spreadsheet/excel_convert" }
+      ]
+    }
+  ]
+}

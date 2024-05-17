@@ -1,0 +1,92 @@
+{
+  "d-day": {
+    "title": "D-Day Calculator: Accurately Calculate Time Remaining to Important Dates for Event Planning and Celebration",
+    "description": "The D-Day calculator accurately calculates the time remaining to important events, anniversaries, and project deadlines. With an easy-to-use interface, manage all your planned events' dates effortlessly.",
+    "url": "/en/time/d-day",
+    "sections": [
+      {
+        "title": "How to Use the D-Day Calculator",
+        "content": "Use the D-Day Calculator to calculate the remaining time until a specific date. Simply input the target date and check the D-Day."
+      },
+      {
+        "title": "Importance of the D-Day Calculator",
+        "content": "The D-Day Calculator helps in checking the remaining time until important events or deadlines, aiding in visualizing the time remaining and planning accordingly."
+      }
+    ]
+  },
+  "pomodoro": {
+    "title": "Pomodoro Timer: Increase Productivity and Efficiency with the Pomodoro Technique",
+    "description": "The Pomodoro Timer is a productivity tool that helps in managing time effectively. With the Pomodoro Technique, increase productivity and efficiency in your work.",
+    "url": "/en/time/pomodoro",
+    "sections": [
+      {
+        "title": "How to Use the Pomodoro Timer",
+        "content": "The Pomodoro Timer is a time management technique that breaks work into intervals, traditionally 25 minutes in length, separated by short breaks. Use the Pomodoro Timer to manage your work effectively."
+      },
+      {
+        "title": "Benefits of the Pomodoro Technique",
+        "content": "The Pomodoro Technique helps in increasing productivity, focus, and efficiency by breaking work into manageable intervals and providing regular breaks to avoid burnout."
+      }
+    ]
+  },
+  "timer": {
+    "title": "Online Timer: Set a Timer for Accurate Time Management and Task Completion",
+    "description": "The Online Timer is a versatile tool that helps in setting timers for various tasks, ensuring accurate time management and task completion. Use the Online Timer for all your timing needs.",
+    "url": "/en/time/timer",
+    "sections": [
+      {
+        "title": "How to Use the Online Timer",
+        "content": "The Online Timer allows you to set a timer for specific durations, helping in managing time effectively for tasks, activities, and projects."
+      },
+      {
+        "title": "Benefits of Using an Online Timer",
+        "content": "The Online Timer helps in tracking time accurately, managing tasks efficiently, and improving productivity by setting time limits for various activities."
+      }
+    ]
+  },
+  "stopwatch": {
+    "title": "Stopwatch: Accurately Measure Time Elapsed for Activities, Sports, and Projects",
+    "description": "The Stopwatch is a versatile tool that accurately measures time elapsed for various activities, sports, and projects. Use the Stopwatch for precise time tracking and management.",
+    "url": "/en/time/stopwatch",
+    "sections": [
+      {
+        "title": "How to Use the Stopwatch",
+        "content": "The Stopwatch allows you to start, stop, and reset the timer to accurately measure time elapsed for activities, sports, and projects."
+      },
+      {
+        "title": "Benefits of Using a Stopwatch",
+        "content": "The Stopwatch helps in tracking time accurately, measuring performance in sports, and managing time effectively for various activities and projects."
+      }
+    ]
+  },
+  "countdown": {
+    "title": "Countdown Timer: Create a Countdown for Events, Holidays, and Special Occasions",
+    "description": "The Countdown Timer is a versatile tool that helps in creating countdowns for events, holidays, and special occasions. Use the Countdown Timer to track time remaining until important dates.",
+    "url": "/en/time/countdown",
+    "sections": [
+      {
+        "title": "How to Use the Countdown Timer",
+        "content": "The Countdown Timer allows you to set a countdown for specific dates, helping in tracking time remaining until events, holidays, and special occasions."
+      },
+      {
+        "title": "Benefits of Using a Countdown Timer",
+        "content": "The Countdown Timer helps in visualizing the time remaining until important dates, planning for events, and creating excitement for upcoming holidays and special occasions."
+      }
+    ]
+  },
+  "lefttime": {
+    "title": "Calculate Time Left: Accurately Calculate Time Remaining to Important Dates for Event Planning and Celebration",
+    "description": "The Calculate Time Left tool accurately calculates the time remaining to important events, anniversaries, and project deadlines. With an easy-to-use interface, manage all your planned events' dates effortlessly.",
+    "url": "/en/time/lefttime",
+    "sections": [
+      {
+        "title": "How to Use the Calculate Time Left Tool",
+        "content": "Use the Calculate Time Left tool to calculate the remaining time until a specific date. Simply input the target date and check the time remaining."
+      },
+      {
+        "title": "Importance of the Calculate Time Left Tool",
+        "content": "The Calculate Time Left tool helps in checking the remaining time until important events or deadlines, aiding in visualizing the time remaining and planning accordingly."
+      }
+    ]
+  }
+}
