@@ -43,60 +43,59 @@ function AppContent({ children }) {
   )
 }
 
-// function Layout({ children }) {
-//   return (
-//     <div className="mx-auto min-h-screen">
-//       <div className="flex flex-col lg:flex-row gap-4 pt-16">
-//         <HeaderWithSideBar />
-//         {/* <main className="lg:ml-36 mr-0 lg:mr-32 lg:px-32 lg:pr-0 main-lg-width break-words"> */}
-//         {/* <main className="main-lg-width break-words">{children}</main> */}
-//         <main>{children}</main>
-//       </div>
-//       <Footer />
-//     </div>
-//   )
-// }
-
 function Layout({ children }) {
   return (
-    <div className="mx-auto min-h-screen bg-transparent">
-      {/* Header with logo and navigation bar */}
-      <HeaderWithSideBar />
-      {/* Main content area */}
-      <div className="flex flex-col pt-16 lg:flex-row gap-4 p-4">
-        {/* Article content area */}
-        <main className=" max-w-7xl p-4 relative">{children}</main>
-        {/* Sidebar ad unit */}
-        <aside className="sidebar min-w-5xl p-4 w-1/4">
-          <ResponsiveAd
-            data_ad_slot={
-              SideContentVerticalResponsive_dataAdSlot[0].dataAdSlot
-            }
-          />
-          <div className="pb-4 bg-transparent"></div>
-          <ResponsiveAd
-            data_ad_slot={
-              SideContentVerticalResponsive_dataAdSlot[1].dataAdSlot
-            }
-          />
-          <div className="pb-4 bg-transparent"></div>
-          <ResponsiveAd
-            data_ad_slot={
-              SideContentVerticalResponsive_dataAdSlot[1].dataAdSlot
-            }
-          />
-          <div className="pb-4 bg-transparent"></div>
-          <ResponsiveAd
-            data_ad_slot={
-              SideContentVerticalResponsive_dataAdSlot[1].dataAdSlot
-            }
-          />
-          <div className="pb-4 bg-transparent"></div>
-        </aside>
+    <div className="mx-auto min-h-screen">
+      <div className="flex flex-col lg:flex-row gap-4 pt-16">
+        <HeaderWithSideBar />
+        {/* <main className="lg:ml-36 mr-0 lg:mr-32 lg:px-32 lg:pr-0 main-lg-width break-words"> */}
+        <main className="main-lg-width break-words">{children}</main>
+        {/* <main>{children}</main> */}
       </div>
       <Footer />
     </div>
   )
 }
+
+// function Layout({ children }) {
+//   return (
+//     <div className="mx-auto min-h-screen bg-transparent">
+//       {/* Header with logo and navigation bar */}
+//       <HeaderWithSideBar />
+//       {/* Main content area */}
+//       <div className="flex flex-col pt-16 lg:flex-row gap-4 p-4">
+//         {/* Article content area */}
+//         <main className=" max-w-7xl p-4 relative">{children}</main>
+//         {/* Sidebar ad unit */}
+//         {/* <aside className="bg-gray-100 sidebar w-1/4 p-4"> */}
+//         {/* <ResponsiveAd
+//             data_ad_slot={
+//               SideContentVerticalResponsive_dataAdSlot[0].dataAdSlot
+//             }
+//           />
+//           <div className="pb-4 bg-transparent"></div>
+//           <ResponsiveAd
+//             data_ad_slot={
+//               SideContentVerticalResponsive_dataAdSlot[1].dataAdSlot
+//             }
+//           />
+//           <div className="pb-4 bg-transparent"></div>
+//           <ResponsiveAd
+//             data_ad_slot={
+//               SideContentVerticalResponsive_dataAdSlot[1].dataAdSlot
+//             }
+//           />
+//           <div className="pb-4 bg-transparent"></div>
+//           <ResponsiveAd
+//             data_ad_slot={
+//               SideContentVerticalResponsive_dataAdSlot[1].dataAdSlot
+//             }
+//           /> */}
+//         {/* </aside> */}
+//       </div>
+//       <Footer />
+//     </div>
+//   )
+// }
 
 export default appWithTranslation(MyApp, nextI18NextConfig)
