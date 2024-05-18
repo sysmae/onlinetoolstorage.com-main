@@ -100,7 +100,7 @@ const HeaderWithSideBar = () => {
 
   return (
     <>
-      <header className="flex items-center justify-between px-4 py-2 bg-gray-50 shadow-md dark:bg-gray-800 fixed top-0 left-0 right-0 z-50 ">
+      <header className="flex items-center justify-between px-4 py-2 bg-gray-50 shadow-md dark:bg-gray-800 fixed top-0 left-0 right-0  z-50">
         <Link href="/" passHref>
           <span className="flex items-center space-x-3">
             <Image
@@ -131,7 +131,7 @@ const HeaderWithSideBar = () => {
           <LanguageSwitcher />
         </div>
       </header>
-
+      {/* 
       <aside className="w-64 top-[60px] h-screen text-white overflow-auto hidden lg:fixed lg:block bottom-0 left-0">
         <div className="px-4 pb-16 ">
           <Nav
@@ -140,7 +140,7 @@ const HeaderWithSideBar = () => {
             handleLinkClick={handleLinkClick}
           />
         </div>
-      </aside>
+      </aside> */}
 
       <Modal
         isOpen={isModalOpen}
