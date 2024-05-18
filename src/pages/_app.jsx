@@ -59,15 +59,15 @@ function AppContent({ children }) {
 
 function Layout({ children }) {
   return (
-    <div className="mx-auto min-h-screen">
+    <div className="mx-auto min-h-screen bg-transparent">
       {/* Header with logo and navigation bar */}
       <HeaderWithSideBar />
       {/* Main content area */}
       <div className="flex flex-col pt-16 lg:flex-row gap-4 p-4">
         {/* Article content area */}
-        <main className="bg-gray-200 max-w-7xl p-4 relative">{children}</main>
+        <main className=" max-w-7xl p-4 relative">{children}</main>
         {/* Sidebar ad unit */}
-        <aside className="sidebar min-w-2xl bg-gray-300 p-4 w-1/4">
+        <aside className="sidebar min-w-5xl p-4 w-1/4">
           <ResponsiveAd
             data_ad_slot={
               SideContentVerticalResponsive_dataAdSlot[0].dataAdSlot
