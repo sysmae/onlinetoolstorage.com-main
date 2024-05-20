@@ -1,3 +1,5 @@
+// TODO: 수직 한번 수평 한번 하면 원래대로 돌아오는 버그 수정
+
 import React, { useState, useRef } from 'react'
 import 'react-image-crop/dist/ReactCrop.css'
 

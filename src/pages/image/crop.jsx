@@ -262,22 +262,11 @@ const Home = () => {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      {/* <input
-        type="file"
-        onChange={handleImageChange}
-        accept="image/*"
-        className="block w-full text-sm text-gray-500
-                 file:mr-4 file:py-2 file:px-4
-                 file:rounded-full file:border-0
-                 file:text-sm file:font-semibold
-                 file:bg-violet-50 file:text-violet-700
-                 hover:file:bg-violet-100
-                 cursor-pointer"
-      /> */}
+
       <div className="App">
         <div className="Crop-Controls">
           <input type="file" accept="image/*" onChange={onSelectFile} />
-          <div>
+          {/* <div>
             <label htmlFor="scale-input">Scale: </label>
             <input
               id="scale-input"
@@ -299,7 +288,7 @@ const Home = () => {
                 setRotate(Math.min(180, Math.max(-180, Number(e.target.value))))
               }
             />
-          </div>
+          </div> */}
           <div>
             <button onClick={handleToggleAspectClick}>
               Toggle aspect {aspect ? 'off' : 'on'}

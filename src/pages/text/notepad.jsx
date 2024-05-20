@@ -11,7 +11,7 @@ const ReactQuill = dynamic(() => import('react-quill'), {
   loading: () => <p>Loading editor...</p>,
 })
 import 'react-quill/dist/quill.snow.css'
-import 'react-quill/dist/quill.bubble.css'
+// import 'react-quill/dist/quill.bubble.css'
 
 const category = 'text'
 
@@ -170,7 +170,7 @@ function Editor() {
             {isFullScreen ? 'Exit Full Screen' : 'Enter Full Screen'}
           </button>
         </div>
-        <ReactQuill theme="bubble" value={content} onChange={handleChange} />
+        <ReactQuill theme="snow" value={content} onChange={handleChange} />
       </div>
       <input
         type="file"

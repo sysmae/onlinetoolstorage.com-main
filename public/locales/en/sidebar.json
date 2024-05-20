@@ -154,9 +154,7 @@
         { "name": "Image Compress", "link": "/en/image/compress" },
         { "name": "Image Crop", "link": "/en/image/crop" },
         { "name": "Image Flip", "link": "/en/image/flip" },
-        { "name": "Image Resize", "link": "/en/image/resize" },
-        { "name": "Image Watermark", "link": "/en/image/watermark" }
-      ]
+        { "name": "Image Resize", "link": "/en/image/resize" }      ]
     },
     {
       "name": "SpreadSheet",

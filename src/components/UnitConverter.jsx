@@ -74,12 +74,7 @@ const UnitConverter = ({ units }) => {
           </select>
         </div>
       </div>
-      <button
-        onClick={handleConvert}
-        className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out dark:bg-indigo-500 dark:hover:bg-indigo-600 dark:focus:ring-indigo-400"
-      >
-        Convert
-      </button>
+      <button onClick={handleConvert}>Convert</button>
       {result && (
         <p className="text-sm text-gray-500 dark:text-gray-400">
           Result: {result} {toUnit}

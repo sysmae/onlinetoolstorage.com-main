@@ -41,49 +41,40 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-        <form
-          onSubmit={handleSubmit}
-          className="p-8 bg-white rounded shadow-md"
-        >
+      <div className="flex flex-col items-center justify-center min-h-screen ">
+        <form onSubmit={handleSubmit} className="p-8 rounded shadow-md">
           <h2 className="text-2xl font-bold mb-6">
             Compound Interest Calculator
           </h2>
-          <div className="mb-4">
+          <div className="mb-4 ">
             <label
               htmlFor="principal"
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-sm font-bold mb-2 "
             >
               Principal Amount
             </label>
             <input
               type="number"
               id="principal"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
               value={principal}
               onChange={(e) => setPrincipal(e.target.value)}
             />
           </div>
           <div className="mb-4">
-            <label
-              htmlFor="rate"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
+            <label htmlFor="rate" className="block text-sm font-bold mb-2">
               Annual Interest Rate (%)
             </label>
             <input
               type="number"
               id="rate"
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
               value={rate}
               onChange={(e) => setRate(e.target.value)}
             />
           </div>
           <div className="mb-4">
-            <label
-              htmlFor="time"
-              className="block text-gray-700 text-sm font-bold mb-2"
-            >
+            <label htmlFor="time" className="block  text-sm font-bold mb-2">
               Time (years)
             </label>
             <input

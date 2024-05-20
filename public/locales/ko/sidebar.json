@@ -146,8 +146,7 @@
         { "name": "이미지 압축", "link": "/ko/image/compress" },
         { "name": "이미지 자르기", "link": "/ko/image/crop" },
         { "name": "이미지 뒤집기", "link": "/ko/image/flip" },
-        { "name": "이미지 크기 조정", "link": "/ko/image/resize" },
-        { "name": "이미지 워터마크", "link": "/ko/image/watermark" }
+        { "name": "이미지 크기 조정", "link": "/ko/image/resize" }
       ]
     },
     {
