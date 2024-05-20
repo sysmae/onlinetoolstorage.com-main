@@ -1,23 +1,32 @@
+const { i18n } = require('./next.config')
+
 module.exports = {
   siteUrl: 'https://www.onlinetoolstorage.com',
   generateRobotsTxt: true,
-  i18n: {
-    locales: ['ko', 'en'],
-    defaultLocale: 'ko',
-  },
-  // transform: async (config, path) => {
-  //   // 기본 경로와 언어별 경로를 모두 포함하여 사이트맵 생성
-  //   const paths = config.i18n.locales.map((locale) => ({
-  //     loc: `${config.siteUrl}${locale === config.i18n.defaultLocale ? '' : `/${locale}`}${path}`,
-  //     alternateRefs: config.i18n.locales.map((altLocale) => ({
-  //       href: `${config.siteUrl}${altLocale === config.i18n.defaultLocale ? '' : `/${altLocale}`}${path}`,
-  //       hreflang: altLocale,
-  //     })),
-  //     changefreq: 'daily',
-  //     priority: 0.7,
-  //     lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-  //   }))
+  changefreq: 'daily',
+  priority: 0.7,
+  // generateIndexSitemap: false, // 인덱스 사이트맵 생성을 비활성화 (선택 사항)
 
-  //   return paths
-  // },
+  alternateRefs: i18n.locales.map((locale) => ({
+    href: `https://onlinetoolstorage.com/${locale}`,
+    hreflang: locale,
+  })),
+
+  transform: async (config, path) => {
+    // Filter out paths that contain '/ko'
+    if (path.includes('/ko')) {
+      return null
+    }
+
+    return {
+      loc: path,
+      lastmod: new Date().toISOString(),
+      changefreq: config.changefreq,
+      priority: config.priority,
+      alternateRefs: i18n.locales.map((locale) => ({
+        href: `https://onlinetoolstorage.com/${locale}${path === '/' ? '' : path}`,
+        hreflang: locale,
+      })),
+    }
+  },
 }

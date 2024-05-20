@@ -4,5 +4,5 @@ module.exports = {
     locales: ['en', 'ko'],
     defaultLocale: 'ko',
   },
-  reactStrictMode: true,
+  // reactStrictMode: true,
 }
