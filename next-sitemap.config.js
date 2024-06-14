@@ -8,15 +8,15 @@ module.exports = {
   // generateIndexSitemap: false, // 인덱스 사이트맵 생성을 비활성화 (선택 사항)
 
   alternateRefs: i18n.locales.map((locale) => ({
-    href: `https://onlinetoolstorage.com/${locale}`,
+    href: `https://www.onlinetoolstorage.com/${locale}`,
     hreflang: locale,
   })),
 
   transform: async (config, path) => {
-    // Filter out paths that contain '/ko'
-    if (path.includes('/en')) {
-      return null
-    }
+    // // Filter out paths that contain '/ko'
+    // if (path.includes('/en')) {
+    //   return null
+    // }
 
     return {
       loc: path,
@@ -24,7 +24,7 @@ module.exports = {
       changefreq: config.changefreq,
       priority: config.priority,
       alternateRefs: i18n.locales.map((locale) => ({
-        href: `https://onlinetoolstorage.com/${locale}${path === '/' ? '' : path}`,
+        href: `https://www.onlinetoolstorage.com/${locale}${path === '/' ? '' : path}`,
         hreflang: locale,
       })),
     }

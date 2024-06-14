@@ -14,7 +14,7 @@ export const useLoadAdsOnScroll = () => {
       const script = document.createElement('script')
       script.id = 'adsbygoogle-script'
       script.src =
-        'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXX'
+        'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670089965415680'
       script.async = true
       document.body.appendChild(script)
 

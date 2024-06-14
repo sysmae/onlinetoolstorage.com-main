@@ -1,6 +1,5 @@
 import { NextSeo, WebPageJsonLd } from 'next-seo'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useTranslation } from 'next-i18next'
 
 export async function getStaticProps({ locale }) {
   return {
@@ -11,23 +10,21 @@ export async function getStaticProps({ locale }) {
 }
 
 const HomePage = () => {
-  const { t } = useTranslation('common')
-
   return (
     <>
       <NextSeo
         title="온툴모 | 온라인 툴 모음 | 당신이 몰랐던 필수 온라인 도구 모음 사이트"
         description="온툴모에서는 계산기, 변환기, 랜덤 생성기 등 현대 생활에 필요한 다양한 온라인 도구를 무료로 제공합니다. 일상과 업무의 효율을 높여보세요."
-        canonical="https://onlinetoolstorage.com"
+        canonical="https://www.onlinetoolstorage.com"
         openGraph={{
-          url: 'https://onlinetoolstorage.com',
+          url: 'https://www.onlinetoolstorage.com',
           title:
             '온툴모 | 온라인 툴 모음 | 당신이 몰랐던 필수 온라인 도구 모음 사이트',
           description:
             '온툴모에서는 계산기, 변환기, 랜덤 생성기 등 현대 생활에 필요한 다양한 온라인 도구를 무료로 제공합니다. 일상과 업무의 효율을 높여보세요.',
           images: [
             {
-              url: 'https://onlinetoolstorage.com/favicon.png',
+              url: 'https://www.onlinetoolstorage.com/favicon.png',
               width: 800,
               height: 600,
               alt: '온툴모',

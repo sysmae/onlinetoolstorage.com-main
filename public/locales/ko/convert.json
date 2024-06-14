@@ -2,7 +2,7 @@
   "color": {
     "title": "효율적인 색상 변환기: RGB, HEX, HSL 간 색깔 코드 변환 사이트",
     "description": "RGB, HEX, HSL 형식 간 쉽게 색상 코드를 변환할 수 있는 효율적인 색상 변환기로, 디자인 및 개발 작업을 더욱 정밀하고 간편하게 처리하세요.",
-    "url": "/en/convert/color",
+    "url": "/ko/convert/color",
     "sections": [
       {
         "title": "HEX 형식",
@@ -33,7 +33,7 @@
   "barcode": {
     "title": "무료 바코드 생성기: 영문 텍스트 숫자를 바코드로 쉽게 변환 하는 사이트",
     "description": "무료 온라인 바코드 생성기로 제품 번호, 가격, 기타 정보를 바코드로 신속하게 변환하세요. 사용이 간편하여 소매업, 창고 관리, 물류, 학교 프로젝트 등 다양한 상황에서 활용할 수 있습니다. 직관적인 인터페이스를 통해 누구나 손쉽게 바코드를 생성할 수 있습니다.",
-    "url": "/en/convert/barcode",
+    "url": "/ko/convert/barcode",
     "sections": [
       {
         "title": "바코드의 기본 이해",
@@ -71,7 +71,7 @@
   "qrcode": {
     "title": "QR 코드 생성기: 웹사이트, 텍스트, 연락처 정보를 위한 맞춤형 QR 코드 신속 제작 도구",
     "description": "QR 코드 무료 생성기를 통해 텍스트를 QR 코드로 변환하세요. 빠르고 쉽게 사용자 맞춤형 QR 코드를 만들어 보세요. 몇 번의 클릭만으로 비즈니스, 이벤트, 개인 프로젝트를 위한 독창적인 QR 코드를 생성할 수 있는 최상의 플랫폼입니다.",
-    "url": "/en/convert/qrcode",
+    "url": "/ko/convert/qrcode",
     "sections": [
       {
         "title": "QR 코드의 역사",
