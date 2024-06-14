@@ -32,6 +32,7 @@ function AppContent({ children }) {
       <Script
         id="adsbygoogle-script"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670089965415680"
+        crossorigin="anonymous"
         async
       ></Script>
 
