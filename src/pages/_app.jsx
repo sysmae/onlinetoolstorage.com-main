@@ -29,13 +29,6 @@ function MyApp({ Component, pageProps }) {
 function AppContent({ children }) {
   return (
     <>
-      <Script
-        id="adsbygoogle-script"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670089965415680"
-        crossorigin="anonymous"
-        async
-      ></Script>
-
       {/* <Script id="gtag-config">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -44,8 +37,15 @@ function AppContent({ children }) {
           gtag('config', 'G-G3GB4K968L');
         `}
       </Script> */}
-      <Layout>{children}</Layout>
+      <Script
+        id="adsbygoogle-script"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670089965415680"
+        crossorigin="anonymous"
+        async
+        onError={(e) => console.error('Script load error: ', e)}
+      ></Script>
       <Script id="adsbygoogle-push">{`window.adsbygoogle = window.adsbygoogle || [];`}</Script>
+      <Layout>{children}</Layout>
     </>
   )
 }
