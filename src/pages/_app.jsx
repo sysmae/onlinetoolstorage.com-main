@@ -30,21 +30,17 @@ function AppContent({ children }) {
   return (
     <>
       <Script
-        id="adsbygoogle-script"
+        async
+        id="adsense-script"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670089965415680"
         crossorigin="anonymous"
-        async
       ></Script>
-
-      <Script id="gtag-config">
+      <Layout>{children}</Layout>
+      <Script id="adsense-push-script">
         {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-G3GB4K968L');
+          (adsbygoogle = window.adsbygoogle || []).push({});
         `}
       </Script>
-      <Layout>{children}</Layout>
     </>
   )
 }
