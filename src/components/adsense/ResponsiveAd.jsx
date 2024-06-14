@@ -1,3 +1,4 @@
+// ResponsiveAd.jsx
 import React, { useEffect } from 'react'
 
 export default function ResponsiveAd({ data_ad_slot }) {
@@ -16,7 +17,6 @@ export default function ResponsiveAd({ data_ad_slot }) {
     <ins
       className="adsbygoogle"
       style={{ display: 'block', minHeight: '280px' }}
-      // style={{ display: 'block' }}
       data-ad-client="ca-pub-3670089965415680"
       data-ad-slot={data_ad_slot}
       data-ad-format="auto"
