@@ -6,8 +6,6 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-import Spinner from '@/components/Spinner'
-
 const category = 'image'
 
 export async function getStaticProps({ locale }) {
@@ -73,7 +71,7 @@ const ImageCompressor = () => {
                      cursor-pointer"
           onChange={handleImageUpload}
         />
-        {isLoading && <Spinner />}
+        {isLoading && <div>Loading...</div>}
         <div>
           {compressedImage && (
             <>

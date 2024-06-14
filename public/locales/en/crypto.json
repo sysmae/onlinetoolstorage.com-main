@@ -526,6 +526,7 @@
   "password": {
       "title": "Random Password Generator: Easily create safe and complex passwords for strong security",
       "description": "Use the random password generator to create strong passwords. This tool is essential for enhancing online security and protecting sensitive information.",
+      "url": "/en/crypto/password",
       "sections": [
         {
           "title": "The Importance of the Random Password Generator",
@@ -544,6 +545,7 @@
   "uuid":{
     "title": "UUID Generator: A quick tool for generating unique identifiers for secure software development and data management",
     "description": "Use the UUID generator to easily create unique identifiers for each data item or object. This tool is essential for database management, software development, and system integration projects.",
+    "url": "/en/crypto/uuid",
     "sections": [
       {
         "title": "How to use the UUID generator",

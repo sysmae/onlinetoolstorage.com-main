@@ -33,6 +33,7 @@
   "barcode": {
     "title": "Free Barcode Generator: Easily Convert Product Numbers and Pricing Information into Barcodes",
     "description": "Quickly convert product numbers, prices, and other information into barcodes with this free online barcode generator. Its user-friendly design makes it suitable for retail, warehouse management, logistics, school projects, and more. Anyone can generate barcodes easily with its intuitive interface, and it provides high-quality barcode outputs.",
+    "url": "/en/convert/barcode",
     "sections": [
       {
         "title": "Basic Understanding of Barcodes",
@@ -136,6 +137,7 @@
   "roman": {
     "title": "Roman Numeral Converter: An Interactive Online Tool for Converting Between Ancient Roman Numerals and Modern Arabic Numbers",
     "description": "Easily convert Arabic numbers to Roman numerals or Roman numerals to Arabic numbers with this Roman numeral converter. This tool is useful in various situations including historical learning, document creation, and hobby activities.",
+    "url": "/en/convert/roman",
     "sections": [
       {
         "title": "How to Convert Roman Numerals",
@@ -158,6 +160,7 @@
   "number": {
     "title": "Number Base Converter: Easy and Fast Conversion Between Binary, Octal, Decimal, and Hexadecimal",
     "description": "Easily convert numbers between various numerical bases such as binary, octal, decimal, and hexadecimal with this number base converter. This tool is useful in fields like programming, mathematical learning, and data processing.",
+    "url": "/en/convert/number",
     "sections": [
       {
         "title": "How to Use the Number Base Converter",

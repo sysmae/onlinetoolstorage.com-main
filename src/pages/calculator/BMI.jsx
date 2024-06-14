@@ -46,29 +46,30 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="container mx-auto px-4 py-8">
+      <div className="py-8">
         <div className="mb-4">
           <input
             type="number"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
-            className="border p-2 mr-2"
+            className=" p-2 mr-2"
             placeholder="Weight (kg) / 체중 (kg)"
           />
           <input
             type="number"
             value={height}
             onChange={(e) => setHeight(e.target.value)}
-            className="border p-2"
+            className=" p-2"
             placeholder="Height (cm) / 키 (cm)"
           />
+          <button
+            className="bg-blue-500 text-white p-2 rounded"
+            onClick={calculateBMI}
+          >
+            Calculate / 계산하기
+          </button>
         </div>
-        <button
-          className="bg-blue-500 text-white p-2 rounded"
-          onClick={calculateBMI}
-        >
-          Calculate / 계산하기
-        </button>
+
         {bmi && (
           <div className="mt-4">
             <p>Your BMI(당신의 BMI): {bmi}</p>

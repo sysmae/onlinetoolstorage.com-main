@@ -2,13 +2,19 @@ import React from 'react'
 
 import Script from 'next/script'
 import Footer from '@/components/Footer'
-import HeaderWithSideBar from '@/components/HeaderWithSideBar'
+import Header from '@/components/Header'
 
 import { appWithTranslation } from 'next-i18next'
 import nextI18NextConfig from '../../next-i18next.config'
 
 import ResponsiveAd from '@/components/adsense/ResponsiveAd'
-import { SideContentVerticalResponsive_dataAdSlot } from '@/constants/adsense/data_ad_slot'
+import {
+  LeftSide_dataAdSlot,
+  RightSide_dataAdSlot,
+  RightSideWithCard_dataAdSlot,
+  Top_dataAdSlot,
+  Bottom_dataAdSlot,
+} from '@/constants/adsense/data_ad_slot'
 
 import '../styles/reset.css'
 import '../styles/globals.css'
@@ -43,59 +49,48 @@ function AppContent({ children }) {
   )
 }
 
-function Layout({ children }) {
-  return (
-    <div className="mx-auto min-h-screen">
-      <div className="flex flex-col lg:flex-row gap-4 pt-16">
-        <HeaderWithSideBar />
-        {/* <main className="lg:ml-36 mr-0 lg:mr-32 lg:px-32 lg:pr-0 main-lg-width break-words"> */}
-        <main className="main-lg-width break-words">{children}</main>
-        {/* <main>{children}</main> */}
-      </div>
-      <Footer />
-    </div>
-  )
-}
-
 // function Layout({ children }) {
 //   return (
-//     <div className="mx-auto min-h-screen bg-transparent">
-//       {/* Header with logo and navigation bar */}
-//       <HeaderWithSideBar />
-//       {/* Main content area */}
-//       <div className="flex flex-col pt-16 lg:flex-row gap-4 p-4">
-//         {/* Article content area */}
-//         <main className=" max-w-7xl p-4 relative">{children}</main>
-//         {/* Sidebar ad unit */}
-//         {/* <aside className="bg-gray-100 sidebar w-1/4 p-4"> */}
-//         {/* <ResponsiveAd
-//             data_ad_slot={
-//               SideContentVerticalResponsive_dataAdSlot[0].dataAdSlot
-//             }
-//           />
-//           <div className="pb-4 bg-transparent"></div>
-//           <ResponsiveAd
-//             data_ad_slot={
-//               SideContentVerticalResponsive_dataAdSlot[1].dataAdSlot
-//             }
-//           />
-//           <div className="pb-4 bg-transparent"></div>
-//           <ResponsiveAd
-//             data_ad_slot={
-//               SideContentVerticalResponsive_dataAdSlot[1].dataAdSlot
-//             }
-//           />
-//           <div className="pb-4 bg-transparent"></div>
-//           <ResponsiveAd
-//             data_ad_slot={
-//               SideContentVerticalResponsive_dataAdSlot[1].dataAdSlot
-//             }
-//           /> */}
-//         {/* </aside> */}
+//     <div className="mx-auto min-h-screen">
+//       <div className="flex flex-col lg:flex-row gap-4 pt-16">
+//         <Header />
+//         {/* <main className="lg:ml-36 mr-0 lg:mr-32 lg:px-32 lg:pr-0 main-lg-width break-words"> */}
+//         <main className="break-words">{children}</main>
 //       </div>
 //       <Footer />
 //     </div>
 //   )
 // }
+
+function Layout({ children }) {
+  return (
+    <div className="mx-auto min-h-screen">
+      <Header />
+      <div className="flex flex-col lg:flex-row gap-4 pt-16">
+        <div className="lg:hidden">
+          <ResponsiveAd data_ad_slot={Top_dataAdSlot} />
+        </div>
+        <aside className="hidden lg:block lg:w-2/12 p-4">
+          <ResponsiveAd data_ad_slot={LeftSide_dataAdSlot} />
+        </aside>
+        <main className="w-full lg:w-6/12 break-words p-4">
+          <div className="content">{children}</div>
+        </main>
+        <aside className="w-full lg:w-2/12 p-4">
+          <div className="right-side-with-card">
+            <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />
+          </div>
+        </aside>
+        <aside className="w-full lg:w-2/12 p-4">
+          <ResponsiveAd data_ad_slot={RightSide_dataAdSlot} />
+        </aside>
+      </div>
+      <div className="ad-unit-end p-4 text-center">
+        <ResponsiveAd data_ad_slot={Bottom_dataAdSlot} />
+      </div>
+      <Footer />
+    </div>
+  )
+}
 
 export default appWithTranslation(MyApp, nextI18NextConfig)

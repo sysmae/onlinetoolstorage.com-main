@@ -61,7 +61,7 @@ const Nav = ({ categories, setCategories, handleLinkClick }) => {
   )
 }
 
-const HeaderWithSideBar = () => {
+const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [categories, setCategories] = useState([])
   const router = useRouter()
@@ -176,4 +176,4 @@ const HeaderWithSideBar = () => {
   )
 }
 
-export default HeaderWithSideBar
+export default Header

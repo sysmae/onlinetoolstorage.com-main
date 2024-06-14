@@ -2,17 +2,14 @@ import React, { useState, useEffect, useRef } from 'react'
 import Fuse from 'fuse.js'
 import { useDebounce } from 'use-debounce'
 import { FiSearch } from 'react-icons/fi'
-import { useTranslation } from 'react-i18next'
 
 function SearchComponent() {
-  const { i18n } = useTranslation()
   const [query, setQuery] = useState('')
   const [debouncedQuery] = useDebounce(query, 300)
   const [results, setResults] = useState([])
   const [isOpen, setIsOpen] = useState(false)
   const [showSearchInput, setShowSearchInput] = useState(false)
   const inputRef = useRef(null)
-  const locale = i18n.language
 
   useEffect(() => {
     async function fetchData(languageCode, dataType) {
@@ -22,12 +19,12 @@ function SearchComponent() {
       const searchData = Object.keys(data).map((key) => ({
         id: key,
         title: data[key].title,
-        // description: data[key].description,
+        description: data[key].description,
         url: data[key].url,
       }))
 
       const fuse = new Fuse(searchData, {
-        keys: ['title'],
+        keys: ['title', 'description'],
         includeScore: true,
       })
 
@@ -35,40 +32,33 @@ function SearchComponent() {
     }
 
     async function fetchAllData() {
-      const dataTypes = [
-        'calculator',
-        'charmap',
-        'convert',
-        'crypto',
-        'image',
-        'network',
-        'random',
-        'text',
-        'time',
-        'units',
-      ]
+      const languageCode = 'ko'
+      const cryptoFuse = await fetchData(languageCode, 'crypto')
+      const randomFuse = await fetchData(languageCode, 'random')
+      const unitsFuse = await fetchData(languageCode, 'units')
 
-      const fusePromises = dataTypes.map((dataType) =>
-        fetchData(locale, dataType),
-      )
-
-      const fuses = await Promise.all(fusePromises)
-      return fuses
+      return { cryptoFuse, randomFuse, unitsFuse }
     }
 
-    fetchAllData().then((fuses) => {
+    fetchAllData().then(({ cryptoFuse, randomFuse, unitsFuse }) => {
       if (debouncedQuery) {
-        const searchResults = fuses.flatMap((fuse) =>
-          fuse.search(debouncedQuery).map(({ item }) => item),
-        )
+        const cryptoResult = cryptoFuse.search(debouncedQuery)
+        const randomResult = randomFuse.search(debouncedQuery)
+        const unitsResult = unitsFuse.search(debouncedQuery)
 
-        setResults(searchResults)
+        const mergedResults = [
+          ...cryptoResult.map(({ item }) => item),
+          ...randomResult.map(({ item }) => item),
+          ...unitsResult.map(({ item }) => item),
+        ]
+
+        setResults(mergedResults)
         setIsOpen(true)
       } else {
         setIsOpen(false)
       }
     })
-  }, [debouncedQuery, locale])
+  }, [debouncedQuery])
 
   const toggleSearchInput = () => {
     setShowSearchInput(!showSearchInput)
@@ -84,8 +74,8 @@ function SearchComponent() {
   }
 
   const inputClass = showSearchInput
-    ? 'py-2 w-[90vw] fixed focus:outline-none z-50'
-    : 'pl-10 pr-3 py-2 w-full focus:outline-none'
+    ? 'py-2 w-[90vw] fixed focus:outline-none z-50' // Full width when search input is shown
+    : 'pl-10 pr-3 py-2 w-full focus:outline-none' // No width when hidden, hiding the input
 
   return (
     <div className="relative w-full">
