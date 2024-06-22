@@ -1,17 +1,17 @@
 // ResponsiveAd.jsx
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export default function ResponsiveAd({ data_ad_slot }) {
-  // useEffect(() => {
-  //   // Ensure this runs only once and window is available
-  //   if (typeof window !== 'undefined' && window.adsbygoogle) {
-  //     try {
-  //       window.adsbygoogle.push({})
-  //     } catch (error) {
-  //       console.error('AdSense error:', error.message)
-  //     }
-  //   }
-  // }, [])
+  useEffect(() => {
+    // Ensure this runs only once and window is available
+    if (typeof window !== 'undefined' && window.adsbygoogle) {
+      try {
+        window.adsbygoogle.push({})
+      } catch (error) {
+        console.error('AdSense error:', error.message)
+      }
+    }
+  }, [])
 
   return (
     <ins

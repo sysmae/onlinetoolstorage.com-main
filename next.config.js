@@ -1,7 +1,7 @@
 // next.config.js
 module.exports = {
   i18n: {
-    locales: ['ko'],
+    locales: ['en', 'ko'],
     defaultLocale: 'ko',
   },
   // reactStrictMode: true,

@@ -10,9 +10,8 @@ import ResponsiveAd from '@/components/adsense/ResponsiveAd'
 import {
   LeftSide_dataAdSlot,
   RightSide_dataAdSlot,
-  RightSideWithCard_dataAdSlot,
-  Top_dataAdSlot,
   Bottom_dataAdSlot,
+  RightSideWithCard_dataAdSlot,
 } from '@/constants/adsense/data_ad_slot'
 
 import '../styles/reset.css'
@@ -29,22 +28,31 @@ function MyApp({ Component, pageProps }) {
 function AppContent({ children }) {
   return (
     <>
-      {/* <Script id="gtag-config">
+      <Script
+        id="adsbygoogle-script"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670089965415680"
+        crossorigin="anonymous"
+        strategy="lazyOnload"
+      ></Script>
+
+      <Script id="gtag-config" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
           gtag('config', 'G-G3GB4K968L');
         `}
-      </Script> */}
-      <Script
+      </Script>
+
+      <Script id="adsbygoogle-push">{`window.adsbygoogle = window.adsbygoogle || [];`}</Script>
+      {/* <Script
         id="adsbygoogle-script"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670089965415680"
         crossorigin="anonymous"
         async
         onError={(e) => console.error('Script load error: ', e)}
       ></Script>
-      <Script id="adsbygoogle-push">{`window.adsbygoogle = window.adsbygoogle || [];`}</Script>
+      <Script id="adsbygoogle-push">{`window.adsbygoogle = window.adsbygoogle || [];`}</Script> */}
       <Layout>{children}</Layout>
     </>
   )
@@ -55,25 +63,27 @@ function Layout({ children }) {
     <div className="mx-auto min-h-screen">
       <Header />
       <div className="flex flex-col lg:flex-row gap-4 pt-16">
-        <div className="lg:hidden">
-          <ResponsiveAd data_ad_slot={Top_dataAdSlot} />
-        </div>
-        <aside className="hidden lg:block lg:w-2/12 p-4">
+        {/* Left Side */}
+        <aside className="hidden lg:block lg:w-1/5">
           <ResponsiveAd data_ad_slot={LeftSide_dataAdSlot} />
         </aside>
-        <main className="w-full lg:w-6/12 break-words p-4">
+
+        {/* Main Content */}
+        <main className="w-full lg:w-2/5 break-words ">
           <div className="content">{children}</div>
         </main>
-        <aside className="w-full lg:w-2/12 p-4">
-          <div className="right-side-with-card">
-            <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />
-          </div>
+
+        {/* Right Side With Card */}
+        <aside className="w-full lg:w-1/5">
+          <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />
         </aside>
-        <aside className="w-full lg:w-2/12 p-4">
+
+        {/* Right Side */}
+        <aside className="w-full lg:w-1/5">
           <ResponsiveAd data_ad_slot={RightSide_dataAdSlot} />
         </aside>
       </div>
-      <div className="ad-unit-end p-4 text-center">
+      <div className="ad-unit-end text-center">
         <ResponsiveAd data_ad_slot={Bottom_dataAdSlot} />
       </div>
       <Footer />

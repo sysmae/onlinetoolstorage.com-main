@@ -1,0 +1,92 @@
+{
+  "color_picker": {
+    "title": "Color Picker: Choose a color from the color palette",
+    "description": "A color picker tool that allows you to choose a color from the color palette. Choose a color from the color palette.",
+    "url": "/en/image/color_picker",
+    "sections": [
+      {
+        "title": "How to Use Color Picker",
+        "content": "You can choose a color from the color palette using the color picker tool. Choose a color from the color palette."
+      },
+      {
+        "title": "Importance of Using Color Picker",
+        "content": "Using a color picker helps you choose the right color for your design projects. Get help with color selection and design creation through the color picker tool."
+      }
+    ]
+  },
+  "compress": {
+    "title": "Compress: Compress your files to reduce their size",
+    "description": "A file compression tool that allows you to reduce the size of your files. Compress your files to reduce their size.",
+    "url": "/en/image/compress",
+    "sections": [
+      {
+        "title": "How to Use Compress",
+        "content": "You can compress your files using the file compression tool. Compress your files to reduce their size."
+      },
+      {
+        "title": "Importance of Using Compress",
+        "content": "Using a file compression tool helps you reduce the size of your files. Get help with file compression and storage optimization through the file compression tool."
+      }
+    ]
+  },
+  "crop": {
+    "title": "Crop: Crop your images to the desired size",
+    "description": "An image cropping tool that allows you to crop your images to the desired size. Crop your images to the desired size.",
+    "url": "/en/image/crop",
+    "sections": [
+      {
+        "title": "How to Use Crop",
+        "content": "You can crop your images using the image cropping tool. Crop your images to the desired size."
+      },
+      {
+        "title": "Importance of Using Crop",
+        "content": "Using an image cropping tool helps you crop your images to the desired size. Get help with image cropping and editing through the image cropping tool."
+      }
+    ]
+  },
+  "flip": {
+    "title": "Flip: Flip your images horizontally or vertically",
+    "description": "An image flipping tool that allows you to flip your images horizontally or vertically. Flip your images horizontally or vertically.",
+    "url": "/en/image/flip",
+    "sections": [
+      {
+        "title": "How to Use Flip",
+        "content": "You can flip your images horizontally or vertically using the image flipping tool. Flip your images horizontally or vertically."
+      },
+      {
+        "title": "Importance of Using Flip",
+        "content": "Using an image flipping tool helps you flip your images horizontally or vertically. Get help with image flipping and editing through the image flipping tool."
+      }
+    ]
+  },
+  "resize": {
+    "title": "Resize: Resize your images to the desired dimensions",
+    "description": "An image resizing tool that allows you to resize your images to the desired dimensions. Resize your images to the desired dimensions.",
+    "url": "/en/image/resize",
+    "sections": [
+      {
+        "title": "How to Use Resize",
+        "content": "You can resize your images to the desired dimensions using the image resizing tool. Resize your images to the desired dimensions."
+      },
+      {
+        "title": "Importance of Using Resize",
+        "content": "Using an image resizing tool helps you resize your images to the desired dimensions. Get help with image resizing and editing through the image resizing tool."
+      }
+    ]
+  },
+  "watermark": {
+    "title": "Watermark: Add a watermark to your images",
+    "description": "An image watermarking tool that allows you to add a watermark to your images. Add a watermark to your images.",
+    "url": "/en/image/watermark",
+    "sections": [
+      {
+        "title": "How to Use Watermark",
+        "content": "You can add a watermark to your images using the image watermarking tool. Add a watermark to your images."
+      },
+      {
+        "title": "Importance of Using Watermark",
+        "content": "Using an image watermarking tool helps you add a watermark to your images. Get help with image watermarking and branding through the image watermarking tool."
+      }
+    ]
+  }
+}

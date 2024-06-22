@@ -9,7 +9,7 @@ import { MdExpandMore, MdExpandLess } from 'react-icons/md'
 import DarkModeToggle from '@/components/DarkModeToggle'
 import SearchComponent from '@components/SearchComponent'
 
-// import LanguageSwitcher from '@components/LanguageSwitcher'
+import LanguageSwitcher from '@components/LanguageSwitcher'
 
 Modal.setAppElement('#__next') // Set the root element ID for accessibility
 
@@ -129,7 +129,7 @@ const Header = () => {
             <CgMenuRound size="24px" />
           </button>
           <DarkModeToggle />
-          {/* <LanguageSwitcher /> */}
+          <LanguageSwitcher />
         </div>
       </header>
 
