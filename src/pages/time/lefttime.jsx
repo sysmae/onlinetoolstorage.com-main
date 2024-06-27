@@ -23,6 +23,7 @@ const TimeUntilEvent = ({ targetDate }) => {
       const totalSeconds = Math.floor(difference / 1000)
       const days = Math.floor(difference / (1000 * 60 * 60 * 24))
       const hours = Math.floor((difference / (1000 * 60 * 60)) % 24)
+      const totalHours = Math.floor(difference / (1000 * 60 * 60))
       const minutes = Math.floor((difference / 1000 / 60) % 60)
       const seconds = Math.floor((difference / 1000) % 60)
       return {
@@ -37,19 +38,22 @@ const TimeUntilEvent = ({ targetDate }) => {
             <span>{seconds} Seconds</span>
           </>
         ),
-        totalSeconds: `Total: ${totalSeconds} seconds`,
+        hoursMinutes: `Or: ${totalHours} hours and ${minutes} minutes`, // 새로운 속성 추가
         minSec: `Or: ${Math.floor(totalSeconds / 60)} minutes and ${totalSeconds % 60} seconds`,
+        totalSeconds: `Or: ${totalSeconds} seconds`,
       }
     } else {
       return {
         formatted: 'The event has already occurred.',
+        hoursMinutes: '',
         totalSeconds: '',
         minSec: '',
+        hoursMinutes: '', // 이벤트가 이미 발생한 경우 빈 문자열 반환
       }
     }
   }
 
-  const { formatted, totalSeconds, minSec } = calculateTimeLeft() // Destructure for easier use
+  const { formatted, hoursMinutes, totalSeconds, minSec } = calculateTimeLeft() // Destructure for easier use
 
   return (
     <div className="text-center mt-12 px-6 sm:px-8 lg:px-10">
@@ -58,8 +62,9 @@ const TimeUntilEvent = ({ targetDate }) => {
       </h2>
       <div className="text-5xl font-bold bg-violet-500 rounded-3xl shadow-2xl p-12 space-y-4">
         <p className="mb-4">{formatted}</p>
-        <p className="text-4xl">{totalSeconds}</p>
+        <p className="text-4xl">{hoursMinutes}</p>
         <p className="text-4xl">{minSec}</p>
+        <p className="text-4xl">{totalSeconds}</p>
       </div>
     </div>
   )

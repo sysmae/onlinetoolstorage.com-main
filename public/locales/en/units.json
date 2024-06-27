@@ -26,10 +26,10 @@
       }
     ]
   },
-  "apparent_power": {
+  "apparent-power": {
     "title": "Apparent Power Unit Converter: VA, kVA, MVA, Quick and Accurate Conversion for All Apparent Power Units",
     "description": "Use this online tool to convert apparent power measured in volt-amperes (VA), kilovolt-amperes (kVA), and megavolt-amperes (MVA), simplifying calculations related to electrical engineering.",
-    "url": "/en/units/apparent_power",
+    "url": "/en/units/apparent-power",
     "sections": [
       {
         "title": "Apparent Power Converter",
@@ -377,10 +377,10 @@
       }
     ]
   },
-  "reactive_energy": {
+  "reactive-energy": {
     "title": "Reactive Energy Unit Converter: Convert Between VARh, kVARh, MVARh, GVARh",
     "description": "Convert between var-hour, millivar-hour, kilovar-hour, megavar-hour, and gigavar-hour. This tool is essential in electrical, power, and energy fields for managing reactive energy efficiently.",
-    "url": "/en/units/reactive_energy",
+    "url": "/en/units/reactive-energy",
     "sections": [
       {
         "title": "Reactive Power Energy Converter",
@@ -404,10 +404,10 @@
       }
     ]
   },
-  "reactive_power": {
+  "reactive-power": {
     "title": "Reactive Power Unit Converter: Convert Between VAR, kVAR, MVAR, GVAR",
     "description": "Convert between var, kilovar, megavar, and gigavar. This tool is useful in electrical, electronics, and physics research among other fields.",
-    "url": "/en/units/reactive_power",
+    "url": "/en/units/reactive-power",
     "sections": [
       {
         "title": "Reactive Power Converter",
@@ -558,10 +558,10 @@
       }
     ]
   },
-  "volume_flow_rate": {
+  "volume-flow-rate": {
     "title": "Volume Flow Rate Converter: Convert Between mm³/s and yd³/h, All Fluid Flow Rates and Volumes Perfectly Converted",
     "description": "Use this volume flow rate converter to easily convert between liters per second, gallons per minute, and other volume flow rate units. Useful in chemistry, agriculture, and construction among other fields.",
-    "url": "/en/units/volume_flow_rate",
+    "url": "/en/units/volume-flow-rate",
     "sections": [
       {
         "title": "Understanding Volume Flow Rate Conversion",

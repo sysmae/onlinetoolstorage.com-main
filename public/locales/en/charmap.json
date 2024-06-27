@@ -44,10 +44,10 @@
       }
     ]
   },
-  "unicode_special": {
+  "unicode-special": {
     "title": "Unicode Characters Collection: Special Characters & Emoticons",
     "description": "Easily copy and download the latest emojis, special characters, and emoticons. Explore the usage, history, and popular emojis with FAQs, all provided alongside the Unicode characters collection.",
-    "url": "/en/charmap/emojis",
+    "url": "/en/charmap/unicode-special",
     "sections": [
       {
         "title": "Unicode Character Collection",

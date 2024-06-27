@@ -39,7 +39,7 @@ export default function Home() {
 
   const determineWinner = (user, computer) => {
     if (user === computer) {
-      setResult('비겼습니다!')
+      setResult('Draw! 비겼습니다!')
       return
     }
 
@@ -48,9 +48,9 @@ export default function Home() {
       (user === '바위' && computer === '가위') ||
       (user === '보' && computer === '바위')
     ) {
-      setResult('이겼습니다!')
+      setResult('Win! 이겼습니다!')
     } else {
-      setResult('졌습니다!')
+      setResult('Lose! 졌습니다!')
     }
   }
 

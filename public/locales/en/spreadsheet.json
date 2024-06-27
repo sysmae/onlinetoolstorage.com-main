@@ -1,8 +1,8 @@
 {
-  "csv_editor": {
+  "csv-editor": {
     "title": "CSV File Editor: Online CSV Editor - Ontoolmo",
     "description": "An online CSV editor that allows you to easily edit and save CSV files online. You can upload a CSV file or enter data directly to edit it, and you can export it in various formats.",
-    "url": "/en/spreadsheet/csv_editor",
+    "url": "/en/spreadsheet/csv-editor",
     "sections": [
       {
         "title": "How to Use the CSV File Editor",
@@ -29,20 +29,13 @@
           "Data analysis: Data can be saved as a CSV file and visualized or analyzed using data analysis tools.",
           "Data sharing: When sharing data with other users, a CSV file can be attached for easy transmission or sharing."
         ]
-      },
-      {
-        "title": "References",
-        "content": [
-          "CSV File Format - A Wikipedia page providing detailed information about the CSV file format. (https://en.wikipedia.org/wiki/Comma-separated_values)",
-          "CSV File Editor - A free tool that allows you to edit and save CSV files online. (https://www.ontoolmo.com/en/spreadsheet/csv-editor)"
-        ]
       }
     ]
   },
-  "json_editor": {
+  "json-editor": {
     "title": "JSON File Editor: Online JSON Editor - Ontoolmo",
     "description": "An online JSON editor that allows you to easily edit and save JSON files online. You can upload a JSON file or enter data directly to edit it, and you can export it in various formats.",
-    "url": "/en/spreadsheet/json_editor",
+    "url": "/en/spreadsheet/json-editor",
     "sections": [
       {
         "title": "How to Use the JSON File Editor",
@@ -69,20 +62,13 @@
           "Data exchange: JSON files are used to exchange structured data between different systems or applications.",
           "Data storage: JSON files are used to store structured data in a human-readable format for easy access and manipulation."
         ]
-      },
-      {
-        "title": "References",
-        "content": [
-          "JSON File Format - A Wikipedia page providing detailed information about the JSON file format. (https://en.wikipedia.org/wiki/JSON)",
-          "JSON File Editor - A free tool that allows you to edit and save JSON files online. (https://www.ontoolmo.com/en/spreadsheet/json-editor)"
-        ]
       }
     ]
   },
-  "excel_editor": {
+  "excel-editor": {
     "title": "Excel File Editor: Online Excel Editor - Ontoolmo",
     "description": "An online Excel editor that allows you to easily edit and save Excel files online. You can upload an Excel file or enter data directly to edit it, and you can export it in various formats.",
-    "url": "/en/spreadsheet/excel_editor",
+    "url": "/en/spreadsheet/excel-editor",
     "sections": [
       {
         "title": "How to Use the Excel File Editor",
@@ -110,20 +96,13 @@
           "Data visualization: Excel files are used to create visualizations of data using charts, graphs, and pivot tables.",
           "Data storage: Excel files are used to store and organize data in a structured format for easy access and manipulation."
         ]
-      },
-      {
-        "title": "References",
-        "content": [
-          "Excel File Format - A Wikipedia page providing detailed information about the Excel file format. (https://en.wikipedia.org/wiki/Microsoft_Excel)",
-          "Excel File Editor - A free tool that allows you to edit and save Excel files online. (https://www.ontoolmo.com/en/spreadsheet/excel-editor)"
-        ]
       }
     ]
   },
-  "csv_convert": {
+  "csv-convert": {
     "title": "CSV Converter: Online CSV Converter - Ontoolmo",
     "description": "An online CSV converter that allows you to convert CSV files to various formats such as Excel, JSON, SQL, and more. You can upload a CSV file or enter data directly to convert it.",
-    "url": "/en/spreadsheet/csv_converter",
+    "url": "/en/spreadsheet/csv-converter",
     "sections": [
       {
         "title": "How to Use the CSV Converter",
@@ -149,20 +128,13 @@
           "Data analysis: Data can be saved as a CSV file and visualized or analyzed using data analysis tools.",
           "Data sharing: When sharing data with other users, a CSV file can be attached for easy transmission or sharing."
         ]
-      },
-      {
-        "title": "References",
-        "content": [
-          "CSV File Format - A Wikipedia page providing detailed information about the CSV file format. (https://en.wikipedia.org/wiki/Comma-separated_values)",
-          "CSV Converter - A free tool that allows you to convert CSV files to various formats online. (https://www.ontoolmo.com/en/spreadsheet/csv-converter)"
-        ]
       }
     ]
   },
-  "json_convert": {
+  "json-convert": {
     "title": "JSON Converter: Online JSON Converter - Ontoolmo",
     "description": "An online JSON converter that allows you to convert JSON files to various formats such as CSV, Excel, SQL, and more. You can upload a JSON file or enter data directly to convert it.",
-    "url": "/en/spreadsheet/json_converter",
+    "url": "/en/spreadsheet/json-converter",
     "sections": [
       {
         "title": "How to Use the JSON Converter",
@@ -189,20 +161,13 @@
           "Data exchange: JSON files are used to exchange structured data between different systems or applications.",
           "Data storage: JSON files are used to store structured data in a human-readable format for easy access and manipulation."
         ]
-      },
-      {
-        "title": "References",
-        "content": [
-          "JSON File Format - A Wikipedia page providing detailed information about the JSON file format. (https://en.wikipedia.org/wiki/JSON)",
-          "JSON Converter - A free tool that allows you to convert JSON files to various formats online. (https://www.ontoolmo.com/en/spreadsheet/json-converter)"
-        ]
       }
     ]
   },
-  "xml_editor": {
+  "xml-editor": {
     "title": "XML File Editor: Online XML Editor - Ontoolmo",
     "description": "An online XML editor that allows you to easily edit and save XML files online. You can upload an XML file or enter data directly to edit it, and you can export it in various formats.",
-    "url": "/en/spreadsheet/xml_editor",
+    "url": "/en/spreadsheet/xml-editor",
     "sections": [
       {
         "title": "How to Use the XML File Editor",
@@ -239,10 +204,10 @@
       }
     ]
   },
-  "excel_convert": {
+  "excel-convert": {
     "title": "Excel Converter: Online Excel Converter - Ontoolmo",
     "description": "An online Excel converter that allows you to convert Excel files to various formats such as CSV, JSON, PDF, and more. You can upload an Excel file or enter data directly to convert it.",
-    "url": "/en/spreadsheet/excel_converter",
+    "url": "/en/spreadsheet/excel-converter",
     "sections": [
       {
         "title": "How to Use the Excel Converter",
@@ -268,13 +233,6 @@
           "Reporting: Excel files are used to create reports, financial statements, and other documents for business and finance.",
           "Data visualization: Excel files are used to create visualizations of data using charts, graphs, and pivot tables.",
           "Data storage: Excel files are used to store and organize data in a structured format for easy access and manipulation."
-        ]
-      },
-      {
-        "title": "References",
-        "content": [
-          "Excel File Format - A Wikipedia page providing detailed information about the Excel file format. (https://en.wikipedia.org/wiki/Microsoft_Excel)",
-          "Excel Converter - A free tool that allows you to convert Excel files to various formats online. (https://www.ontoolmo.com/en/spreadsheet/excel-converter)"
         ]
       }
     ]

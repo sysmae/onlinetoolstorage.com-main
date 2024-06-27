@@ -48,10 +48,10 @@
       }
     ]
   },
-  "extract_keywords": {
+  "extract-keywords": {
     "title": "키워드 추출기: 텍스트에서 키워드 추출을 위한 무료 온라인 도구",
     "description": "키워드 추출기를 사용하여 텍스트에서 중요한 키워드를 추출하고, 콘텐츠의 핵심 내용을 파악하세요. 이 도구는 SEO, 콘텐츠 마케팅, 학술 연구에 유용합니다.",
-    "url": "/ko/text/extract_keywords",
+    "url": "/ko/text/extract-keywords",
     "sections": [
       {
         "title": "키워드 추출기 사용법",

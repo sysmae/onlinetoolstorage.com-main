@@ -33,7 +33,7 @@
       "link": "/ko/units",
       "subcategories": [
         { "name": "각도", "link": "/ko/units/angle" },
-        { "name": "표시 전력", "link": "/ko/units/apparent_power" },
+        { "name": "표시 전력", "link": "/ko/units/apparent-power" },
         { "name": "면적", "link": "/ko/units/area" },
         { "name": "전류", "link": "/ko/units/current" },
         { "name": "데이터", "link": "/ko/units/data" },
@@ -46,14 +46,14 @@
         { "name": "농도 단위", "link": "/ko/units/partsper" },
         { "name": "전력", "link": "/ko/units/power" },
         { "name": "압력", "link": "/ko/units/pressure" },
-        { "name": "무효 에너지", "link": "/ko/units/reactive_energy" },
-        { "name": "무효 전력", "link": "/ko/units/reactive_power" },
+        { "name": "무효 에너지", "link": "/ko/units/reactive-energy" },
+        { "name": "무효 전력", "link": "/ko/units/reactive-power" },
         { "name": "속도", "link": "/ko/units/speed" },
         { "name": "온도", "link": "/ko/units/temperature" },
         { "name": "시간", "link": "/ko/units/time" },
         { "name": "전압", "link": "/ko/units/voltage" },
         { "name": "부피", "link": "/ko/units/volume" },
-        { "name": "유량", "link": "/ko/units/volume_flow_rate" }
+        { "name": "유량", "link": "/ko/units/volume-flow-rate" }
       ]
     },
     {
@@ -66,9 +66,9 @@
         { "name": "로렘 입숨", "link": "/ko/random/lorem" },
         { "name": "로또 번호", "link": "/ko/random/lotto" },
         { "name": "난수 생성", "link": "/ko/random/number" },
-        { "name": "가위바위보", "link": "/ko/random/rock_paper_scissors" },
-        { "name": "랜덤 영어 단어", "link": "/ko/random/word_en" },
-        { "name": "랜덤 한글 단어", "link": "/ko/random/word_ko" }
+        { "name": "가위바위보", "link": "/ko/random/rock-paper-scissors" },
+        { "name": "랜덤 영어 단어", "link": "/ko/random/word-en" },
+        { "name": "랜덤 한글 단어", "link": "/ko/random/word-ko" }
       ]
     },
     {
@@ -81,11 +81,11 @@
         { "name": "유효이자율법 표 생성", "link": "/ko/calculator/EIR" },
         {
           "name": "복리 이자 계산기",
-          "link": "/ko/calculator/compound_interest"
+          "link": "/ko/calculator/compound-interest"
         },
         {
           "name": "대출 상환 계산기",
-          "link": "/ko/calculator/repayment_loan"
+          "link": "/ko/calculator/repayment-loan"
         },
         {
           "name": "공학용 계산기",
@@ -110,7 +110,7 @@
       "link": "/ko/charmap",
       "subcategories": [
         { "name": "이모지 모음", "link": "/ko/charmap/emojis" },
-        { "name": "유니코드 특수문자", "link": "/ko/charmap/unicode_special" }
+        { "name": "유니코드 특수문자", "link": "/ko/charmap/unicode-special" }
       ]
     },
     {
@@ -142,7 +142,7 @@
       "name": "이미지",
       "link": "/ko/image",
       "subcategories": [
-        { "name": "이미지 색상 선택", "link": "/ko/image/color_picker" },
+        { "name": "이미지 색상 선택", "link": "/ko/image/color-picker" },
         { "name": "이미지 압축", "link": "/ko/image/compress" },
         { "name": "이미지 자르기", "link": "/ko/image/crop" },
         { "name": "이미지 뒤집기", "link": "/ko/image/flip" },
@@ -153,14 +153,14 @@
       "name": "스프레드시트",
       "link": "/ko/spreadsheet",
       "subcategories": [
-        { "name": "CSV 편집기", "link": "/ko/spreadsheet/csv_editor" },
-        { "name": "JSON 편집기", "link": "/ko/spreadsheet/json_editor" },
-        { "name": "엑셀 편집기", "link": "/ko/spreadsheet/excel_editor" },
-        { "name": "XML 편집기", "link": "/ko/spreadsheet/xml_editor" },
+        { "name": "CSV 편집기", "link": "/ko/spreadsheet/csv-editor" },
+        { "name": "JSON 편집기", "link": "/ko/spreadsheet/json-editor" },
+        { "name": "엑셀 편집기", "link": "/ko/spreadsheet/excel-editor" },
+        { "name": "XML 편집기", "link": "/ko/spreadsheet/xml-editor" },
 
-        { "name": "CSV 변환", "link": "/ko/spreadsheet/csv_convert" },
-        { "name": "JSON 변환", "link": "/ko/spreadsheet/json_convert" },
-        { "name": "엑셀 변환", "link": "/ko/spreadsheet/excel_convert" }
+        { "name": "CSV 변환", "link": "/ko/spreadsheet/csv-convert" },
+        { "name": "JSON 변환", "link": "/ko/spreadsheet/json-convert" },
+        { "name": "엑셀 변환", "link": "/ko/spreadsheet/excel-convert" }
       ]
     }
   ]

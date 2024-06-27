@@ -1,8 +1,8 @@
 {
-  "color_picker": {
+  "color-picker": {
     "title": "Color Picker: Choose a color from the color palette",
     "description": "A color picker tool that allows you to choose a color from the color palette. Choose a color from the color palette.",
-    "url": "/en/image/color_picker",
+    "url": "/en/image/color-picker",
     "sections": [
       {
         "title": "How to Use Color Picker",

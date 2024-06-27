@@ -27,10 +27,10 @@
     ]
   },
   
-    "apparent_power": {
+    "apparent-power": {
       "title": "피상 전력 단위 변환기: 바, 킬로바, 메가바, 기가바 변환 모든 피상 전력 단위를 정확하게 변환",
       "description": "피상 전력(볼트-암페어)을 VA, kVA, MVA 등으로 변환하는 이 온라인 도구를 사용하여 전기 공학과 관련된 계산을 손쉽게 수행하세요. 이 도구는 고효율과 정확한 변환을 제공하여 전력 관리 및 계획에서 중요한 역할을 합니다.",
-      "url": "/ko/units/apparent_power",
+      "url": "/ko/units/apparent-power",
       "sections": [
         {
           "title": "피상 전력 변환기",
@@ -379,10 +379,10 @@
       }
     ]
   },
-  "reactive_energy": {
+  "reactive-energy": {
     "title": "무효 에너지 단위 변환기: VARh에서 GVARh까지, 전기 에너지 관리를 위한 정밀 변환 도구",
     "description": "바르시, 밀리바르시, 킬로바르시, 메가바르시, 기가바르시 등 다양한 무효 에너지 단위를 변환하세요. 이 도구는 전기, 전력, 에너지 분야에서 유용합니다.",
-    "url": "/ko/units/reactive_energy",
+    "url": "/ko/units/reactive-energy",
     "sections": [
       {
         "title": "무효 전력 에너지 단위 변환기",
@@ -406,10 +406,10 @@
       }
     ]
   },
-  "reactive_power": {
+  "reactive-power": {
     "title": "무효 전력 단위 변환기: VAR부터 GVAR까지, 전력 시스템 최적화를 위한 필수 도구",
     "description": "바, 킬로바, 메가바, 기가바 등 다양한 무효 전력 단위를 변환하세요. 이 도구는 전기, 전자공학, 물리학 연구 등 다양한 분야에서 유용합니다.",
-    "url": "/ko/units/reactive_power",
+    "url": "/ko/units/reactive-power",
     "sections": [
       {
         "title": "무효 전력 단위 변환기",
@@ -560,10 +560,10 @@
       }
     ]
   },
-  "volume_flow_rate":{
+  "volume-flow-rate":{
     "title": "부피 유량 변환기: mm³/s부터 yd³/h까지, 모든 유체 흐름 속도와 부피 유량 단위 완벽 변환",
     "description": "부피 유량 변환기를 사용하여 리터/초, 갤런/분 등 다양한 부피 유량 단위 간의 변환을 쉽게 처리하세요. 화학, 농업, 건축 등 다양한 분야에서 유용합니다.",
-    "url":"/ko/units/volume_flow_rate",
+    "url":"/ko/units/volume-flow-rate",
     "sections": [
       {
         "title": "부피 유량 변환의 기본 이해",

@@ -48,10 +48,10 @@
       }
     ]
   },
-  "extract_keywords": {
+  "extract-keywords": {
     "title": "Keyword Extractor: Identify Key Terms for SEO and Content Optimization",
     "description": "Utilize our Keyword Extractor to identify and extract key terms from your text for SEO, content optimization, and targeted marketing strategies.",
-    "url": "/en/text/extract_keywords",
+    "url": "/en/text/extract-keywords",
     "sections": [
       {
         "title": "How to Use the Keyword Extractor",

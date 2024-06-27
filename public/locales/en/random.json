@@ -140,10 +140,10 @@
         }
       ]
     },
-    "rock_paper_scissors": {
+    "rock-paper-scissors": {
       "title": "Random Rock Paper Scissors Generator: Provides Fun and Educational Value for Decision Making, Gaming, and Probability Learning",
       "description": "Make decisions simple and fun with the rock paper scissors generator! This online tool randomly selects rock, paper, or scissors for you. It's useful for games, education, and even making small decisions, adding more fun to learning or daily life.",
-      "url": "/en/random/rock_paper_scissors",
+      "url": "/en/random/rock-paper-scissors",
       "sections": [
         {
           "title": "How to Use the Rock Paper Scissors Generator",
@@ -163,10 +163,10 @@
         }
       ]
     },
-    "word_en": {
+    "word-en": {
       "title": "Random English Word Generator: A Source of Inspiration for Language Learning and Creative Writing",
       "description": "Utilize the random English word generator to gain new ideas and enhance creativity. This tool is useful for creators in all fields such as writers, educators, designers, developers, and more.",
-      "url": "/en/random/word_en",
+      "url": "/en/random/word-en",
       "sections": [
         {
           "title": "Generating Random English Words",
@@ -182,10 +182,10 @@
         }
       ]
     },
-    "word_ko": {
+    "word-ko": {
       "title": "Random Korean Word Generator: Provides Infinite Inspiration for Korean Language Learning and Creative Writing",
       "description": "Get ideas or inspiration for creative work using the random Korean word generator. This tool is useful for creators in all fields such as writers, designers, developers, and more.",
-      "url": "/en/random/word_ko",
+      "url": "/en/random/word-ko",
       "sections": [
         {
           "title": "Generating Random Korean Words",

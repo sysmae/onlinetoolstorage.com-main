@@ -44,10 +44,10 @@
       }
     ]
   },
-  "unicode_special": {
+  "unicode-special": {
     "title": "유니코드 특수 문자 모음: 다양한 특수문자와 이모티콘 전체 리스트 | 온툴모",
     "description": "최신 이모지, 특수문자, 이모티콘을 쉽게 복사 및 다운로드하세요. 이모지의 사용법, 역사, 인기 이모지 소개, FAQ 등을 탐구하며, 유니코드 문자 모음과 함께 제공됩니다.",
-    "url": "/ko/charmap/emojis",
+    "url": "/ko/charmap/unicode-special",
     "sections": [
       {
         "title": "유니코드 문자 모음",

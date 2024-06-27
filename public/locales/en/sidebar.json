@@ -33,7 +33,7 @@
       "link": "/en/units",
       "subcategories": [
         { "name": "Angle", "link": "/en/units/angle" },
-        { "name": "Apparent Power", "link": "/en/units/apparent_power" },
+        { "name": "Apparent Power", "link": "/en/units/apparent-power" },
         { "name": "Area", "link": "/en/units/area" },
         { "name": "Current", "link": "/en/units/current" },
         { "name": "Data", "link": "/en/units/data" },
@@ -46,14 +46,14 @@
         { "name": "Parts Per", "link": "/en/units/partsper" },
         { "name": "Power", "link": "/en/units/power" },
         { "name": "Pressure", "link": "/en/units/pressure" },
-        { "name": "Reactive Energy", "link": "/en/units/reactive_energy" },
-        { "name": "Reactive Power", "link": "/en/units/reactive_power" },
+        { "name": "Reactive Energy", "link": "/en/units/reactive-energy" },
+        { "name": "Reactive Power", "link": "/en/units/reactive-power" },
         { "name": "Speed", "link": "/en/units/speed" },
         { "name": "Temperature", "link": "/en/units/temperature" },
         { "name": "Time", "link": "/en/units/time" },
         { "name": "Voltage", "link": "/en/units/voltage" },
         { "name": "Volume", "link": "/en/units/volume" },
-        { "name": "Volume Flow Rate", "link": "/en/units/volume_flow_rate" }
+        { "name": "Volume Flow Rate", "link": "/en/units/volume-flow-rate" }
       ]
     },
     {
@@ -68,10 +68,10 @@
         { "name": "Random Number", "link": "/en/random/number" },
         {
           "name": "Rock Paper Scissors",
-          "link": "/en/random/rock_paper_scissors"
+          "link": "/en/random/rock-paper-scissors"
         },
-        { "name": "Random English Word", "link": "/en/random/word_en" },
-        { "name": "Random Korean Word", "link": "/en/random/word_ko" }
+        { "name": "Random English Word", "link": "/en/random/word-en" },
+        { "name": "Random Korean Word", "link": "/en/random/word-ko" }
       ]
     },
     {
@@ -84,11 +84,11 @@
         { "name": "Effective Interest Rate", "link": "/en/calculator/EIR" },
         {
           "name": "Compound Interest",
-          "link": "/en/calculator/compound_interest"
+          "link": "/en/calculator/compound-interest"
         },
         {
           "name": "Repayment Loan",
-          "link": "/en/calculator/repayment_loan"
+          "link": "/en/calculator/repayment-loan"
         },
         {
           "name": "Engineering Calc",
@@ -116,7 +116,7 @@
       "link": "/en/charmap",
       "subcategories": [
         { "name": "Emojis", "link": "/en/charmap/emojis" },
-        { "name": "Unicode Special", "link": "/en/charmap/unicode_special" }
+        { "name": "Unicode Special", "link": "/en/charmap/unicode-special" }
       ]
     },
     {
@@ -150,7 +150,7 @@
       "name": "Image",
       "link": "/en/image",
       "subcategories": [
-        { "name": "Image Color Picker", "link": "/en/image/color_picker" },
+        { "name": "Image Color Picker", "link": "/en/image/color-picker" },
         { "name": "Image Compress", "link": "/en/image/compress" },
         { "name": "Image Crop", "link": "/en/image/crop" },
         { "name": "Image Flip", "link": "/en/image/flip" },
@@ -160,14 +160,14 @@
       "name": "SpreadSheet",
       "link": "/en/spreadsheet",
       "subcategories": [
-        { "name": "CSV Editor", "link": "/en/spreadsheet/csv_editor" },
-        { "name": "JSON Editor", "link": "/en/spreadsheet/json_editor" },
-        { "name": "Excel Editor", "link": "/en/spreadsheet/excel_editor" },
-        { "name": "XML Editor", "link": "/en/spreadsheet/xml_editor" },
+        { "name": "CSV Editor", "link": "/en/spreadsheet/csv-editor" },
+        { "name": "JSON Editor", "link": "/en/spreadsheet/json-editor" },
+        { "name": "Excel Editor", "link": "/en/spreadsheet/excel-editor" },
+        { "name": "XML Editor", "link": "/en/spreadsheet/xml-editor" },
 
-        { "name": "CSV Convert", "link": "/en/spreadsheet/csv_convert" },
-        { "name": "JSON Convert", "link": "/en/spreadsheet/json_convert" },
-        { "name": "Excel Convert", "link": "/en/spreadsheet/excel_convert" }
+        { "name": "CSV Convert", "link": "/en/spreadsheet/csv-convert" },
+        { "name": "JSON Convert", "link": "/en/spreadsheet/json-convert" },
+        { "name": "Excel Convert", "link": "/en/spreadsheet/excel-convert" }
       ]
     }
   ]

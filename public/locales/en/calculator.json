@@ -80,10 +80,10 @@
       }
     ]
   },
-  "compound_interest": {
+  "compound-interest": {
     "title": "Compound Interest Calculator: Calculate Your Earnings and Interest Growth Over Time",
     "description": "Estimate the growth of your investments with the Compound Interest Calculator. This tool calculates the future value of your investments based on the principal amount, interest rate, compounding frequency, and time period.",
-    "url": "/en/calculator/compound_interest",
+    "url": "/en/calculator/compound-interest",
     "sections": [
       {
         "title": "Understanding Compound Interest",
@@ -103,10 +103,10 @@
       }
     ]
   },
-  "repayment_loan": {
+  "repayment-loan": {
     "title": "Loan Repayment Calculator: Estimate Your Monthly Payments and Total Interest Over the Loan Term",
     "description": "Use the Loan Repayment Calculator to determine your monthly payments and total interest paid over the loan term. This tool helps you plan your finances and manage debt effectively.",
-    "url": "/en/calculator/repayment_loan",
+    "url": "/en/calculator/repayment-loan",
     "sections": [
       {
         "title": "Understanding Loan Repayment",

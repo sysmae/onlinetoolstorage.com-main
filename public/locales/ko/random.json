@@ -139,10 +139,10 @@
       }
     ]
   },
-  "rock_paper_scissors":{
+  "rock-paper-scissors":{
     "title": "랜덤 가위바위보 생성기: 의사결정, 게임, 확률 학습을 위한 재미와 교육적 가치를 제공하는 온라인 도구",
     "description": "가위바위보 생성기로 의사결정을 간단하고 재미있게! 이 온라인 도구는 무작위로 가위, 바위, 보 중 하나를 선택해 줍니다. 게임, 교육, 심지어 작은 결정을 내릴 때도 유용하게 사용할 수 있어, 학습이나 생활에 재미를 더합니다.",
-    "url":"/ko/random/rock_paper_scissors",
+    "url":"/ko/random/rock-paper-scissors",
     "sections": [
       {
         "title": "가위바위보 생성기 사용 방법",
@@ -162,10 +162,10 @@
       }
     ]
   },
-  "word_en":{
+  "word-en":{
     "title": "랜덤 영어 단어 생성기 : 언어 학습과 창의적 글쓰기를 위한 영감의 원천",
     "description": "랜덤 영어 단어 생성기를 활용해 새로운 아이디어를 얻고 창의력을 발전시키세요. 이 도구는 작가, 교육자, 디자이너, 개발자 등 모든 분야의 창작자에게 유용합니다.",
-    "url":"/ko/random/word_en",
+    "url":"/ko/random/word-en",
     "sections": [
       {
         "title": "랜덤 영어 단어 생성",
@@ -181,10 +181,10 @@
       }
     ]
   },
-  "word_ko":{
+  "word-ko":{
     "title": "랜덤 한글 단어 생성기: 한국어 학습과 창의적 작문을 위한 무한한 영감 제공",
     "description": "랜덤 한글 단어 생성기를 사용하여 아이디어를 얻거나, 창의적인 작업에 영감을 주세요. 이 도구는 작가, 디자이너, 개발자 등 모든 창작자에게 유용합니다.",
-    "url":"/ko/random/word_ko",
+    "url":"/ko/random/word-ko",
     "sections": [
       {
         "title": "랜덤 한글 단어 생성",
