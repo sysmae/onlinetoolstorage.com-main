@@ -146,6 +146,15 @@ export default function Home() {
         <button className={buttonStyle} onClick={() => handleGenerate(true)}>
           Generate Korean Lorem
         </button>
+        <button
+          className={`${buttonStyle} mt-2`}
+          onClick={() => copyToClipboard(generatedSentence)}
+        >
+          Copy
+        </button>
+        {showCopied && (
+          <div className={copiedPopupStyle}>Copied to clipboard!</div>
+        )}
         {generatedSentence && (
           <div className="relative mt-4">
             <div
@@ -154,15 +163,6 @@ export default function Home() {
             >
               {generatedSentence}
             </div>
-            <button
-              className={`${buttonStyle} mt-2`}
-              onClick={() => copyToClipboard(generatedSentence)}
-            >
-              Copy
-            </button>
-            {showCopied && (
-              <div className={copiedPopupStyle}>Copied to clipboard!</div>
-            )}
           </div>
         )}
       </div>
