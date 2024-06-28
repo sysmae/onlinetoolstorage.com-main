@@ -22,6 +22,7 @@ const Nav = ({ categories, setCategories, handleLinkClick }) => {
           className="border-b border-gray-300 dark:border-gray-700"
         >
           <button
+            aria-label="Togggle Category"
             onClick={() => {
               const isOpen = category.isOpen
               setCategories(
