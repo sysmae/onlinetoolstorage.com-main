@@ -3,6 +3,7 @@ import React from 'react'
 import Script from 'next/script'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+// import Card from '@/components/Card'
 import { appWithTranslation } from 'next-i18next'
 import nextI18NextConfig from '../../next-i18next.config'
 
@@ -69,7 +70,7 @@ function Layout({ children }) {
   return (
     <div className="mx-auto min-h-screen">
       <Header />
-      <div className="flex flex-col lg:flex-row pt-8">
+      <div className="flex flex-col lg:flex-row pt-8 gap-4">
         {/* Left Side */}
         <aside className="hidden lg:block lg:w-1/5">
           <ResponsiveAd data_ad_slot={LeftSide_dataAdSlot} />
@@ -82,6 +83,9 @@ function Layout({ children }) {
 
         {/* Right Side With Card */}
         <aside className="w-full lg:w-1/5">
+          {/* 카드 샘플 */}
+          {/* <Card title="인기있는 온라인 툴" /> */}
+
           <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />
         </aside>
 
