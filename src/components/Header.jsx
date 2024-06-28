@@ -70,9 +70,9 @@ const NavHover = ({ categories }) => {
   }
 
   return (
-    <ul className="flex flex-row justify-center items-center space-x-2 pt-[80px] font-bold">
+    <ul className="z-9999 flex flex-row justify-center items-center space-x-2 pt-[80px] font-bold">
       {categories.map((category, index) => (
-        <li key={index} className="relative">
+        <li key={index} className="z-9999 relative">
           <div
             className="cursor-pointer py-1 bg-indigo-100 dark:bg-gray-700 rounded-lg px-2 hover:bg-purple-500 dark:hover:bg-purple-500"
             onMouseEnter={() => setHoverIndex(index)}
@@ -88,7 +88,7 @@ const NavHover = ({ categories }) => {
               >
                 {category.subcategories.map((sub, idx) => (
                   <Link key={idx} href={sub.link} onClick={handleClick}>
-                    <li className="pl-4 py-1 pr-3 cursor-pointer hover:bg-gray-100 dark:hover:text-purple-600 whitespace-nowrap">
+                    <li className="z-9999 pl-4 py-1 pr-3 cursor-pointer hover:bg-gray-100 dark:hover:text-purple-600 whitespace-nowrap">
                       {sub.name}
                     </li>
                   </Link>
