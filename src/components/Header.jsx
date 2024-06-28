@@ -61,29 +61,40 @@ const Nav = ({ categories, setCategories, handleLinkClick }) => {
     </ul>
   )
 }
+
 const NavHover = ({ categories }) => {
+  // 현재 호버 중인 카테고리의 인덱스를 추적하는 상태
+  const [hoverIndex, setHoverIndex] = useState(null)
+
   return (
-    <ul className="space-x-3 pt-[60px] flex flex-row">
+    <ul className="hidden lg:flex flex-row justify-center items-center space-x-2 pt-[80px] font-bold">
       {categories.map((category, index) => (
-        <li key={index} className="group relative ">
-          <div className="cursor-pointer py-2 bg-indigo-100 rounded-lg p-2">
+        <li key={index} className="relative">
+          <div
+            className="cursor-pointer py-1 bg-indigo-100 dark:bg-gray-700 rounded-lg px-2 hover:bg-purple-500 dark:hover:bg-purple-500"
+            onMouseEnter={() => setHoverIndex(index)} // 마우스가 요소 위로 올라갔을 때
+            onMouseLeave={() => setHoverIndex(null)} // 마우스가 요소를 벗어났을 때
+          >
             {category.name}
+            {/* 현재 호버 중인 카테고리에만 서브카테고리 목록을 표시 */}
+            {hoverIndex === index && (
+              <ul className="absolute left-0 bg-white dark:bg-gray-900 shadow-md mt-1 opacity-100 transition-opacity duration-300 ease-in-out">
+                {category.subcategories.map((sub, idx) => (
+                  <Link key={idx} href={sub.link}>
+                    <li className="pl-4 py-1 pr-3 cursor-pointer hover:bg-gray-100 dark:hover:text-purple-600 whitespace-nowrap">
+                      {sub.name}
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+            )}
           </div>
-          <ul className="absolute left-0 bg-white shadow-md mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out visibility-hidden group-hover:visibility-visible">
-            {category.subcategories.map((sub, idx) => (
-              <li
-                key={idx}
-                className="pl-4 py-1 cursor-pointer hover:bg-gray-100 whitespace-nowrap"
-              >
-                <Link href={sub.link}>{sub.name}</Link>
-              </li>
-            ))}
-          </ul>
         </li>
       ))}
     </ul>
   )
 }
+
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [categories, setCategories] = useState([])
@@ -186,7 +197,7 @@ const Header = () => {
             </div>
           </aside>
         </Modal>
-        <NavHover categories={categories} setCategories={setCategories} />
+        <NavHover categories={categories} />
       </div>
     </>
   )

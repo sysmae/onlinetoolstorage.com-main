@@ -84,7 +84,7 @@ function SearchComponent() {
   }
 
   const inputClass = showSearchInput
-    ? 'py-2 w-[90vw] fixed focus:outline-none z-50'
+    ? 'py-2 w-[50vw]  focus:outline-none z-50'
     : 'pl-10 pr-3 py-2 w-full focus:outline-none'
 
   return (
@@ -105,12 +105,12 @@ function SearchComponent() {
           className={inputClass}
         />
       </div>
-      <button
+      {/* <button
         className="sm:hidden absolute right-3 top-1/2 transform -translate-y-1/2"
         onClick={toggleSearchInput}
-      ></button>
+      ></button> */}
       {isOpen && (
-        <div className="absolute z-10 top-5  w-[90vw] bg-white shadow-lg max-h-60 overflow-auto transition-opacity duration-300 ease-in-out">
+        <div className="absolute z-10 top-10 w-[50vw] bg-white shadow-lg max-h-60 overflow-auto transition-opacity duration-300 ease-in-out">
           <ul>
             {results.map((page) => (
               <li key={page.id} className="p-2 hover:bg-gray-100">
