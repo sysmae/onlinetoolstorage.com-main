@@ -61,7 +61,29 @@ const Nav = ({ categories, setCategories, handleLinkClick }) => {
     </ul>
   )
 }
-
+const NavHover = ({ categories }) => {
+  return (
+    <ul className="space-x-3 pt-[60px] flex flex-row">
+      {categories.map((category, index) => (
+        <li key={index} className="group relative ">
+          <div className="cursor-pointer py-2 bg-indigo-100 rounded-lg p-2">
+            {category.name}
+          </div>
+          <ul className="absolute left-0 bg-white shadow-md mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out visibility-hidden group-hover:visibility-visible">
+            {category.subcategories.map((sub, idx) => (
+              <li
+                key={idx}
+                className="pl-4 py-1 cursor-pointer hover:bg-gray-100 whitespace-nowrap"
+              >
+                <Link href={sub.link}>{sub.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  )
+}
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [categories, setCategories] = useState([])
@@ -101,68 +123,71 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex items-center justify-between px-4 py-2 bg-gray-50 shadow-md dark:bg-gray-800 fixed top-0 left-0 right-0 z-50 ">
-        <Link href="/" passHref>
-          <span className="flex items-center space-x-3">
-            <Image
-              src="/logo.svg"
-              alt="Logo"
-              width={40}
-              height={40}
-              priority
-              onError={(e) => {
-                e.target.onerror = null
-                e.target.src = '/logo.png'
-              }}
-            />
-            <span className="text-xl font-bold hidden md:block">온툴모</span>
-          </span>
-        </Link>
-        <div className="flex-grow mx-2 lg:mx-6">
-          <SearchComponent />
-        </div>
-        <div className="flex items-center space-x-3 md:space-x-6 min-w-[200px]">
-          <button
-            className="rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 p-2"
-            onClick={toggleModal}
-          >
-            <CgMenuRound size="24px" />
-          </button>
-          <DarkModeToggle />
-          <LanguageSwitcher />
-        </div>
-      </header>
-
-      <Modal
-        isOpen={isModalOpen}
-        onRequestClose={toggleModal}
-        contentLabel="Menu Modal"
-        overlayClassName="fixed inset-0 bg-black bg-opacity-90 dark:bg-opacity-95 z-40"
-        className="absolute bottom-0 left-0 right-0 bg-white dark:bg-gray-800 p-5 z-50 rounded-t-lg dark:text-white overflow-auto"
-        style={{
-          content: {
-            height: '80vh', // 뷰포트 높이의 80%로 설정
-            inset: 'auto 0 0 0', // Top, right, bottom, left
-            overflow: 'auto', // 내용이 넘칠 경우 스크롤 허용
-          },
-        }}
-      >
-        <button
-          onClick={toggleModal}
-          className="absolute top-0 right-0 p-2 text-lg font-semibold text-gray-600 dark:text-gray-200"
-        >
-          ✕
-        </button>
-        <aside className="w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
-          <div className="h-full overflow-y-auto">
-            <Nav
-              categories={categories}
-              setCategories={setCategories}
-              handleLinkClick={handleLinkClick}
-            />
+      <div className="flex flex-col  items-center justify-between">
+        <header className="flex px-4 py-2 bg-gray-50 shadow-md dark:bg-gray-800 fixed top-0 left-0 right-0 z-50 ">
+          <Link href="/" passHref>
+            <span className="flex items-center space-x-3">
+              <Image
+                src="/logo.svg"
+                alt="Logo"
+                width={40}
+                height={40}
+                priority
+                onError={(e) => {
+                  e.target.onerror = null
+                  e.target.src = '/logo.png'
+                }}
+              />
+              <span className="text-xl font-bold hidden md:block">온툴모</span>
+            </span>
+          </Link>
+          <div className="flex-grow mx-2 lg:mx-6">
+            <SearchComponent />
           </div>
-        </aside>
-      </Modal>
+          <div className="flex items-center space-x-3 md:space-x-6 min-w-[200px]">
+            <button
+              className="rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 p-2"
+              onClick={toggleModal}
+            >
+              <CgMenuRound size="24px" />
+            </button>
+            <DarkModeToggle />
+            <LanguageSwitcher />
+          </div>
+        </header>
+
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={toggleModal}
+          contentLabel="Menu Modal"
+          overlayClassName="fixed inset-0 bg-black bg-opacity-90 dark:bg-opacity-95 z-40"
+          className="absolute bottom-0 left-0 right-0 bg-white dark:bg-gray-800 p-5 z-50 rounded-t-lg dark:text-white overflow-auto"
+          style={{
+            content: {
+              height: '80vh', // 뷰포트 높이의 80%로 설정
+              inset: 'auto 0 0 0', // Top, right, bottom, left
+              overflow: 'auto', // 내용이 넘칠 경우 스크롤 허용
+            },
+          }}
+        >
+          <button
+            onClick={toggleModal}
+            className="absolute top-0 right-0 p-2 text-lg font-semibold text-gray-600 dark:text-gray-200"
+          >
+            ✕
+          </button>
+          <aside className="w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+            <div className="h-full overflow-y-auto">
+              <Nav
+                categories={categories}
+                setCategories={setCategories}
+                handleLinkClick={handleLinkClick}
+              />
+            </div>
+          </aside>
+        </Modal>
+        <NavHover categories={categories} setCategories={setCategories} />
+      </div>
     </>
   )
 }

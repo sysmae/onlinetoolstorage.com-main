@@ -1,4 +1,5 @@
 // ResponsiveAd.jsx
+'use client'
 import React, { useEffect } from 'react'
 
 export default function ResponsiveAd({ data_ad_slot }) {
