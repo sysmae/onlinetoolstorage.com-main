@@ -79,10 +79,10 @@ export default function Home() {
         <input type="file" accept=".csv" onChange={handleFileChange} />
         {error && <p className="text-red-500">{error}</p>}
         <div
-          className="overflow-x-auto bg-white rounded-lg shadow overflow-y-auto relative"
+          className="overflow-x-auto bg-white rounded-lg shadow overflow-y-auto "
           style={{ height: '300px' }}
         >
-          <table className="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped relative">
+          <table className="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped">
             <thead>
               {csvData.length > 0 && (
                 <tr className="text-left">

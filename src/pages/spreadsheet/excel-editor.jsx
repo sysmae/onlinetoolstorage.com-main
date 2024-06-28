@@ -83,10 +83,10 @@ export default function Home() {
           </div>
         )}
         <div
-          className="overflow-x-auto bg-white rounded-lg shadow overflow-y-auto relative"
+          className="overflow-x-auto bg-white rounded-lg shadow overflow-y-auto "
           style={{ height: '300px' }}
         >
-          <table className="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped relative">
+          <table className="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped">
             <thead>
               {excelData.length > 0 && (
                 <tr className="text-left">
