@@ -31,7 +31,6 @@ function AppContent({ children }) {
       <Script
         id="adsbygoogle-script"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670089965415680"
-        crossorigin="anonymous"
         strategy="lazyOnload"
       ></Script>
 
@@ -62,7 +61,7 @@ function Layout({ children }) {
   return (
     <div className="mx-auto min-h-screen">
       <Header />
-      <div className="flex flex-col lg:flex-row gap-4 pt-16">
+      <div className="flex flex-col lg:flex-row pt-8">
         {/* Left Side */}
         <aside className="hidden lg:block lg:w-1/5">
           <ResponsiveAd data_ad_slot={LeftSide_dataAdSlot} />
