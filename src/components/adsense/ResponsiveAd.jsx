@@ -16,7 +16,7 @@ export default function ResponsiveAd({ data_ad_slot }) {
   return (
     <ins
       className="adsbygoogle"
-      style={{ display: 'block' }}
+      style={{ display: 'block', zIndex: 1 }}
       data-ad-client="ca-pub-3670089965415680"
       data-ad-slot={data_ad_slot}
       data-ad-format="auto"
