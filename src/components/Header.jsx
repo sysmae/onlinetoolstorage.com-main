@@ -77,7 +77,7 @@ const NavHover = ({ categories }) => {
             onMouseEnter={() => setHoverIndex(index)}
             onMouseLeave={() => setHoverIndex(null)}
           >
-            <span className="lg:hidden">{category.emoji}</span>
+            <span className="lg:hidden px-2">{category.emoji}</span>
             <span className="hidden lg:inline">{category.name}</span>
             {hoverIndex === index && (
               <ul
