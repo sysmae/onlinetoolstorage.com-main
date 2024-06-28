@@ -157,10 +157,10 @@ const Header = () => {
           </div>
           <div className="flex items-center space-x-3 md:space-x-6 min-w-[200px]">
             <button
-              className="rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 p-2"
+              className="rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-600 p-2"
               onClick={toggleModal}
             >
-              <CgMenuRound size="24px" />
+              <CgMenuRound size="24px" color="violet" />
             </button>
             <DarkModeToggle />
             <LanguageSwitcher />
@@ -183,7 +183,7 @@ const Header = () => {
         >
           <button
             onClick={toggleModal}
-            className="absolute top-0 right-0 p-2 text-lg font-semibold text-gray-600 dark:text-gray-200"
+            className="absolute top-0 right-0 p-2 text-lg font-semibold text-gray-600 bg-purple-300 dark:text-gray-200"
           >
             ✕
           </button>
