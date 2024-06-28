@@ -3,6 +3,7 @@
     {
       "name": "Encryption Decryption",
       "link": "/en/crypto",
+      "emoji": "🔐",
       "subcategories": [
         { "name": "PassWord Generate", "link": "/en/crypto/password" },
         { "name": "UUID Generate", "link": "/en/crypto/uuid" },
@@ -31,6 +32,7 @@
     {
       "name": "Unit Converter",
       "link": "/en/units",
+      "emoji": "📏",
       "subcategories": [
         { "name": "Angle", "link": "/en/units/angle" },
         { "name": "Apparent Power", "link": "/en/units/apparent-power" },
@@ -59,6 +61,7 @@
     {
       "name": "Random Generator",
       "link": "/en/random",
+      "emoji": "🎲",
       "subcategories": [
         { "name": "Coin Toss", "link": "/en/random/coin" },
         { "name": "Dice", "link": "/en/random/dice" },
@@ -77,6 +80,7 @@
     {
       "name": "Calculators",
       "link": "/en/calculator",
+      "emoji": "🧮",
       "subcategories": [
         { "name": "Statistics", "link": "/en/calculator/statics" },
         { "name": "BMI", "link": "/en/calculator/BMI" },
@@ -99,6 +103,7 @@
     {
       "name": "Convertors Generators",
       "link": "/en/convert",
+      "emoji": "🔄",
       "subcategories": [
         { "name": "Color Convert", "link": "/en/convert/color" },
         { "name": "Barcode Generator", "link": "/en/convert/barcode" },
@@ -114,6 +119,7 @@
     {
       "name": "CharMap",
       "link": "/en/charmap",
+      "emoji": "🔤",
       "subcategories": [
         { "name": "Emojis", "link": "/en/charmap/emojis" },
         { "name": "Unicode Special", "link": "/en/charmap/unicode-special" }
@@ -122,6 +128,7 @@
     {
       "name": "Text",
       "link": "/en/text",
+      "emoji": "📝",
       "subcategories": [
         { "name": "NotePad", "link": "/en/text/notepad" },
         { "name": "Character Count", "link": "/en/text/charcount" }
@@ -130,6 +137,7 @@
     {
       "name": "Times",
       "link": "/en/time",
+      "emoji": "⏰",
       "subcategories": [
         { "name": "D-Day Counter", "link": "/en/time/d-day" },
         { "name": "Pomodoro", "link": "/en/time/pomodoro" },
@@ -142,6 +150,7 @@
     {
       "name": "Network",
       "link": "/en/network",
+      "emoji": "🌐",
       "subcategories": [
         { "name": "IP Address", "link": "/en/network/ipaddress" }
       ]
@@ -149,6 +158,7 @@
     {
       "name": "Image",
       "link": "/en/image",
+      "emoji": "🖼️",
       "subcategories": [
         { "name": "Image Color Picker", "link": "/en/image/color-picker" },
         { "name": "Image Compress", "link": "/en/image/compress" },
@@ -159,12 +169,12 @@
     {
       "name": "SpreadSheet",
       "link": "/en/spreadsheet",
+      "emoji": "📊",
       "subcategories": [
         { "name": "CSV Editor", "link": "/en/spreadsheet/csv-editor" },
         { "name": "JSON Editor", "link": "/en/spreadsheet/json-editor" },
         { "name": "Excel Editor", "link": "/en/spreadsheet/excel-editor" },
         { "name": "XML Editor", "link": "/en/spreadsheet/xml-editor" },
-
         { "name": "CSV Convert", "link": "/en/spreadsheet/csv-convert" },
         { "name": "JSON Convert", "link": "/en/spreadsheet/json-convert" },
         { "name": "Excel Convert", "link": "/en/spreadsheet/excel-convert" }

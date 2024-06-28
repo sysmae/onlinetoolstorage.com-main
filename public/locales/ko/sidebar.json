@@ -3,6 +3,7 @@
     {
       "name": "암호화 복호화",
       "link": "/ko/crypto",
+      "emoji": "🔐",
       "subcategories": [
         { "name": "비밀번호 생성", "link": "/ko/crypto/password" },
         { "name": "UUID 생성", "link": "/ko/crypto/uuid" },
@@ -31,6 +32,7 @@
     {
       "name": "단위 변환기",
       "link": "/ko/units",
+      "emoji": "📏",
       "subcategories": [
         { "name": "각도", "link": "/ko/units/angle" },
         { "name": "표시 전력", "link": "/ko/units/apparent-power" },
@@ -59,6 +61,7 @@
     {
       "name": "랜덤 생성기",
       "link": "/ko/random",
+      "emoji": "🎲",
       "subcategories": [
         { "name": "코인 토스", "link": "/ko/random/coin" },
         { "name": "주사위", "link": "/ko/random/dice" },
@@ -73,6 +76,7 @@
     },
     {
       "name": "계산기",
+      "emoji": "🧮",
       "link": "/ko/calculator",
       "subcategories": [
         { "name": "통계 계산기", "link": "/ko/calculator/statics" },
@@ -95,6 +99,7 @@
     },
     {
       "name": "변환기 생성기",
+      "emoji": "🔄",
       "link": "/ko/convert",
       "subcategories": [
         { "name": "색상 코드 변환기", "link": "/ko/convert/color" },
@@ -107,6 +112,7 @@
     },
     {
       "name": "특수 문자 모음",
+      "emoji": "🔤",
       "link": "/ko/charmap",
       "subcategories": [
         { "name": "이모지 모음", "link": "/ko/charmap/emojis" },
@@ -115,6 +121,7 @@
     },
     {
       "name": "텍스트",
+      "emoji": "📝",
       "link": "/ko/text",
       "subcategories": [
         { "name": "노트패드", "link": "/ko/text/notepad" },
@@ -123,6 +130,7 @@
     },
     {
       "name": "시간 관련 도구",
+      "emoji": "⏰",
       "link": "/ko/time",
       "subcategories": [
         { "name": "D-Day 계산기", "link": "/ko/time/d-day" },
@@ -135,11 +143,13 @@
     },
     {
       "name": "네트워크",
+      "emoji": "🌐",
       "link": "/ko/network",
       "subcategories": [{ "name": "IP 주소", "link": "/ko/network/ipaddress" }]
     },
     {
       "name": "이미지",
+      "emoji": "🖼️",
       "link": "/ko/image",
       "subcategories": [
         { "name": "이미지 색상 선택", "link": "/ko/image/color-picker" },
@@ -151,6 +161,7 @@
     },
     {
       "name": "스프레드시트",
+      "emoji": "📊",
       "link": "/ko/spreadsheet",
       "subcategories": [
         { "name": "CSV 편집기", "link": "/ko/spreadsheet/csv-editor" },

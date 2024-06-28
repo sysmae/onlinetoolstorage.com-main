@@ -61,26 +61,32 @@ const Nav = ({ categories, setCategories, handleLinkClick }) => {
     </ul>
   )
 }
-
 const NavHover = ({ categories }) => {
-  // 현재 호버 중인 카테고리의 인덱스를 추적하는 상태
   const [hoverIndex, setHoverIndex] = useState(null)
 
+  const handleClick = () => {
+    setHoverIndex(null)
+  }
+
   return (
-    <ul className="hidden lg:flex flex-row justify-center items-center space-x-2 pt-[80px] font-bold">
+    <ul className="flex flex-row justify-center items-center space-x-2 pt-[80px] font-bold">
       {categories.map((category, index) => (
         <li key={index} className="relative">
           <div
             className="cursor-pointer py-1 bg-indigo-100 dark:bg-gray-700 rounded-lg px-2 hover:bg-purple-500 dark:hover:bg-purple-500"
-            onMouseEnter={() => setHoverIndex(index)} // 마우스가 요소 위로 올라갔을 때
-            onMouseLeave={() => setHoverIndex(null)} // 마우스가 요소를 벗어났을 때
+            onMouseEnter={() => setHoverIndex(index)}
+            onMouseLeave={() => setHoverIndex(null)}
           >
-            {category.name}
-            {/* 현재 호버 중인 카테고리에만 서브카테고리 목록을 표시 */}
+            <span className="lg:hidden">{category.emoji}</span>
+            <span className="hidden lg:inline">{category.name}</span>
             {hoverIndex === index && (
-              <ul className="absolute left-0 bg-white dark:bg-gray-900 shadow-md mt-1 opacity-100 transition-opacity duration-300 ease-in-out">
+              <ul
+                className={`absolute z-9999 ${
+                  index >= categories.length - 3 ? 'right-0' : 'left-0'
+                } bg-white dark:bg-gray-900 shadow-md mt-1 opacity-100 transition-opacity duration-300 ease-in-out`}
+              >
                 {category.subcategories.map((sub, idx) => (
-                  <Link key={idx} href={sub.link}>
+                  <Link key={idx} href={sub.link} onClick={handleClick}>
                     <li className="pl-4 py-1 pr-3 cursor-pointer hover:bg-gray-100 dark:hover:text-purple-600 whitespace-nowrap">
                       {sub.name}
                     </li>
@@ -94,7 +100,6 @@ const NavHover = ({ categories }) => {
     </ul>
   )
 }
-
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [categories, setCategories] = useState([])
