@@ -24,7 +24,8 @@ module.exports = {
       changefreq: config.changefreq,
       priority: config.priority,
       alternateRefs: i18n.locales.map((locale) => ({
-        href: `https://www.onlinetoolstorage.com/${locale}${path === '/' ? '' : path}`,
+        href: `https://www.onlinetoolstorage.com/${locale}`,
+
         hreflang: locale,
       })),
     }

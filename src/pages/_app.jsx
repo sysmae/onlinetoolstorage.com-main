@@ -1,9 +1,7 @@
 // _app.jsx
-import React from 'react'
-import Script from 'next/script'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-// import Card from '@/components/Card'
+import AdsenseScript from '@/components/adsense/AdsenseScript'
 import { appWithTranslation } from 'next-i18next'
 import nextI18NextConfig from '../../next-i18next.config'
 
@@ -29,37 +27,7 @@ function MyApp({ Component, pageProps }) {
 function AppContent({ children }) {
   return (
     <>
-      {/* Google Adsense 구글 애드센스*/}
-      <Script
-        id="adsbygoogle-script"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3670089965415680"
-        strategy="afterInteractive"
-      ></Script>
-
-      <Script id="gtag-config" strategy="afterInteractive">
-        {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-G3GB4K968L');
-  `}
-      </Script>
-      <Script id="adsbygoogle-push">{`window.adsbygoogle = window.adsbygoogle || [];`}</Script>
-
-      {/* Google Analytics  구글 애널리틱스 */}
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-43FPVB8QN1"
-        strategy="afterInteractive"
-      ></Script>
-      <Script id="GA-script" strategy="afterInteractive">
-        {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-43FPVB8QN1');
-  `}
-      </Script>
-
+      <AdsenseScript />
       {/* 메인 레이아웃 */}
       <Layout>{children}</Layout>
     </>
@@ -83,9 +51,6 @@ function Layout({ children }) {
 
         {/* Right Side With Card */}
         <aside className="w-full lg:w-1/5">
-          {/* 카드 샘플 */}
-          {/* <Card title="인기있는 온라인 툴" /> */}
-
           <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />
         </aside>
 

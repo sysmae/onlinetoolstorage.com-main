@@ -6,10 +6,11 @@ module.exports = {
     defaultLocale: 'ko',
     locales: ['ko', 'en'],
   },
-  localePath: path.resolve('./public/locales'),
-  interpolation: {
-    escapeValue: false, // not needed for react as it escapes by default
-    formatSeparator: ',',
-  },
+  // localePath: path.resolve('./public/locales'),
+
   reloadOnPrerender: process.env.NODE_ENV === 'development',
+  // interpolation: {
+  //   escapeValue: false, // not needed for react as it escapes by default
+  //   formatSeparator: ',',
+  // },
 }
