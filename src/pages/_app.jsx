@@ -40,34 +40,26 @@ function AppContent({ children }) {
   )
 }
 
+function DemoBox() {
+  return (
+    <div className="bg-gray-100  w-full h-auto border border-slate-900 "></div>
+  )
+}
 function Layout({ children }) {
   return (
     <Theme>
       <Header />
       <div className="pb-[100px]"></div>
-      <Grid
-        columns={{ md: '1', lg: '3' }}
-        // rows={{ md: 'auto', lg: '2' }}
-        mx={{ lg: '7' }}
-        style={{ padding: 'auto' }}
-      >
+      <Flex mx={{ lg: '7' }} style={{ padding: 'auto' }}>
         <MainContent>{children}</MainContent>
         <RightSideWithCard />
-        {/* 
-        <Container
-          px={{ lg: '40px' }}
-          width={{ lg: '100%' }}
-          gridColumn={{ lg: '1 / -1' }}
-          gridRowStart={{ lg: '2' }}
-          gridRow={{ lg: '2' }}
-        >
-          <Flex flexGrow="1" justify="between">
-            <CardDemo />
-            <CardDemo />
-            <CardDemo />
-          </Flex>
-        </Container> */}
-      </Grid>
+      </Flex>
+
+      <Flex px={{ lg: '40px' }} mx={{ lg: '7' }} justify="between">
+        <CardDemo />
+        <CardDemo />
+        <CardDemo />
+      </Flex>
 
       <Footer />
     </Theme>
@@ -76,12 +68,7 @@ function Layout({ children }) {
 
 function MainContent({ children }) {
   return (
-    <Container
-      maxWidth={{ lg: '768px' }}
-      px={{ lg: '40px' }}
-      gridColumn={{ lg: '2/3' }}
-      gridColumnStart={{ lg: '1' }}
-    >
+    <Container maxWidth={{ lg: '848px' }} px={{ lg: '40px' }}>
       <main>{children}</main>
     </Container>
   )
@@ -89,22 +76,17 @@ function MainContent({ children }) {
 
 function RightSideWithCard() {
   return (
-    <Container
-      maxWidth={{ lg: '344px' }}
-      px={{ lg: '40px' }}
-      gridColumn={{ lg: '3/3' }}
-      gridColumnStart={{ lg: '3' }}
-    >
+    <Flex maxWidth={{ lg: '424px' }} px={{ lg: '40px' }}>
       <aside>
         <SearchComponent />
         <div className="pb-[100px]"></div>
-
         <CardDemo />
         <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />
         <CardDemo />
+        <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />
         <CardDemo />
       </aside>
-    </Container>
+    </Flex>
   )
 }
 
