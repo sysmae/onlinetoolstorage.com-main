@@ -142,7 +142,7 @@ const Header = () => {
   return (
     <>
       <div className="flex flex-col">
-        <header className="flex justify-between items-center px-4 py-4 bg-gray-50 shadow-md dark:bg-gray-800 w-full top-0 left-0 right-0 z-50">
+        <header className="flex justify-between items-center px-4 py-4 bg-gray-50 shadow-md dark:bg-gray-800 w-[100vw ] top-0 left-0 right-0 z-50">
           {' '}
           <Link href="/" passHref>
             <div className="flex flex-row justify-center items-center gap-x-2">
@@ -164,8 +164,8 @@ const Header = () => {
           {/* <div className="flex-grow mx-2 lg:mx-6">
             <SearchComponent />
           </div> */}
-          <div className="flex flex-col lg:flex-row">
-            <ul className="flex flex-col lg:flex-row flex-grow">
+          <div className="flex flex-row">
+            <ul className="flex flex-row flex-grow">
               {categories.map((category, index) => (
                 <li
                   key={index}
@@ -184,17 +184,19 @@ const Header = () => {
                     }}
                     className="flex items-center"
                   >
-                    {category.name}
+                    <div className="hidden lg:block">{category.name}</div>
+                    <div className="lg:hidden">{category.emoji}</div>
+
                     {category.isOpen ? (
-                      <MdExpandLess className="text-gray-400 transition duration-300 ml-2" />
+                      <MdExpandLess className="text-gray-400  ml-2" />
                     ) : (
-                      <MdExpandMore className="text-gray-400 transition duration-300 ml-2" />
+                      <MdExpandMore className="text-gray-400  ml-2" />
                     )}
                   </button>
                   <ul
                     className={`${
-                      category.isOpen ? 'max-h-full ' : 'max-h-0'
-                    } absolute bg-slate-50 overflow-hidden transition-max-height duration-200`}
+                      category.isOpen ? 'max-h-full' : 'max-h-0'
+                    } absolute bg-slate-50 overflow-hidden transition-max-height `}
                   >
                     {category.subcategories.map((sub, idx) => (
                       <li key={idx}>
@@ -231,39 +233,38 @@ const Header = () => {
             <DarkModeToggle />
             <LanguageSwitcher />
           </div>
-        </header>
-
-        <Modal
-          isOpen={isModalOpen}
-          onRequestClose={toggleModal}
-          contentLabel="Menu Modal"
-          overlayClassName="fixed inset-0 bg-black bg-opacity-90 dark:bg-opacity-95 z-40"
-          className="absolute bottom-0 left-0 right-0 bg-white dark:bg-gray-800 p-5 z-50 rounded-t-lg dark:text-white overflow-auto"
-          style={{
-            content: {
-              height: '80vh', // 뷰포트 높이의 80%로 설정
-              inset: 'auto 0 0 0', // Top, right, bottom, left
-              overflow: 'auto', // 내용이 넘칠 경우 스크롤 허용
-            },
-          }}
-        >
-          <button
-            onClick={toggleModal}
-            className="absolute top-0 right-0 p-2 text-lg font-semibold text-gray-600 bg-purple-300 dark:text-gray-200"
+          <Modal
+            isOpen={isModalOpen}
+            onRequestClose={toggleModal}
+            contentLabel="Menu Modal"
+            overlayClassName="fixed inset-0 bg-black bg-opacity-90 dark:bg-opacity-95 z-40"
+            className="absolute bottom-0 left-0 right-0 bg-white dark:bg-gray-800 p-5 z-50 rounded-t-lg dark:text-white overflow-auto"
+            style={{
+              content: {
+                height: '80vh', // 뷰포트 높이의 80%로 설정
+                inset: 'auto 0 0 0', // Top, right, bottom, left
+                overflow: 'auto', // 내용이 넘칠 경우 스크롤 허용
+              },
+            }}
           >
-            ✕
-          </button>
-          <aside className="w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
-            <div className="h-full overflow-y-auto">
-              <Nav
-                categories={categories}
-                setCategories={setCategories}
-                handleLinkClick={handleLinkClick}
-              />
-            </div>
-          </aside>
-        </Modal>
-        {/* <NavHover categories={categories} /> */}
+            <button
+              onClick={toggleModal}
+              className="absolute top-0 right-0 p-2 text-lg font-semibold text-gray-600 bg-purple-300 dark:text-gray-200"
+            >
+              ✕
+            </button>
+            <aside className="w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+              <div className="h-full overflow-y-auto">
+                <Nav
+                  categories={categories}
+                  setCategories={setCategories}
+                  handleLinkClick={handleLinkClick}
+                />
+              </div>
+            </aside>
+          </Modal>
+          {/* <NavHover categories={categories} /> */}
+        </header>
       </div>
     </>
   )
