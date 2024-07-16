@@ -1,9 +1,18 @@
 // _app.jsx
+import '@radix-ui/themes/styles.css'
+import '../styles/globals.css'
+
+import { Grid, Theme, Container, Flex } from '@radix-ui/themes'
+
+import { appWithTranslation } from 'next-i18next'
+import nextI18NextConfig from '../../next-i18next.config'
+
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import AdsenseScript from '@/components/adsense/AdsenseScript'
-import { appWithTranslation } from 'next-i18next'
-import nextI18NextConfig from '../../next-i18next.config'
+
+import { CardDemo } from '@/components/Card'
+import SearchComponent from '@/components/SearchComponent'
 
 import ResponsiveAd from '@/components/adsense/ResponsiveAd'
 import {
@@ -12,9 +21,6 @@ import {
   Bottom_dataAdSlot,
   RightSideWithCard_dataAdSlot,
 } from '@/constants/adsense/data_ad_slot'
-
-import '../styles/reset.css'
-import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -36,34 +42,69 @@ function AppContent({ children }) {
 
 function Layout({ children }) {
   return (
-    <div className="mx-auto min-h-screen">
+    <Theme>
       <Header />
-      <div className="flex flex-col lg:flex-row pt-8 gap-4">
-        {/* Left Side */}
-        <aside className="hidden lg:block lg:w-1/5">
-          <ResponsiveAd data_ad_slot={LeftSide_dataAdSlot} />
-        </aside>
+      <div className="pb-[100px]"></div>
+      <Grid
+        columns={{ md: '1', lg: '3' }}
+        // rows={{ md: 'auto', lg: '2' }}
+        mx={{ lg: '7' }}
+        style={{ padding: 'auto' }}
+      >
+        <MainContent>{children}</MainContent>
+        <RightSideWithCard />
+        {/* 
+        <Container
+          px={{ lg: '40px' }}
+          width={{ lg: '100%' }}
+          gridColumn={{ lg: '1 / -1' }}
+          gridRowStart={{ lg: '2' }}
+          gridRow={{ lg: '2' }}
+        >
+          <Flex flexGrow="1" justify="between">
+            <CardDemo />
+            <CardDemo />
+            <CardDemo />
+          </Flex>
+        </Container> */}
+      </Grid>
 
-        {/* Main Content */}
-        <main className="w-full lg:w-2/5 break-words ">
-          <div className="content">{children}</div>
-        </main>
-
-        {/* Right Side With Card */}
-        <aside className="w-full lg:w-1/5">
-          <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />
-        </aside>
-
-        {/* Right Side */}
-        <aside className="w-full lg:w-1/5">
-          <ResponsiveAd data_ad_slot={RightSide_dataAdSlot} />
-        </aside>
-      </div>
-      <div className="ad-unit-end text-center">
-        <ResponsiveAd data_ad_slot={Bottom_dataAdSlot} />
-      </div>
       <Footer />
-    </div>
+    </Theme>
+  )
+}
+
+function MainContent({ children }) {
+  return (
+    <Container
+      maxWidth={{ lg: '768px' }}
+      px={{ lg: '40px' }}
+      gridColumn={{ lg: '2/3' }}
+      gridColumnStart={{ lg: '1' }}
+    >
+      <main>{children}</main>
+    </Container>
+  )
+}
+
+function RightSideWithCard() {
+  return (
+    <Container
+      maxWidth={{ lg: '344px' }}
+      px={{ lg: '40px' }}
+      gridColumn={{ lg: '3/3' }}
+      gridColumnStart={{ lg: '3' }}
+    >
+      <aside>
+        <SearchComponent />
+        <div className="pb-[100px]"></div>
+
+        <CardDemo />
+        <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />
+        <CardDemo />
+        <CardDemo />
+      </aside>
+    </Container>
   )
 }
 

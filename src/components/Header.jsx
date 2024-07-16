@@ -7,9 +7,8 @@ import { useRouter } from 'next/router'
 import { MdExpandMore, MdExpandLess } from 'react-icons/md'
 
 import DarkModeToggle from '@/components/DarkModeToggle'
-import SearchComponent from '@components/SearchComponent'
-
-import LanguageSwitcher from '@components/LanguageSwitcher'
+import SearchComponent from '@/components/SearchComponent'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 Modal.setAppElement('#__next') // Set the root element ID for accessibility
 
@@ -62,45 +61,47 @@ const Nav = ({ categories, setCategories, handleLinkClick }) => {
     </ul>
   )
 }
-const NavHover = ({ categories }) => {
-  const [hoverIndex, setHoverIndex] = useState(null)
 
-  const handleClick = () => {
-    setHoverIndex(null)
-  }
+// const NavHover = ({ categories }) => {
+//   const [hoverIndex, setHoverIndex] = useState(null)
 
-  return (
-    <ul className="z-9999 flex flex-row justify-center items-center space-x-2 pt-[80px] font-bold">
-      {categories.map((category, index) => (
-        <li key={index} className="z-9999 relative">
-          <div
-            className="cursor-pointer py-1 bg-indigo-100 dark:bg-gray-700 rounded-lg px-2 hover:bg-purple-500 dark:hover:bg-purple-500"
-            onMouseEnter={() => setHoverIndex(index)}
-            onMouseLeave={() => setHoverIndex(null)}
-          >
-            <span className="lg:hidden px-2">{category.emoji}</span>
-            <span className="hidden lg:inline">{category.name}</span>
-            {hoverIndex === index && (
-              <ul
-                className={`absolute z-9999 ${
-                  index >= categories.length - 3 ? 'right-0' : 'left-0'
-                } bg-white dark:bg-gray-900 shadow-md mt-1 opacity-100 transition-opacity duration-300 ease-in-out`}
-              >
-                {category.subcategories.map((sub, idx) => (
-                  <Link key={idx} href={sub.link} onClick={handleClick}>
-                    <li className="z-9999 pl-4 py-1 pr-3 cursor-pointer hover:bg-gray-100 dark:hover:text-purple-600 whitespace-nowrap">
-                      {sub.name}
-                    </li>
-                  </Link>
-                ))}
-              </ul>
-            )}
-          </div>
-        </li>
-      ))}
-    </ul>
-  )
-}
+//   const handleClick = () => {
+//     setHoverIndex(null)
+//   }
+
+//   return (
+//     <ul className="z-9999 flex flex-row justify-center items-center space-x-2 pt-[80px] font-bold">
+//       {categories.map((category, index) => (
+//         <li key={index} className="z-9999 relative">
+//           <div
+//             className="cursor-pointer py-1 bg-indigo-100 dark:bg-gray-700 rounded-lg px-2 hover:bg-purple-500 dark:hover:bg-purple-500"
+//             onMouseEnter={() => setHoverIndex(index)}
+//             onMouseLeave={() => setHoverIndex(null)}
+//           >
+//             <span className="lg:hidden px-2">{category.emoji}</span>
+//             <span className="hidden lg:inline">{category.name}</span>
+//             {hoverIndex === index && (
+//               <ul
+//                 className={`absolute z-9999 ${
+//                   index >= categories.length - 3 ? 'right-0' : 'left-0'
+//                 } bg-white dark:bg-gray-900 shadow-md mt-1 opacity-100 transition-opacity duration-300 ease-in-out`}
+//               >
+//                 {category.subcategories.map((sub, idx) => (
+//                   <Link key={idx} href={sub.link} onClick={handleClick}>
+//                     <li className="z-9999 pl-4 py-1 pr-3 cursor-pointer hover:bg-gray-100 dark:hover:text-purple-600 whitespace-nowrap">
+//                       {sub.name}
+//                     </li>
+//                   </Link>
+//                 ))}
+//               </ul>
+//             )}
+//           </div>
+//         </li>
+//       ))}
+//     </ul>
+//   )
+// }
+
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [categories, setCategories] = useState([])
@@ -140,26 +141,85 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex flex-col  items-center justify-between">
-        <header className="flex px-4 py-2 bg-gray-50 shadow-md dark:bg-gray-800 fixed top-0 left-0 right-0 z-50 ">
+      <div className="flex flex-col">
+        <header className="flex justify-between items-center px-4 py-4 bg-gray-50 shadow-md dark:bg-gray-800 w-full top-0 left-0 right-0 z-50">
+          {' '}
           <Link href="/" passHref>
-            <span className="flex items-center space-x-3">
-              <Image
+            <div className="flex flex-row justify-center items-center gap-x-2">
+              {/* <Image
+                className="hidden md:block"
                 src="/logo.svg"
                 alt="Logo"
+                objectFit="contain"
                 width={40}
                 height={40}
-                priority
                 onError={(e) => {
                   e.target.onerror = null
                   e.target.src = '/logo.png'
                 }}
-              />
-              <span className="text-xl font-bold hidden md:block">온툴모</span>
-            </span>
+              /> */}
+              <span className="text-sm lg:text-xl  font-bold ">OTM</span>
+            </div>
           </Link>
-          <div className="flex-grow mx-2 lg:mx-6">
+          {/* <div className="flex-grow mx-2 lg:mx-6">
             <SearchComponent />
+          </div> */}
+          <div className="flex flex-col lg:flex-row">
+            <ul className="flex flex-col lg:flex-row flex-grow">
+              {categories.map((category, index) => (
+                <li
+                  key={index}
+                  className="border-b border-gray-300 dark:border-gray-700 lg:border-none"
+                >
+                  <button
+                    aria-label="Toggle Category"
+                    onClick={() => {
+                      setCategories(
+                        categories.map((cat) => ({
+                          ...cat,
+                          isOpen:
+                            cat.name === category.name ? !cat.isOpen : false, // 다른 카테고리는 닫힘
+                        })),
+                      )
+                    }}
+                    className="flex items-center"
+                  >
+                    {category.name}
+                    {category.isOpen ? (
+                      <MdExpandLess className="text-gray-400 transition duration-300 ml-2" />
+                    ) : (
+                      <MdExpandMore className="text-gray-400 transition duration-300 ml-2" />
+                    )}
+                  </button>
+                  <ul
+                    className={`${
+                      category.isOpen ? 'max-h-full ' : 'max-h-0'
+                    } absolute bg-slate-50 overflow-hidden transition-max-height duration-200`}
+                  >
+                    {category.subcategories.map((sub, idx) => (
+                      <li key={idx}>
+                        <Link href={sub.link}>
+                          <span
+                            onClick={() => {
+                              handleLinkClick()
+                              setCategories(
+                                categories.map((cat) => ({
+                                  ...cat,
+                                  isOpen: false,
+                                })),
+                              ) // 링크 클릭 시 모든 카테고리 닫힘
+                            }}
+                            className="text-purple-800 dark:text-gray-300 dark:hover:text-gray-500 hover:bg-purple-200 text-xl flex justify-between items-center p-1 pl-4 transition duration-300 ease-in-out"
+                          >
+                            {sub.name}
+                          </span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
           </div>
           <div className="flex items-center space-x-3 md:space-x-6 min-w-[200px]">
             <button
@@ -203,7 +263,7 @@ const Header = () => {
             </div>
           </aside>
         </Modal>
-        <NavHover categories={categories} />
+        {/* <NavHover categories={categories} /> */}
       </div>
     </>
   )

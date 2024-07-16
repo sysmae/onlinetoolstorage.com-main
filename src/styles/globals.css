@@ -2,184 +2,148 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 글로벌 스타일 설정 */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-#__next {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-html,
-body,
-div,
-section {
-  @apply bg-gray-50 text-gray-900 dark:bg-gray-800 dark:text-gray-300 m-0 p-0;
-
-  .ReactCrop__crop-selection {
-    background-color: rgba(0, 0, 0, 0);
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
 
-img {
-  @apply max-w-full h-auto;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-/* 텍스트 및 폰트 스타일 */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a,
-ul,
-ol,
-li,
-blockquote label,
-form {
-  @apply text-gray-900 dark:text-gray-300;
-}
-
-input,
-textarea,
-pre {
-  @apply bg-gray-100 dark:bg-gray-600 text-gray-900 dark:text-gray-50 border-gray-300 dark:border-gray-900;
-}
-
+/* Typography */
 h1 {
-  @apply text-4xl font-bold my-2;
+  @apply text-3xl font-extrabold leading-tight tracking-tighter;
 }
 
 h2 {
-  @apply text-2xl font-semibold my-1.5;
+  @apply text-2xl font-extrabold leading-tight tracking-tighter;
 }
 
 h3 {
-  @apply text-xl font-semibold my-1;
+  @apply text-2xl font-bold leading-tight;
 }
 
-p {
-  @apply mb-4;
+h4 {
+  @apply text-xl font-bold leading-snug tracking-tight;
 }
 
-a {
-  @apply text-blue-500 hover:text-blue-600 transition duration-300;
-}
-
-ol {
-  @apply list-decimal list-inside;
-}
-
-li {
-  @apply mb-1;
-}
-
-ul li p {
-  @apply text-base leading-relaxed my-2 tracking-wide;
-}
-
-section {
-  @apply py-4;
-}
-
-footer {
-  @apply text-gray-500 dark:text-gray-50 dark:bg-gray-600;
-}
-
-/* 버튼 스타일 */
-button {
-  @apply font-semibold py-2 px-4 rounded-lg transition duration-300;
-}
-
-button.primary {
-  @apply bg-blue-500 text-white hover:bg-blue-600;
-}
-
-button.secondary {
-  @apply border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white;
-}
-
-/* 폼 요소 스타일 */
-input,
-textarea,
-select {
-  @apply border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 rounded-md shadow-sm;
-}
-
-/* 스크롤바 전체를 스타일링 */
-::-webkit-scrollbar {
-  width: 6px; /* 스크롤바의 너비 조정 */
-  background-color: #f9f9f9; /* 스크롤바 배경색 설정 */
-}
-
-/* 스크롤바 트랙 */
-::-webkit-scrollbar-track {
-  background: linear-gradient(
-    180deg,
-    #f1f1f1,
-    #e5e5e5
-  ); /* 세로 방향 그라데이션 */
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3); /* 트랙 내부에 그림자 추가 */
-}
-
-/* 스크롤바 핸들 */
-::-webkit-scrollbar-thumb {
-  background-color: darkgrey; /* 핸들의 기본 색상 */
-  border-radius: 10px; /* 모서리 둥글게 처리 */
-  border: 0.3px solid darkgrey; /* 핸들의 테두리 */
-  background-image: linear-gradient(
-    360deg,
-    #a9a9a9,
-    #808080
-  ); /* 핸들에 그라데이션 적용 */
-}
-
-/* 스크롤바 핸들 호버 시 */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #696969; /* 핸들의 호버 색상 */
-}
-
-/* 스크롤바 핸들 클릭 시 */
-::-webkit-scrollbar-thumb:active {
-  background-color: #555; /* 클릭 시 핸들의 색상 */
-  background-image: linear-gradient(
-    360deg,
-    #555,
-    #333
-  ); /* 클릭 시 그라데이션 적용 */
-}
-
-@media (min-width: 1024px) {
-  .main-lg-width {
-    width: calc(100vw - 512px - 96px); /* Adjusted width for lg screens */
+/* @screen md {
+  h1 {
+    @apply text-3xl;
   }
+
+  h2 {
+    @apply text-2xl;
+  }
+} */
+
+/* Buttons */
+.btn,
+.btn-sm {
+  @apply font-medium inline-flex items-center justify-center border border-transparent rounded-sm leading-snug transition duration-150 ease-in-out;
 }
 
-button {
-  @apply py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out dark:bg-indigo-500 dark:hover:bg-indigo-600 dark:focus:ring-indigo-400;
+.btn {
+  @apply px-8 py-3;
 }
 
-input[type='file'] {
-  @apply block w-full text-sm text-gray-500
-  file:mr-4 file:py-2 file:px-4
-  file:rounded-full file:border-0
-  file:text-sm file:font-semibold
-  file:bg-violet-50 file:text-violet-700
-  hover:file:bg-violet-100
-  cursor-pointer m-10;
+.btn-sm {
+  @apply px-4 py-2;
+}
+
+/* Forms */
+form-input,
+form-textarea,
+form-multiselect,
+form-select,
+form-checkbox,
+form-radio {
+  @apply bg-transparent border border-gray-700 focus:border-gray-500;
+}
+
+form-input,
+form-textarea,
+form-multiselect,
+form-select,
+form-checkbox {
+  @apply rounded-sm;
+}
+
+form-input,
+form-textarea,
+form-multiselect,
+form-select {
+  @apply py-3 px-4;
+}
+
+form-input,
+form-textarea {
+  @apply placeholder-gray-500;
+}
+
+form-select {
+  @apply pr-10;
+}
+
+form-checkbox,
+form-radio {
+  @apply text-purple-600;
 }
