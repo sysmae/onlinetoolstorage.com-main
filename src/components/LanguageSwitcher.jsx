@@ -45,7 +45,7 @@ const LanguageSwitcher = () => {
   }, [])
 
   return (
-    <div className="relative language-switcher">
+    <div className=" language-switcher">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="px-4 py-2 text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-600 rounded-md focus:outline-none"

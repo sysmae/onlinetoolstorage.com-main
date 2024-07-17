@@ -11,6 +11,9 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import AdsenseScript from '@/components/adsense/AdsenseScript'
 
+import GiscusScript from '@/components/GiscusScript'
+import Giscus from '@/components/Giscus'
+
 import { CardDemo } from '@/components/Card'
 import SearchComponent from '@/components/SearchComponent'
 import { Separator } from '@/components/ui/separator'
@@ -35,9 +38,33 @@ function AppContent({ children }) {
   return (
     <>
       <AdsenseScript />
+      {/* <GiscusScript /> */}
       {/* 메인 레이아웃 */}
       <Layout>{children}</Layout>
     </>
+  )
+}
+
+function CustomFlex({ children, ...props }) {
+  return (
+    <Flex
+      direction={{ initial: 'column', lg: 'row' }}
+      className="mx-auto"
+      maxWidth={{ initial: '100vw', lg: '1440px' }}
+      justify="between"
+      px={{ initial: '20px', lg: '40px' }}
+      {...props}
+    >
+      {children}
+    </Flex>
+  )
+}
+
+function CenteredSeparator() {
+  return (
+    <div className="flex justify-center items-center">
+      <Separator className="my-8 max-w-[1360px]" />
+    </div>
   )
 }
 
@@ -45,38 +72,27 @@ function Layout({ children }) {
   return (
     <Theme>
       <Header />
-      <div className="pb-[100px]"></div>
+      <div className="pb-[50px] xl:pb-[100px]"></div>
+      <div className="block xl:hidden">
+        <SearchComponent />
+      </div>
+      <div className="pb-[50px] xl:hidden"></div>
 
-      <Flex
-        direction={{ initial: 'column', lg: 'row' }}
-        className="mx-auto"
-        maxWidth={{ lg: '1440px' }}
-        justify="between"
-      >
+      <CustomFlex>
         <MainContent>{children}</MainContent>
         <RightSideWithCard />
-      </Flex>
+      </CustomFlex>
 
-      <div className="flex justify-center items-center">
-        <Separator className="my-8 w-[1360px]" />
-      </div>
+      <CenteredSeparator />
 
-      <Flex
-        px={{ lg: '40px' }}
-        direction={{ initial: 'column', lg: 'row' }}
-        className="mx-auto"
-        maxWidth={{ lg: '1440px' }}
-        justify="between"
-      >
+      <CustomFlex>
         <CardDemo />
         <CardDemo />
         <CardDemo />
-      </Flex>
+      </CustomFlex>
 
-      <div className="flex justify-center items-center">
-        <Separator className="my-8 w-[1360px]" />
-      </div>
-
+      <CenteredSeparator />
+      {/* <Giscus /> */}
       <Footer />
     </Theme>
   )
@@ -84,7 +100,9 @@ function Layout({ children }) {
 
 function MainContent({ children }) {
   return (
-    <Container maxWidth={{ lg: '960px' }} px={{ lg: '40px' }}>
+    <Container
+      maxWidth={{ initial: '100%', lg: '960px' }} // 수정: maxWidth 100%로 변경
+    >
       <main>{children}</main>
     </Container>
   )
@@ -92,9 +110,13 @@ function MainContent({ children }) {
 
 function RightSideWithCard() {
   return (
-    <Flex maxWidth={{ lg: '480px' }} px={{ lg: '40px' }}>
+    <Flex
+      maxWidth={{ initial: '100%', lg: '480px' }} // 수정: maxWidth 100%로 변경
+    >
       <aside>
-        <SearchComponent />
+        <div className="hidden xl:block">
+          <SearchComponent />
+        </div>
         <div className="pb-[100px]"></div>
         <CardDemo />
         <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />

@@ -7,7 +7,7 @@ function CustomH1Content({ category }) {
 
   return (
     <div className="break-words">
-      <h1 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">
+      <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-300 mb-4">
         {t(`${pageKey}.title`)}
       </h1>
       <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">

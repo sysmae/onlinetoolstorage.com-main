@@ -156,7 +156,7 @@ const Header = () => {
 
   return (
     <>
-      <div ref={ref} className="flex flex-col ">
+      <div ref={ref} className="flex flex-col flex-grow">
         <header className="flex flex-wrap justify-between items-center px-4 py-4 bg-gray-50 shadow-md dark:bg-gray-800 w-[100vw ] top-0 left-0 right-0 z-50">
           {' '}
           <Link href="/" passHref>
@@ -180,7 +180,7 @@ const Header = () => {
             <SearchComponent />
           </div> */}
           <div className="flex flex-row">
-            <ul className="flex flex-row flex-grow">
+            <ul className="flex flex-row flex-grow flex-wrap">
               {categories.map((category, index) => (
                 <li
                   key={index}
@@ -242,7 +242,7 @@ const Header = () => {
               className="rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-600 p-2"
               onClick={toggleModal}
             >
-              <CgMenuRound size="24px" color="violet" />
+              <CgMenuRound size="24px" />
             </button>
             <DarkModeToggle />
             <LanguageSwitcher />
