@@ -2,7 +2,7 @@
 import '@radix-ui/themes/styles.css'
 import '../styles/globals.css'
 
-import { Grid, Theme, Container, Flex } from '@radix-ui/themes'
+import { Theme, Container, Flex } from '@radix-ui/themes'
 
 import { appWithTranslation } from 'next-i18next'
 import nextI18NextConfig from '../../next-i18next.config'
@@ -13,6 +13,7 @@ import AdsenseScript from '@/components/adsense/AdsenseScript'
 
 import { CardDemo } from '@/components/Card'
 import SearchComponent from '@/components/SearchComponent'
+import { Separator } from '@/components/ui/separator'
 
 import ResponsiveAd from '@/components/adsense/ResponsiveAd'
 import {
@@ -40,26 +41,41 @@ function AppContent({ children }) {
   )
 }
 
-function DemoBox() {
-  return (
-    <div className="bg-gray-100  w-full h-auto border border-slate-900 "></div>
-  )
-}
 function Layout({ children }) {
   return (
     <Theme>
       <Header />
       <div className="pb-[100px]"></div>
-      <Flex mx={{ lg: '7' }} style={{ padding: 'auto' }}>
+
+      <Flex
+        direction={{ initial: 'column', lg: 'row' }}
+        className="mx-auto"
+        maxWidth={{ lg: '1440px' }}
+        justify="between"
+      >
         <MainContent>{children}</MainContent>
         <RightSideWithCard />
       </Flex>
 
-      <Flex px={{ lg: '40px' }} mx={{ lg: '7' }} justify="between">
+      <div className="flex justify-center items-center">
+        <Separator className="my-8 w-[1360px]" />
+      </div>
+
+      <Flex
+        px={{ lg: '40px' }}
+        direction={{ initial: 'column', lg: 'row' }}
+        className="mx-auto"
+        maxWidth={{ lg: '1440px' }}
+        justify="between"
+      >
         <CardDemo />
         <CardDemo />
         <CardDemo />
       </Flex>
+
+      <div className="flex justify-center items-center">
+        <Separator className="my-8 w-[1360px]" />
+      </div>
 
       <Footer />
     </Theme>
@@ -68,7 +84,7 @@ function Layout({ children }) {
 
 function MainContent({ children }) {
   return (
-    <Container maxWidth={{ lg: '848px' }} px={{ lg: '40px' }}>
+    <Container maxWidth={{ lg: '960px' }} px={{ lg: '40px' }}>
       <main>{children}</main>
     </Container>
   )
@@ -76,7 +92,7 @@ function MainContent({ children }) {
 
 function RightSideWithCard() {
   return (
-    <Flex maxWidth={{ lg: '424px' }} px={{ lg: '40px' }}>
+    <Flex maxWidth={{ lg: '480px' }} px={{ lg: '40px' }}>
       <aside>
         <SearchComponent />
         <div className="pb-[100px]"></div>

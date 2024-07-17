@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { CgMenuRound } from 'react-icons/cg'
@@ -106,6 +106,8 @@ const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [categories, setCategories] = useState([])
   const router = useRouter()
+  const ref = useRef()
+
   const locale = router.locale || 'ko'
 
   const toggleModal = () => {
@@ -133,6 +135,19 @@ const Header = () => {
     fetchSidebarData()
   }, [locale, isModalOpen])
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setCategories(categories.map((cat) => ({ ...cat, isOpen: false })))
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [categories, setCategories])
+
   const handleLinkClick = () => {
     if (isModalOpen) {
       toggleModal()
@@ -141,8 +156,8 @@ const Header = () => {
 
   return (
     <>
-      <div className="flex flex-col">
-        <header className="flex justify-between items-center px-4 py-4 bg-gray-50 shadow-md dark:bg-gray-800 w-[100vw ] top-0 left-0 right-0 z-50">
+      <div ref={ref} className="flex flex-col ">
+        <header className="flex flex-wrap justify-between items-center px-4 py-4 bg-gray-50 shadow-md dark:bg-gray-800 w-[100vw ] top-0 left-0 right-0 z-50">
           {' '}
           <Link href="/" passHref>
             <div className="flex flex-row justify-center items-center gap-x-2">
@@ -169,7 +184,7 @@ const Header = () => {
               {categories.map((category, index) => (
                 <li
                   key={index}
-                  className="border-b border-gray-300 dark:border-gray-700 lg:border-none"
+                  className="border-b border-gray-300 dark:border-gray-700 lg:border-none hover:text-purple-700 dark:hover:text-purple-500"
                 >
                   <button
                     aria-label="Toggle Category"
@@ -182,10 +197,9 @@ const Header = () => {
                         })),
                       )
                     }}
-                    className="flex items-center"
+                    className="flex items-center lg:p-2 hover:bg-purple-300"
                   >
-                    <div className="hidden lg:block">{category.name}</div>
-                    <div className="lg:hidden">{category.emoji}</div>
+                    <div>{category.emoji}</div>
 
                     {category.isOpen ? (
                       <MdExpandLess className="text-gray-400  ml-2" />
@@ -196,7 +210,7 @@ const Header = () => {
                   <ul
                     className={`${
                       category.isOpen ? 'max-h-full' : 'max-h-0'
-                    } absolute bg-slate-50 overflow-hidden transition-max-height `}
+                    } absolute bg-slate-50 dark:bg-gray-800 overflow-hidden transition-max-height `}
                   >
                     {category.subcategories.map((sub, idx) => (
                       <li key={idx}>

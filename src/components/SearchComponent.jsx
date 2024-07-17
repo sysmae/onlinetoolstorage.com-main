@@ -85,7 +85,7 @@ function SearchComponent() {
   }
 
   const inputClass = showSearchInput
-    ? 'py-2 w-[50vw] text-lg focus:outline-none z-50 dark:bg-gray-800'
+    ? 'py-2 text-lg focus:outline-none z-50 dark:bg-gray-800'
     : 'pl-10 pr-3 py-2 text-lg w-full focus:outline-none dark:bg-gray-700'
 
   return (
