@@ -1,17 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import Modal from 'react-modal'
-
+import Image from 'next/image'
 import { CgMenuRound } from 'react-icons/cg'
+import Modal from 'react-modal'
+import { useRouter } from 'next/router'
 import { MdExpandMore, MdExpandLess } from 'react-icons/md'
 
 import DarkModeToggle from '@/components/DarkModeToggle'
+import SearchComponent from '@/components/SearchComponent'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 Modal.setAppElement('#__next') // Set the root element ID for accessibility
 
-const ModalNav = ({ categories, setCategories, handleLinkClick }) => {
+const Nav = ({ categories, setCategories, handleLinkClick }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleClick = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
     <ul className="space-y-1 mb-20">
       {categories.map((category, index) => (
@@ -61,6 +68,46 @@ const ModalNav = ({ categories, setCategories, handleLinkClick }) => {
   )
 }
 
+// const NavHover = ({ categories }) => {
+//   const [hoverIndex, setHoverIndex] = useState(null)
+
+//   const handleClick = () => {
+//     setHoverIndex(null)
+//   }
+
+//   return (
+//     <ul className="z-9999 flex flex-row justify-center items-center space-x-2 pt-[80px] font-bold">
+//       {categories.map((category, index) => (
+//         <li key={index} className="z-9999 relative">
+//           <div
+//             className="cursor-pointer py-1 bg-indigo-100 dark:bg-gray-700 rounded-lg px-2 hover:bg-purple-500 dark:hover:bg-purple-500"
+//             onMouseEnter={() => setHoverIndex(index)}
+//             onMouseLeave={() => setHoverIndex(null)}
+//           >
+//             <span className="lg:hidden px-2">{category.emoji}</span>
+//             <span className="hidden lg:inline">{category.name}</span>
+//             {hoverIndex === index && (
+//               <ul
+//                 className={`absolute z-9999 ${
+//                   index >= categories.length - 3 ? 'right-0' : 'left-0'
+//                 } bg-white dark:bg-gray-900 shadow-md mt-1 opacity-100 transition-opacity duration-300 ease-in-out`}
+//               >
+//                 {category.subcategories.map((sub, idx) => (
+//                   <Link key={idx} href={sub.link} onClick={handleClick}>
+//                     <li className="z-9999 pl-4 py-1 pr-3 cursor-pointer hover:bg-gray-100 dark:hover:text-purple-600 whitespace-nowrap">
+//                       {sub.name}
+//                     </li>
+//                   </Link>
+//                 ))}
+//               </ul>
+//             )}
+//           </div>
+//         </li>
+//       ))}
+//     </ul>
+//   )
+// }
+
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [categories, setCategories] = useState([])
@@ -93,6 +140,19 @@ const Header = () => {
 
     fetchSidebarData()
   }, [locale, isModalOpen])
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setCategories(categories.map((cat) => ({ ...cat, isOpen: false })))
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [categories, setCategories])
 
   const handleLinkClick = () => {
     if (isModalOpen) {
@@ -213,7 +273,7 @@ const Header = () => {
             </button>
             <aside className="w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
               <div className="h-full overflow-y-auto">
-                <ModalNav
+                <Nav
                   categories={categories}
                   setCategories={setCategories}
                   handleLinkClick={handleLinkClick}
@@ -221,6 +281,7 @@ const Header = () => {
               </div>
             </aside>
           </Modal>
+          {/* <NavHover categories={categories} /> */}
         </header>
       </div>
     </>
