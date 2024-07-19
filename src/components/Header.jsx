@@ -197,7 +197,7 @@ const Header = () => {
             onRequestClose={toggleModal}
             contentLabel="Menu Modal"
             overlayClassName="fixed inset-0 bg-black bg-opacity-90 dark:bg-opacity-95 z-40"
-            className="absolute bottom-0 left-0 right-0 lg:left-40 lg:right-40 bg-white dark:bg-gray-800 p-5 z-50 rounded-t-lg dark:text-white overflow-auto"
+            className="absolute bottom-0 left-0 right-0 lg:left-48 lg:right-52 bg-white dark:bg-gray-800 p-5 z-50 rounded-t-lg dark:text-white overflow-auto"
             style={{
               content: {
                 height: '80vh', // 뷰포트 높이의 80%로 설정
