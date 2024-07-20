@@ -11,7 +11,7 @@
       {
         "title": "글자수 계산기",
         "description": "글자수 계산기 입니다.",
-        "href": "/ko/calculator/charcount"
+        "href": "/ko/text/charcount"
       }
     ]
   }
