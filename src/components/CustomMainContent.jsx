@@ -1,7 +1,7 @@
 import useLocalizedPage from '../../hooks/useLocalizedPage'
 import ResponsiveAd from './adsense/ResponsiveAd'
 import { SquareResponsive_dataAdSlot } from '../constants/adsense/data_ad_slot'
-import { parseContentLink } from '@/lib/parsecontent' // Adjust the path accordingly
+import { parseContentLink } from '@/lib/parseContent' // Adjust the path accordingly
 
 function CustomContent({ category }) {
   const { t, pageKey } = useLocalizedPage(category)
