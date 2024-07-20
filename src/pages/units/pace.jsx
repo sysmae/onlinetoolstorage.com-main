@@ -11,7 +11,7 @@ const units = ['s/m', 'min/km', 's/ft', 'min/mi']
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, [category])),
+      ...(await serverSideTranslations(locale, [category, 'common'])),
       locale,
     },
   }

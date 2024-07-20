@@ -11,9 +11,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import AdsenseScript from '@/components/adsense/AdsenseScript'
 
-import GiscusScript from '@/components/GiscusScript'
-import Giscus from '@/components/Giscus'
-
+import RightSideWithCard from '@/components/RightSideWithCard'
 import { CardDemo } from '@/components/Card'
 import SearchComponent from '@/components/SearchComponent'
 import { Separator } from '@/components/ui/separator'
@@ -25,6 +23,12 @@ import {
   Bottom_dataAdSlot,
   RightSideWithCard_dataAdSlot,
 } from '@/constants/adsense/data_ad_slot'
+
+function getCardData() {
+  return {
+    title: '인기있는 툴 모음',
+  }
+}
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -92,7 +96,6 @@ function Layout({ children }) {
       </CustomFlex>
 
       <CenteredSeparator />
-      {/* <Giscus /> */}
       <Footer />
     </Theme>
   )
@@ -105,26 +108,6 @@ function MainContent({ children }) {
     >
       <main>{children}</main>
     </Container>
-  )
-}
-
-function RightSideWithCard() {
-  return (
-    <Flex
-      maxWidth={{ initial: '100%', lg: '480px' }} // 수정: maxWidth 100%로 변경
-    >
-      <aside>
-        <div className="hidden xl:block">
-          <SearchComponent />
-        </div>
-        <div className="pb-[100px]"></div>
-        <CardDemo />
-        <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />
-        <CardDemo />
-        <ResponsiveAd data_ad_slot={RightSideWithCard_dataAdSlot} />
-        <CardDemo />
-      </aside>
-    </Flex>
   )
 }
 

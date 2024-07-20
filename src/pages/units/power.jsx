@@ -11,7 +11,7 @@ const units = ['W', 'mW', 'kW', 'MW', 'GW']
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, [category])),
+      ...(await serverSideTranslations(locale, [category, 'common'])),
       locale,
     },
   }

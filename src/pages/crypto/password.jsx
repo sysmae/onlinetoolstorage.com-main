@@ -29,7 +29,7 @@ function generatePassword(length, options) {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, [category])),
+      ...(await serverSideTranslations(locale, [category, 'common'])),
       locale,
     },
   }

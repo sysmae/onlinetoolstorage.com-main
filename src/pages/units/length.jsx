@@ -11,7 +11,7 @@ const units = ['mm', 'cm', 'm', 'in', 'ft-us', 'ft', 'mi']
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, [category])),
+      ...(await serverSideTranslations(locale, [category, 'common'])),
       locale,
     },
   }

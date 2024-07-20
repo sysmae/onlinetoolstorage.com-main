@@ -11,7 +11,7 @@ const units = ['mm2', 'cm2', 'm2', 'ha', 'km2', 'in2', 'ft2', 'ac', 'mi2']
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, [category])),
+      ...(await serverSideTranslations(locale, [category, 'common'])),
       locale,
     },
   }

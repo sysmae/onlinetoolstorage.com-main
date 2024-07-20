@@ -11,7 +11,7 @@ const units = ['mcg', 'mg', 'g', 'kg', 'oz', 'lb', 'mt', 't']
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, [category])),
+      ...(await serverSideTranslations(locale, [category, 'common'])),
       locale,
     },
   }

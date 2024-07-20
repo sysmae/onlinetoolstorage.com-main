@@ -1,0 +1,18 @@
+{
+  "popular": {
+    "title": "Popular Tools Collection",
+    "description": "A collection of popular tools.",
+    "links": [
+      {
+        "title": "Statistics Calculator",
+        "description": "A statistics calculator.",
+        "href": "/en/calculator/statistics"
+      },
+      {
+        "title": "Character Count Calculator",
+        "description": "A character count calculator.",
+        "href": "/en/calculator/charcount"
+      }
+    ]
+  }
+}

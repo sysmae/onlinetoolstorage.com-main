@@ -11,7 +11,7 @@ const units = ['ns', 'mu', 'ms', 's', 'min', 'h', 'd', 'week', 'month', 'year']
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, [category])),
+      ...(await serverSideTranslations(locale, [category, 'common'])),
       locale,
     },
   }

@@ -1,0 +1,18 @@
+{
+  "popular": {
+    "title": "인기있는 툴 모음",
+    "description": "인기있는 툴 모음입니다.",
+    "links": [
+      {
+        "title": "통계 계산기",
+        "description": "통계 계산기 입니다.",
+        "href": "/ko/calculator/statics"
+      },
+      {
+        "title": "글자수 계산기",
+        "description": "글자수 계산기 입니다.",
+        "href": "/ko/calculator/charcount"
+      }
+    ]
+  }
+}
