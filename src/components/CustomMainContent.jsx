@@ -1,6 +1,7 @@
 import useLocalizedPage from '../../hooks/useLocalizedPage'
 import ResponsiveAd from './adsense/ResponsiveAd'
 import { SquareResponsive_dataAdSlot } from '../constants/adsense/data_ad_slot'
+import { parseContentLink } from '@/lib/parsecontent' // Adjust the path accordingly
 
 function CustomContent({ category }) {
   const { t, pageKey } = useLocalizedPage(category)
@@ -20,12 +21,12 @@ function CustomContent({ category }) {
                     key={idx}
                     className="text-gray-600 dark:text-gray-300 mb-2"
                   >
-                    {item}
+                    {parseContentLink(item)}
                   </p>
                 ))
               ) : (
                 <p className="text-gray-600 dark:text-gray-300 mb-2">
-                  {section.content}
+                  {parseContentLink(section.content)}
                 </p>
               )}
               {/* Conditionally render an ad after each section */}
