@@ -1,34 +1,33 @@
 // Giscus.js
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import useDarkModeStore from '@/stores/darkModeStore'
 
 export default function Giscus() {
   const ref = useRef(null)
   const { darkMode, initializeDarkMode } = useDarkModeStore()
+  const [isInitialized, setIsInitialized] = useState(false)
+
+  console.log('darkMode', darkMode)
 
   useEffect(() => {
     initializeDarkMode()
+    setIsInitialized(true)
   }, [initializeDarkMode])
 
   useEffect(() => {
-    const handleStorageChange = (event) => {
-      if (event.key === 'darkMode') {
-        const newTheme = event.newValue === 'true' ? 'dark' : 'light'
-        updateGiscusTheme(newTheme)
-      }
+    if (isInitialized) {
+      const iframe = document.querySelector('iframe.giscus-frame')
+      iframe?.contentWindow?.postMessage(
+        { giscus: { setConfig: { theme: darkMode ? 'dark' : 'light' } } },
+        'https://giscus.app',
+      )
     }
-    window.addEventListener('storage', handleStorageChange)
-    return () => {
-      window.removeEventListener('storage', handleStorageChange)
-    }
-  }, [])
+  }, [darkMode, isInitialized])
 
   useEffect(() => {
-    if (!ref.current || ref.current.hasChildNodes()) return
-
-    const theme = darkMode ? 'dark' : 'light'
+    if (!isInitialized || !ref.current || ref.current.hasChildNodes()) return
 
     const scriptElem = document.createElement('script')
     scriptElem.src = 'https://giscus.app/client.js'
@@ -44,21 +43,13 @@ export default function Giscus() {
     scriptElem.setAttribute('data-reactions-enabled', '1')
     scriptElem.setAttribute('data-emit-metadata', '1')
     scriptElem.setAttribute('data-input-position', 'top')
-    scriptElem.setAttribute('data-theme', theme)
+    scriptElem.setAttribute('data-theme', darkMode ? 'dark' : 'light')
     scriptElem.setAttribute('data-lang', 'ko')
     scriptElem.setAttribute('data-loading', 'lazy')
     scriptElem.setAttribute('crossOrigin', 'anonymous')
 
     ref.current.appendChild(scriptElem)
-  }, [ref, darkMode])
-
-  useEffect(() => {
-    const iframe = document.querySelector('iframe.giscus-frame')
-    iframe?.contentWindow?.postMessage(
-      { giscus: { setConfig: { theme: darkMode ? 'dark' : 'light' } } },
-      'https://giscus.app',
-    )
-  }, [darkMode])
+  }, [darkMode, isInitialized])
 
   return <section ref={ref} />
 }

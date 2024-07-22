@@ -83,7 +83,9 @@ function Layout({ children }) {
       </CustomFlex>
 
       <CenteredSeparator />
-      <Giscus />
+      <div className="max-w-[1280px] mx-auto">
+        <Giscus />
+      </div>
       <Footer />
     </Theme>
   )
