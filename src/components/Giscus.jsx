@@ -9,8 +9,6 @@ export default function Giscus() {
   const { darkMode, initializeDarkMode } = useDarkModeStore()
   const [isInitialized, setIsInitialized] = useState(false)
 
-  console.log('darkMode', darkMode)
-
   useEffect(() => {
     initializeDarkMode()
     setIsInitialized(true)
@@ -42,7 +40,7 @@ export default function Giscus() {
     scriptElem.setAttribute('data-strict', '0')
     scriptElem.setAttribute('data-reactions-enabled', '1')
     scriptElem.setAttribute('data-emit-metadata', '1')
-    scriptElem.setAttribute('data-input-position', 'top')
+    scriptElem.setAttribute('data-input-position', 'bottom')
     scriptElem.setAttribute('data-theme', darkMode ? 'dark' : 'light')
     scriptElem.setAttribute('data-lang', 'ko')
     scriptElem.setAttribute('data-loading', 'lazy')
