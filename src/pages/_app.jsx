@@ -42,7 +42,7 @@ function CustomFlex({ children, ...props }) {
     <Flex
       direction={{ initial: 'column', lg: 'row' }}
       className="mx-auto"
-      maxWidth={{ initial: '100vw', lg: '1240px' }}
+      maxWidth={{ initial: '100vw', lg: '1200px' }}
       justify="between"
       {...props}
     >
@@ -54,14 +54,14 @@ function CustomFlex({ children, ...props }) {
 function CenteredSeparator() {
   return (
     <div className="flex justify-center items-center">
-      <Separator className="my-8 max-w-[1360px]" />
+      <Separator className="my-8 max-w-[1280px]" />
     </div>
   )
 }
 
 function Layout({ children }) {
   return (
-    <Theme scaling="90%">
+    <Theme>
       <Header />
       <div className="pb-[50px] xl:pb-[100px]"></div>
       <div className="block xl:hidden">
@@ -95,7 +95,7 @@ function MainContent({ children }) {
   return (
     <Container
       maxWidth={{ initial: '100%', lg: '768px' }}
-      px={{ initial: '20px', lg: '40px' }}
+      px={{ initial: '15px', lg: '30px' }}
     >
       <main>{children}</main>
     </Container>
