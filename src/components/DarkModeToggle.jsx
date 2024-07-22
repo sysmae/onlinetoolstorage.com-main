@@ -1,19 +1,13 @@
-import { useEffect, useState } from 'react'
+// DarkModeToggle.js
+import { useEffect } from 'react'
+import useDarkModeStore from '@/stores/darkModeStore'
 
 const DarkModeToggle = () => {
-  const [darkMode, setDarkMode] = useState(false)
+  const { darkMode, toggleDarkMode, initializeDarkMode } = useDarkModeStore()
 
   useEffect(() => {
-    const isDarkMode = localStorage.getItem('darkMode') === 'true'
-    setDarkMode(isDarkMode)
-    document.body.classList.toggle('dark', isDarkMode)
-  }, [])
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode)
-    localStorage.setItem('darkMode', !darkMode)
-    document.body.classList.toggle('dark', !darkMode)
-  }
+    initializeDarkMode()
+  }, [initializeDarkMode])
 
   return (
     <button

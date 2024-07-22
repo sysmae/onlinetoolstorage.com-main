@@ -25,11 +25,23 @@ export const SquareResponsive_dataAdSlot = [
   },
 ]
 
+export const RightSideWithCard_dataAdSlot = [
+  {
+    dataAdSlot: '3187175501',
+  },
+  {
+    dataAdSlot: '6722214920',
+  },
+  {
+    dataAdSlot: '6785762287',
+  },
+]
+
 export const LeftSide_dataAdSlot = '6527654710'
 
 export const RightSide_dataAdSlot = '7317992208'
 
-export const RightSideWithCard_dataAdSlot = '3187175501'
+export const RightSideVertical_dataAdSlot = '4930605199'
 
 export const Top_dataAdSlot = '8986297094'
 

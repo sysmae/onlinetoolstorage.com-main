@@ -10,19 +10,13 @@ import nextI18NextConfig from '../../next-i18next.config'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import AdsenseScript from '@/components/adsense/AdsenseScript'
+import Giscus from '@/components/Giscus'
+// import GiscusScript from '@/components/GiscusScript'
 
 import RightSideWithCard from '@/components/RightSideWithCard'
 import { CardDemo } from '@/components/Card'
 import SearchComponent from '@/components/SearchComponent'
 import { Separator } from '@/components/ui/separator'
-
-import ResponsiveAd from '@/components/adsense/ResponsiveAd'
-import {
-  LeftSide_dataAdSlot,
-  RightSide_dataAdSlot,
-  Bottom_dataAdSlot,
-  RightSideWithCard_dataAdSlot,
-} from '@/constants/adsense/data_ad_slot'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -67,7 +61,7 @@ function CenteredSeparator() {
 
 function Layout({ children }) {
   return (
-    <Theme>
+    <Theme scaling="90%">
       <Header />
       <div className="pb-[50px] xl:pb-[100px]"></div>
       <div className="block xl:hidden">
@@ -89,6 +83,7 @@ function Layout({ children }) {
       </CustomFlex>
 
       <CenteredSeparator />
+      <Giscus />
       <Footer />
     </Theme>
   )

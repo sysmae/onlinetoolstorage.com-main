@@ -12,6 +12,11 @@
         "title": "글자수 계산기",
         "description": "글자수 계산기 입니다.",
         "href": "/ko/text/charcount"
+      },
+      {
+        "title": "랜덤 한글 단어 생성기",
+        "description": "랜덤 한글 단어 생성 입니다.",
+        "href": "/ko/random/word-ko"
       }
     ]
   }
