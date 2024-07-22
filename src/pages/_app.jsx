@@ -24,12 +24,6 @@ import {
   RightSideWithCard_dataAdSlot,
 } from '@/constants/adsense/data_ad_slot'
 
-function getCardData() {
-  return {
-    title: '인기있는 툴 모음',
-  }
-}
-
 function MyApp({ Component, pageProps }) {
   return (
     <AppContent>
@@ -54,9 +48,8 @@ function CustomFlex({ children, ...props }) {
     <Flex
       direction={{ initial: 'column', lg: 'row' }}
       className="mx-auto"
-      maxWidth={{ initial: '100vw', lg: '1440px' }}
+      maxWidth={{ initial: '100vw', lg: '1240px' }}
       justify="between"
-      px={{ initial: '20px', lg: '40px' }}
       {...props}
     >
       {children}
@@ -104,7 +97,8 @@ function Layout({ children }) {
 function MainContent({ children }) {
   return (
     <Container
-      maxWidth={{ initial: '100%', lg: '960px' }} // 수정: maxWidth 100%로 변경
+      maxWidth={{ initial: '100%', lg: '768px' }}
+      px={{ initial: '20px', lg: '40px' }}
     >
       <main>{children}</main>
     </Container>

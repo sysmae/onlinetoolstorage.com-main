@@ -13,9 +13,7 @@ import {
 
 export default function RightSideWithCard() {
   return (
-    <Flex
-      maxWidth={{ initial: '100%', lg: '480px' }} // 수정: maxWidth 100%로 변경
-    >
+    <Flex maxWidth={{ initial: '100%', lg: '344px' }}>
       <aside>
         <div className="hidden xl:block">
           <SearchComponent />
