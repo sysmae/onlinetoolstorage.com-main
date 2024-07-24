@@ -90,8 +90,8 @@ function SearchComponent() {
   }
 
   const inputClass = showSearchInput
-    ? 'pl-10 pr-10 py-2 text-lg focus:outline-none z-50 dark:bg-gray-800 w-full bg-purple-200'
-    : 'pl-10 pr-10 py-2 text-lg w-full focus:outline-none dark:bg-gray-700 bg-purple-100'
+    ? 'pl-10 pr-10 py-2 text-lg focus:outline-bold z-50 dark:bg-gray-800 w-full bg-purple-200'
+    : 'pl-10 pr-10 py-2 text-lg w-full focus:outline-bold dark:bg-gray-700 bg-purple-100'
 
   return (
     <div className="relative w-full">
@@ -128,7 +128,7 @@ function SearchComponent() {
             {results.map((page) => (
               <li
                 key={page.id}
-                className="p-2 hover:bg-purple-100 dark:bg-purple-700 dark:hover:bg-gray-500 dark:text-gray-100"
+                className="p-2 hover:bg-purple-100 dark:bg-gray-500 dark:hover:bg-purple-500 dark:text-gray-100"
               >
                 <Link
                   onClick={() => {
