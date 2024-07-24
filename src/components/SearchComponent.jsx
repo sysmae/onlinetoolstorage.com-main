@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Fuse from 'fuse.js'
 import { useDebounce } from 'use-debounce'
-import { FiSearch } from 'react-icons/fi'
+import { FiSearch, FiX } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next'
 
 function SearchComponent() {
@@ -23,7 +23,6 @@ function SearchComponent() {
       const searchData = Object.keys(data).map((key) => ({
         id: key,
         title: data[key].title,
-        // description: data[key].description,
         url: data[key].url,
       }))
 
@@ -84,9 +83,15 @@ function SearchComponent() {
     }
   }
 
+  const handleClear = () => {
+    setQuery('')
+    setIsOpen(false)
+    setShowSearchInput(false)
+  }
+
   const inputClass = showSearchInput
-    ? 'pl-10 py-2 text-lg focus:outline-bold  z-50 dark:bg-gray-800 w-full bg-purple-200'
-    : 'pl-10 pr-3 py-2 text-lg w-full focus:outline-bold dark:bg-gray-700 bg-purple-100'
+    ? 'pl-10 pr-10 py-2 text-lg focus:outline-none z-50 dark:bg-gray-800 w-full bg-purple-200'
+    : 'pl-10 pr-10 py-2 text-lg w-full focus:outline-none dark:bg-gray-700 bg-purple-100'
 
   return (
     <div className="relative w-full">
@@ -104,11 +109,22 @@ function SearchComponent() {
           onBlur={handleBlur}
           className={inputClass}
         />
+        {query && (
+          <FiX
+            onClick={handleClear}
+            className="text-gray-400 w-5 h-5 cursor-pointer absolute right-0 mr-3 transform -translate-y-1/2 top-1/2"
+          />
+        )}
       </div>
 
       {isOpen && (
         <div className="absolute z-10 top-10 bg-white shadow-lg max-h-60 overflow-auto transition-opacity duration-300 ease-in-out">
           <ul>
+            {results.length === 0 && (
+              <li className="p-2 text-gray-500 dark:text-gray-400 w-full">
+                No results found
+              </li>
+            )}
             {results.map((page) => (
               <li
                 key={page.id}
