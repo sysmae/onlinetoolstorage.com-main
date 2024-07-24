@@ -85,15 +85,15 @@ function SearchComponent() {
   }
 
   const inputClass = showSearchInput
-    ? 'py-2 text-lg focus:outline-none z-50 dark:bg-gray-800'
-    : 'pl-10 pr-3 py-2 text-lg w-full focus:outline-none dark:bg-gray-700'
+    ? 'pl-10 py-2 text-lg focus:outline-bold  z-50 dark:bg-gray-800 w-full bg-purple-200'
+    : 'pl-10 pr-3 py-2 text-lg w-full focus:outline-bold dark:bg-gray-700 bg-purple-100'
 
   return (
     <div className="relative w-full">
-      <div className={`flex items-center border-b border-gray-300  w-full`}>
+      <div className={`flex items-center border-b border-gray-300 w-full`}>
         <FiSearch
           onClick={toggleSearchInput}
-          className="text-gray-400 w-5 h-5 cursor-pointer absolute left-0 ml-3 transform -translate-y-1/2 top-1/2 hover:bg-slate-100"
+          className="text-gray-400 w-5 h-5 cursor-pointer absolute left-0 ml-3 transform -translate-y-1/2 top-1/2"
         />
         <input
           ref={inputRef}
@@ -101,22 +101,18 @@ function SearchComponent() {
           placeholder="Search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onClick={toggleSearchInput}
           onBlur={handleBlur}
           className={inputClass}
         />
       </div>
-      {/* <button
-        className="sm:hidden absolute right-3 top-1/2 transform -translate-y-1/2"
-        onClick={toggleSearchInput}
-      ></button> */}
+
       {isOpen && (
-        <div className="absolute z-10 top-10  bg-white shadow-lg max-h-60 overflow-auto transition-opacity duration-300  ease-in-out">
+        <div className="absolute z-10 top-10 bg-white shadow-lg max-h-60 overflow-auto transition-opacity duration-300 ease-in-out">
           <ul>
             {results.map((page) => (
               <li
                 key={page.id}
-                className="p-2 hover:bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-500 dark:text-gray-100"
+                className="p-2 hover:bg-purple-100 dark:bg-purple-700 dark:hover:bg-gray-500 dark:text-gray-100"
               >
                 <Link
                   onClick={() => {
