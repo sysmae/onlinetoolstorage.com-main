@@ -2,6 +2,9 @@
 import '@radix-ui/themes/styles.css'
 import '../styles/globals.css'
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { useState } from 'react'
+
 import { Theme, Container, Flex } from '@radix-ui/themes'
 
 import { appWithTranslation } from 'next-i18next'
@@ -19,10 +22,14 @@ import SearchComponent from '@/components/SearchComponent'
 import { Separator } from '@/components/ui/separator'
 
 function MyApp({ Component, pageProps }) {
+  const [queryClient] = useState(() => new QueryClient())
+
   return (
-    <AppContent>
-      <Component {...pageProps} />
-    </AppContent>
+    <QueryClientProvider client={queryClient}>
+      <AppContent>
+        <Component {...pageProps} />
+      </AppContent>
+    </QueryClientProvider>
   )
 }
 
