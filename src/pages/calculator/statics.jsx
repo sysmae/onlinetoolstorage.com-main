@@ -10,7 +10,7 @@ import {
   calculateCovariance,
   calculateCorrelationCoefficient,
   calculateLinearRegression,
-} from '../../../lib/statistics'
+} from '@/lib/statistics'
 
 import { Line } from 'react-chartjs-2'
 import {
