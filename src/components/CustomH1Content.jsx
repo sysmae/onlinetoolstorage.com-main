@@ -1,4 +1,4 @@
-import useLocalizedPage from '../../hooks/useLocalizedPage'
+import useLocalizedPage from '@/hooks/useLocalizedPage'
 // import ResponsiveAd from './adsense/ResponsiveAd'
 // import { SquareResponsive_dataAdSlot } from '../constants/adsense/data_ad_slot'
 

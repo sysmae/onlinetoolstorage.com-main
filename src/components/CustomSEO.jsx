@@ -1,5 +1,5 @@
 import { NextSeo, WebPageJsonLd } from 'next-seo'
-import useLocalizedPage from '../../hooks/useLocalizedPage'
+import useLocalizedPage from '@/hooks/useLocalizedPage'
 
 function CustomSEOContent({ category }) {
   const { seoData } = useLocalizedPage(category)
