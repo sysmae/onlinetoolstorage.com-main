@@ -84,11 +84,11 @@ export const calculateCorrelationCoefficient = (x, y) => {
   return covariance / (standardDeviationX * standardDeviationY)
 }
 
-export const calculateLinearRegression = (x, y) => {
-  const meanX = calculateMean(x)
-  const meanY = calculateMean(y)
-  const slope = calculateCovariance(x, y) / calculateVariance(x, meanX)
-  const intercept = meanY - slope * meanX
+// export const calculateLinearRegression = (x, y) => {
+//   const meanX = calculateMean(x)
+//   const meanY = calculateMean(y)
+//   const slope = calculateCovariance(x, y) / calculateVariance(x, meanX)
+//   const intercept = meanY - slope * meanX
 
-  return { slope, intercept }
-}
+//   return { slope, intercept }
+// }

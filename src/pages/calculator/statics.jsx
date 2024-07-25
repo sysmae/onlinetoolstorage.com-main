@@ -9,20 +9,7 @@ import {
   calculateQuartiles,
   calculateCovariance,
   calculateCorrelationCoefficient,
-  calculateLinearRegression,
 } from '@/lib/statistics'
-
-import { Line } from 'react-chartjs-2'
-import {
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend,
-  Chart,
-} from 'chart.js'
 
 import CustomSEOContent from '@/components/CustomSEO'
 import CustomContent from '@/components/CustomMainContent'
@@ -46,7 +33,6 @@ export default function Home() {
   const [yData, setYData] = useState('')
   const [result, setResult] = useState('')
   const [correlationResult, setCorrelationResult] = useState('')
-  const [linearRegressionResult, setLinearRegressionResult] = useState(null) // 회귀 분석 결과 상태 추가
 
   const parseInput = (input) => {
     return input
@@ -94,68 +80,12 @@ export default function Home() {
     }
 
     try {
-      const { slope, intercept } = calculateLinearRegression(xNumbers, yNumbers)
       setCorrelationResult(
-        `공분산: ${calculateCovariance(xNumbers, yNumbers)}\n상관계수: ${calculateCorrelationCoefficient(xNumbers, yNumbers)}\n선형 회귀 기울기: ${slope}\n선형 회귀 y절편: ${intercept}`,
+        `공분산: ${calculateCovariance(xNumbers, yNumbers)}\n상관계수: ${calculateCorrelationCoefficient(xNumbers, yNumbers)}`,
       )
-      setLinearRegressionResult({ slope, intercept })
     } catch (error) {
       setCorrelationResult(`오류 처리: ${error.message}`)
     }
-  }
-  Chart.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-  )
-
-  const RegressionChart = ({ xData, yData, slope, intercept }) => {
-    // 원본 데이터 포인트
-    const dataPoints = xData.map((x, index) => ({ x, y: yData[index] }))
-
-    const options = {
-      scales: {
-        x: {
-          type: 'linear',
-          position: 'bottom',
-        },
-        y: {
-          beginAtZero: true,
-        },
-      },
-    }
-
-    // 회귀 직선의 데이터 포인트 생성
-    const linePoints = xData.map((x) => ({
-      x,
-      y: slope * x + intercept,
-    }))
-
-    const data = {
-      datasets: [
-        {
-          label: '원본 데이터',
-          data: dataPoints,
-          backgroundColor: 'rgba(255, 99, 132, 0.5)',
-          borderColor: 'rgba(255, 99, 132, 1)',
-          type: 'scatter',
-          showLine: false, // 선을 그리지 않습니다.
-        },
-        {
-          label: '회귀 직선',
-          data: linePoints,
-          borderColor: 'rgba(53, 162, 235, 1)',
-          borderWidth: 2,
-          fill: false,
-        },
-      ],
-    }
-
-    return <Line data={data} options={options} />
   }
 
   return (
@@ -204,20 +134,8 @@ export default function Home() {
           </button>
         </form>
         <pre className="p-4 bg-gray-100 rounded-md whitespace-pre-wrap">
-          {correlationResult ||
-            '공분산:\n상관계수:\n선형 회귀 기울기:\n선형 회귀 y절편:'}
+          {correlationResult || '공분산:\n상관계수:\n'}
         </pre>
-        <div style={{ height: '300px' }}>
-          {/* 이 div의 높이를 그래프의 높이에 맞게 조정하세요 */}
-          {linearRegressionResult && (
-            <RegressionChart
-              xData={parseInput(xData)}
-              yData={parseInput(yData)}
-              slope={linearRegressionResult.slope}
-              intercept={linearRegressionResult.intercept}
-            />
-          )}
-        </div>
       </div>
       <CustomContent category={category} />
     </>

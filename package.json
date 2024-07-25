@@ -22,7 +22,6 @@
     "axios": "^1.6.8",
     "bcryptjs": "^2.4.3",
     "browser-image-compression": "^2.0.2",
-    "chart.js": "^4.4.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "color": "^4.2.3",
@@ -51,7 +50,6 @@
     "qrcode": "^1.5.3",
     "react": "^18",
     "react-ace": "^11.0.1",
-    "react-chartjs-2": "^5.2.0",
     "react-color": "^2.19.3",
     "react-dom": "^18",
     "react-i18next": "^14.1.0",
@@ -64,8 +62,6 @@
     "remark-html": "^16.0.1",
     "sharp": "^0.33.3",
     "sonner": "^1.5.0",
-    "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7",
     "use-debounce": "^10.0.0",
     "uuid": "^9.0.1",
     "xlsx": "^0.18.5",
@@ -84,6 +80,8 @@
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.3",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^4.5.5"
   }
 }
