@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import Modal from 'react-modal'
 
@@ -106,9 +107,9 @@ const Header = () => {
         <header className="flex flex-wrap justify-between items-center px-4 py-4 bg-gray-50 shadow-md dark:bg-gray-800 w-[100vw ] top-0 left-0 right-0 z-50">
           <Link href="/" passHref>
             <div className="flex flex-row justify-center items-center gap-x-2">
-              {/* <Image
-                className="hidden md:block"
-                src="/logo.svg"
+              <Image
+                className="cursor-pointer dark:hidden"
+                src="/logo-header.png"
                 alt="Logo"
                 objectFit="contain"
                 width={40}
@@ -117,8 +118,20 @@ const Header = () => {
                   e.target.onerror = null
                   e.target.src = '/logo.png'
                 }}
-              /> */}
-              <span className="text-sm lg:text-xl  font-bold ">OTM</span>
+              />
+              <Image
+                className="cursor-pointer hidden dark:block"
+                src="/logo-header-dark.png"
+                alt="Logo"
+                objectFit="contain"
+                width={40}
+                height={40}
+                onError={(e) => {
+                  e.target.onerror = null
+                  e.target.src = '/logo.png'
+                }}
+              />
+              {/* <span className="text-sm lg:text-xl  font-bold ">OTM</span> */}
             </div>
           </Link>
           {/* <div className="flex-grow mx-2 lg:mx-6">
