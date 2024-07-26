@@ -1,6 +1,7 @@
 import { Flex } from '@radix-ui/themes'
 import SearchComponent from '@/components/SearchComponent'
 import { PopularCard } from '@/components/cards/PopularCard'
+import { RecentCommentsCard } from '@/components/cards/RecentCommentsCard'
 import { CardDemo } from '@/components/Card'
 
 import ResponsiveAd from '@/components/adsense/ResponsiveAd'
@@ -9,7 +10,7 @@ import { RightSideWithCard_dataAdSlot } from '@/constants/adsense/data_ad_slot'
 export default function RightSideWithCard() {
   return (
     <Flex maxWidth={{ initial: '100%', lg: '344px' }}>
-      <aside>
+      <aside className="flex-grow">
         <div className="hidden xl:block">
           <SearchComponent />
         </div>
@@ -18,7 +19,7 @@ export default function RightSideWithCard() {
         <ResponsiveAd
           data_ad_slot={RightSideWithCard_dataAdSlot[0].dataAdSlot}
         />
-        <CardDemo />
+        <RecentCommentsCard />
         <ResponsiveAd
           data_ad_slot={RightSideWithCard_dataAdSlot[1].dataAdSlot}
         />

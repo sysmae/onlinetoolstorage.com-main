@@ -18,6 +18,8 @@ import { CardDemo } from '@/components/Card'
 import SearchComponent from '@/components/SearchComponent'
 import { Separator } from '@/components/ui/separator'
 
+import { CarouselSize } from '@/components/Carousel'
+
 function MyApp({ Component, pageProps }) {
   return (
     <AppContent>
@@ -42,7 +44,7 @@ function CustomFlex({ children, ...props }) {
     <Flex
       direction={{ initial: 'column', lg: 'row' }}
       className="mx-auto"
-      maxWidth={{ initial: '100vw', lg: '1200px' }}
+      maxWidth={{ initial: '100%', lg: '1200px' }}
       justify="between"
       {...props}
     >
@@ -76,14 +78,10 @@ function Layout({ children }) {
 
       <CenteredSeparator />
 
-      <CustomFlex>
-        <CardDemo />
-        <CardDemo />
-        <CardDemo />
-      </CustomFlex>
+      <CarouselSize />
 
       <CenteredSeparator />
-      <div className="max-w-[1280px] mx-auto">
+      <div className="lg:max-w-[1280px] mx-auto">
         <Giscus />
       </div>
       <Footer />

@@ -17,6 +17,45 @@
         "title": "랜덤 한글 단어 생성기",
         "description": "랜덤 한글 단어 생성 입니다.",
         "href": "/ko/random/word-ko"
+      },
+      {
+        "title": "로또 번호 생성기",
+        "description": "로또 번호 생성기 입니다.",
+        "href": "/ko/random/lotto"
+      }
+    ]
+  },
+  "carousel": {
+    "cards": [
+      {
+        "title": "QR코드 생성기",
+        "description": "QR코드 생성기 입니다.",
+        "href": "/ko/convert/qrcode",
+        "image": "/images/convert-qrcode.png"
+      },
+      {
+        "title": "로또 번호 생성기",
+        "description": "로또 번호 생성기 입니다.",
+        "href": "/ko/random/lotto",
+        "image": "/images/random-lotto.png"
+      },
+      {
+        "title": "비밀번호 생성기",
+        "description": "비밀번호 생성기 입니다.",
+        "href": "/ko/crypto/password",
+        "image": "/images/crypto-password.png"
+      },
+      {
+        "title": "이자 계산기",
+        "description": "이자 계산기 입니다.",
+        "href": "/ko/calculator/compound-interest",
+        "image": "/images/calculator-compound-interest.png"
+      },
+      {
+        "title": "남은 시간 계산기",
+        "description": "남은 시간 계산기 입니다.",
+        "href": "/ko/time/lefttime",
+        "image": "/images/time-lefttime.png"
       }
     ]
   }

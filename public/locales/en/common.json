@@ -12,6 +12,50 @@
         "title": "Character Count Calculator",
         "description": "A character count calculator.",
         "href": "/en/text/charcount"
+      },
+      {
+        "title": "Random Korean Word Generator",
+        "description": "This is a random Korean word generator.",
+        "href": "/en/random/word-ko"
+      },
+      {
+        "title": "Lotto Number Generator",
+        "description": "This is a lotto number generator.",
+        "href": "/en/random/lotto"
+      }
+    ]
+  },
+  "carousel": {
+    "cards": [
+      {
+        "title": "QR Code Generator",
+        "description": "This is a QR code generator.",
+        "href": "/en/convert/qrcode",
+        "image": "/images/convert-qrcode.png"
+      },
+      {
+        "title": "Lotto Number Generator",
+        "description": "This is a lotto number generator.",
+        "href": "/en/random/lotto",
+        "image": "/images/random-lotto.png"
+      },
+      {
+        "title": "Password Generator",
+        "description": "This is a password generator.",
+        "href": "/en/crypto/password",
+        "image": "/images/crypto-password.png"
+      },
+      {
+        "title": "Compound Interest Calculator",
+        "description": "This is an Compound interest calculator.",
+        "href": "/en/calculator/compound-interest",
+        "image": "/images/calculator-compound-interest.png"
+      },
+      {
+        "title": "Time Left Calculator",
+        "description": "This is a time left calculator.",
+        "href": "/en/time/lefttime",
+        "image": "/images/time-lefttime.png"
       }
     ]
   }

@@ -5,14 +5,17 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+const category = 'time'
+
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['time'])), // Ensure 'time' is the correct category for i18n
+      ...(await serverSideTranslations(locale, [category, 'common'])),
       locale,
     },
   }
 }
+
 export const TimeInput = forwardRef(
   ({ value, onChange, placeholder, max }, ref) => (
     <div className="flex flex-col items-center justify-center w-full">
