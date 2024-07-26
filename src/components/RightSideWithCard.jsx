@@ -16,14 +16,22 @@ export default function RightSideWithCard() {
         </div>
         <div className="pb-[100px]"></div>
         <PopularCard />
+        <div className="pb-[30px]"></div>
         <ResponsiveAd
           data_ad_slot={RightSideWithCard_dataAdSlot[0].dataAdSlot}
         />
+        <div className="pb-[30px]"></div>
         <RecentCommentsCard />
+        <div className="pb-[30px]"></div>
+
         <ResponsiveAd
           data_ad_slot={RightSideWithCard_dataAdSlot[1].dataAdSlot}
         />
+        <div className="pb-[30px]"></div>
+
         <NewsletterCard />
+        <div className="pb-[30px]"></div>
+
         <ResponsiveAd
           data_ad_slot={RightSideWithCard_dataAdSlot[2].dataAdSlot}
         />
