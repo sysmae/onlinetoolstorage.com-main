@@ -29,38 +29,42 @@ const Newsletter = () => {
   }
 
   return (
-    <>
+    <div className="flex justify-center items-center  bg-gray-100 dark:bg-gray-900">
       <form
-        className="rounded px-8 pt-6 pb-8 mb-4 max-w-md"
+        className="w-full max-w-md bg-white dark:bg-gray-800 shadow-md p-4 sm:p-6"
         onSubmit={handleSubscribe}
       >
-        <div className="flex">
+        <div className="mb-2">
           <input
-            className={`grow mr-1 transition ease-out delay-75 focus-within:border-2 focus-within:border-purple-600 items-center h-14 pr-0.5 rounded caret-purple-700 outline-none px-4 disabled:border-slate-400 border ${statusCode == 400 ? 'border-orange-500' : 'border-purple-600'} `}
+            className={`w-full h-12 px-4 mb-2 text-lg rounded-lg border transition ease-out duration-200 focus:outline-none focus:ring-2 focus:ring-purple-600 disabled:border-gray-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-purple-400 ${
+              statusCode === 400 ? 'border-orange-500' : 'border-gray-300'
+            }`}
             type="email"
-            placeholder="What is your email address?"
+            placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            disabled={status == 'loading'}
+            disabled={status === 'loading'}
           />
+        </div>
+        <div className="flex justify-center">
           <button
-            className="bg-violet-700 hover:bg-violet-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:bg-slate-400"
+            className="w-full h-12 bg-purple-700 hover:bg-purple-500 text-white font-bold rounded-lg transition ease-out duration-200 focus:outline-none focus:ring-2 focus:ring-purple-600 disabled:bg-gray-400 disabled:cursor-not-allowed dark:focus:ring-purple-400"
             type="submit"
-            disabled={status == 'loading'}
+            disabled={status === 'loading'}
           >
             Subscribe
           </button>
         </div>
-        <div className="server-message pt-4 text-green-600">
-          {status === 'success' ? (
+        <div className="pt-4 text-center">
+          {status === 'success' && (
             <p className="text-green-600">{responseMsg}</p>
-          ) : null}
-          {status === 'error' ? (
+          )}
+          {status === 'error' && (
             <p className="text-orange-600">{responseMsg}</p>
-          ) : null}
+          )}
         </div>
       </form>
-    </>
+    </div>
   )
 }
 

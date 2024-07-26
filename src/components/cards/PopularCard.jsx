@@ -31,7 +31,7 @@ export function PopularCard({ className, ...props }) {
     <Card className={className} {...props}>
       <CardHeader>
         <CardTitle>{t('popular.title')}</CardTitle>
-        {/* <CardDescription>{t('popular.description')}</CardDescription> */}
+        <CardDescription>{t('popular.description')}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         <div>

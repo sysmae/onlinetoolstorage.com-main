@@ -9,15 +9,14 @@ import nextI18NextConfig from '../../next-i18next.config'
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import AdsenseScript from '@/components/adsense/AdsenseScript'
 import Giscus from '@/components/Giscus'
-// import GiscusScript from '@/components/GiscusScript'
 
-import RightSideWithCard from '@/components/RightSideWithCard'
-import { CardDemo } from '@/components/Card'
-import SearchComponent from '@/components/SearchComponent'
+import AdsenseScript from '@/components/adsense/AdsenseScript'
+
 import { Separator } from '@/components/ui/separator'
 
+import RightSideWithCard from '@/components/RightSideWithCard'
+import SearchComponent from '@/components/SearchComponent'
 import { CarouselSize } from '@/components/Carousel'
 
 function MyApp({ Component, pageProps }) {

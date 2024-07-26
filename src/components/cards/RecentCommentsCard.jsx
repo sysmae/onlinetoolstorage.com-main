@@ -1,12 +1,21 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import {
+  Card,
+  CardDescription,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 import { useRouter } from 'next/router'
 
 export function RecentCommentsCard({ className, ...props }) {
   const [comments, setComments] = useState([])
   const [loading, setLoading] = useState(true)
   const [title, setTitle] = useState('Recent Comments')
+  const [description, setDescription] = useState(
+    'Check out the latest comments from our community.',
+  )
 
   const router = useRouter()
   const { locale } = router
@@ -14,9 +23,11 @@ export function RecentCommentsCard({ className, ...props }) {
   useEffect(() => {
     if (locale === 'en') {
       setTitle('Recent Comments')
+      setDescription('Check out the latest comments from our community.')
     }
     if (locale === 'ko') {
       setTitle('최근 댓글')
+      setDescription('커뮤니티의 최신 댓글을 확인하세요.')
     }
 
     async function fetchComments() {
@@ -62,6 +73,7 @@ export function RecentCommentsCard({ className, ...props }) {
     <Card className={className} {...props}>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
         {loading ? (
@@ -71,7 +83,7 @@ export function RecentCommentsCard({ className, ...props }) {
         ) : (
           comments.map((comment) => (
             <a href={`/${comment.title}#comments`} key={comment.id}>
-              <div className="p-1 border rounded-lg hover:bg-gray-100 transition">
+              <div className="p-1 border rounded-lg hover:hover:text-violet-400 transition">
                 <p className="text-sm">
                   <strong>{comment.author.login}</strong> at{' '}
                   {new Date(comment.createdAt).toLocaleString()}
