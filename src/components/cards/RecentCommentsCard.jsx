@@ -32,7 +32,7 @@ export function RecentCommentsCard({ className, ...props }) {
         const allComments = data.discussions.flatMap((discussion) =>
           discussion.comments.edges.map((edge) => ({
             ...edge.node,
-            title: discussion.title === 'index' ? '/' : discussion.title, // Update title if necessary
+            title: discussion.title === 'index' ? '' : discussion.title, // Update title if necessary
           })),
         )
 
@@ -70,7 +70,7 @@ export function RecentCommentsCard({ className, ...props }) {
           <p>No comments available</p>
         ) : (
           comments.map((comment) => (
-            <Link href={`/${comment.title}#comments`} key={comment.id} passHref>
+            <a href={`/${comment.title}#comments`} key={comment.id}>
               <div className="p-1 border rounded-lg hover:bg-gray-100 transition">
                 <p className="text-sm">
                   <strong>{comment.author.login}</strong> at{' '}
@@ -79,7 +79,7 @@ export function RecentCommentsCard({ className, ...props }) {
                 <p className="text-sm">{comment.body}</p>
                 <hr />
               </div>
-            </Link>
+            </a>
           ))
         )}
       </CardContent>
