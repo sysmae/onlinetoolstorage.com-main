@@ -10,7 +10,6 @@ import nextI18NextConfig from '../../next-i18next.config'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import AdsenseScript from '@/components/adsense/AdsenseScript'
-import MailChimpScript from '../components/MailChimpScript'
 import Giscus from '@/components/Giscus'
 // import GiscusScript from '@/components/GiscusScript'
 
@@ -33,7 +32,6 @@ function AppContent({ children }) {
   return (
     <>
       <AdsenseScript />
-      <MailChimpScript />
       {/* <GiscusScript /> */}
       {/* 메인 레이아웃 */}
       <Layout>{children}</Layout>
@@ -83,7 +81,13 @@ function Layout({ children }) {
       <CarouselSize />
 
       <CenteredSeparator />
-      <div className="lg:max-w-[1280px] mx-auto" id="comments">
+      <div className="lg:max-w-[1280px] mx-auto " id="comments">
+        <p className="text-lg font-bold text-center bg-violet-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300">
+          개발자에게 건의(훈수)하기
+        </p>
+        <p className="text-center bg-violet-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300">
+          Communicate With Developer
+        </p>
         <Giscus />
       </div>
       <Footer />
@@ -96,6 +100,7 @@ function MainContent({ children }) {
     <Container
       maxWidth={{ initial: '100%', lg: '768px' }}
       px={{ initial: '15px', lg: '30px' }}
+      className=" bg-violet-100 dark:bg-gray-700 p-8 rounded-lg"
     >
       <main>{children}</main>
     </Container>

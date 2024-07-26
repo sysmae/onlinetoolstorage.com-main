@@ -10,7 +10,7 @@ import { RightSideWithCard_dataAdSlot } from '@/constants/adsense/data_ad_slot'
 export default function RightSideWithCard() {
   return (
     <Flex maxWidth={{ initial: '100%', lg: '344px' }}>
-      <aside className="flex-grow">
+      <aside className="flex-grow lg:pl-8">
         <div className="hidden xl:block">
           <SearchComponent />
         </div>
