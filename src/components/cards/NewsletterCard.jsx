@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
-import { Newsletter } from '@/components/newsletter'
+import Newsletter from '@/components/Newsletter'
 import { useRouter } from 'next/router'
 
 export function NewsletterCard({ className, ...props }) {
