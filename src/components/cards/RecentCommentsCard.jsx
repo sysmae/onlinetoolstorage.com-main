@@ -70,7 +70,7 @@ export function RecentCommentsCard({ className, ...props }) {
           <p>No comments available</p>
         ) : (
           comments.map((comment) => (
-            <Link href={`/${comment.title}`} key={comment.id} passHref>
+            <Link href={`/${comment.title}#comments`} key={comment.id} passHref>
               <div className="p-1 border rounded-lg hover:bg-gray-100 transition">
                 <p className="text-sm">
                   <strong>{comment.author.login}</strong> at{' '}

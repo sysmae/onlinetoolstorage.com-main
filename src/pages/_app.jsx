@@ -81,7 +81,7 @@ function Layout({ children }) {
       <CarouselSize />
 
       <CenteredSeparator />
-      <div className="lg:max-w-[1280px] mx-auto">
+      <div className="lg:max-w-[1280px] mx-auto" id="comments">
         <Giscus />
       </div>
       <Footer />
