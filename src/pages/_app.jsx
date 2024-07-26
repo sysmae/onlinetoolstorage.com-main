@@ -10,6 +10,7 @@ import nextI18NextConfig from '../../next-i18next.config'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import AdsenseScript from '@/components/adsense/AdsenseScript'
+import MailChimpScript from '../components/MailChimpScript'
 import Giscus from '@/components/Giscus'
 // import GiscusScript from '@/components/GiscusScript'
 
@@ -32,6 +33,7 @@ function AppContent({ children }) {
   return (
     <>
       <AdsenseScript />
+      <MailChimpScript />
       {/* <GiscusScript /> */}
       {/* 메인 레이아웃 */}
       <Layout>{children}</Layout>
