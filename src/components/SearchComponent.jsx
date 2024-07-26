@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Fuse from 'fuse.js'
@@ -12,6 +13,7 @@ function SearchComponent() {
   const [results, setResults] = useState([])
   const [isOpen, setIsOpen] = useState(false)
   const [showSearchInput, setShowSearchInput] = useState(false)
+  const [notFoundMsg, setNotFoundMsg] = useState('')
   const inputRef = useRef(null)
   const locale = i18n.language
 
@@ -68,6 +70,13 @@ function SearchComponent() {
         setIsOpen(false)
       }
     })
+
+    if (locale === 'en') {
+      setNotFoundMsg("Can't Find Tool? Request Here!")
+    }
+    if (locale === 'ko') {
+      setNotFoundMsg('필요한 도구를 댓글로 건의하세요!')
+    }
   }, [debouncedQuery, locale])
 
   const toggleSearchInput = () => {
@@ -122,7 +131,13 @@ function SearchComponent() {
           <ul>
             {results.length === 0 && (
               <li className="p-2 text-gray-500 dark:text-gray-400 w-full">
-                No results found
+                <a
+                  className="hover:text-violet-400"
+                  href="/#comments"
+                  onClick={handleClear}
+                >
+                  {notFoundMsg}
+                </a>
               </li>
             )}
             {results.map((page) => (
