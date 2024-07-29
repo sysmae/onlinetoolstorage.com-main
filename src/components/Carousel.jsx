@@ -29,7 +29,7 @@ export function CarouselSize() {
         loop: true,
       }}
       plugins={[plugin.current]}
-      className="max-w-md lg:max-w-6xl mx-auto bg-slate-500"
+      className="mx-auto max-w-md bg-slate-500 lg:max-w-6xl"
     >
       {/* <CarouselContent className="-ml-1">
         {Array.from({ length: 5 }).map((_, index) => (
@@ -52,7 +52,7 @@ export function CarouselSize() {
           return (
             <CarouselItem
               key={index}
-              className="items-center justify-center md:basis-1/2 lg:basis-1/3 w-full bg-slate-400"
+              className="w-full items-center justify-center bg-slate-400 md:basis-1/2 lg:basis-1/3"
             >
               <div className="p-1">
                 <CarouselCard

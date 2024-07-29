@@ -1,6 +1,11 @@
 {
-  "extends": ["next/core-web-vitals", "plugin:prettier/recommended"],
-  "plugins": ["prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  // "plugins": ["prettier"],
   "rules": {
     "semi": ["error", "never"],
     "prettier/prettier": [
@@ -8,6 +13,36 @@
       {
         "semi": false,
         "singleQuote": true
+      }
+    ],
+    "tailwindcss/classnames-order": [
+      "warn",
+      {
+        "callees": ["cva", "cn"]
+      }
+    ],
+    "tailwindcss/enforces-negative-arbitrary-values": [
+      "warn",
+      {
+        "callees": ["cva", "cn"]
+      }
+    ],
+    "tailwindcss/enforces-shorthand": [
+      "warn",
+      {
+        "callees": ["cva", "cn"]
+      }
+    ],
+    "tailwindcss/no-contradicting-classname": [
+      "warn",
+      {
+        "callees": ["cva", "cn"]
+      }
+    ],
+    "tailwindcss/no-custom-classname": [
+      "warn",
+      {
+        "callees": ["cva", "cn"]
       }
     ]
   }

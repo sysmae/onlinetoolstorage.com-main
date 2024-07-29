@@ -29,14 +29,14 @@ const Newsletter = () => {
   }
 
   return (
-    <div className="flex justify-center items-center  bg-gray-100 dark:bg-gray-900">
+    <div className="flex items-center justify-center  bg-gray-100 dark:bg-gray-900">
       <form
-        className="w-full max-w-md bg-white dark:bg-gray-800 shadow-md p-4 sm:p-6"
+        className="w-full max-w-md bg-white p-4 shadow-md dark:bg-gray-800 sm:p-6"
         onSubmit={handleSubscribe}
       >
         <div className="mb-2">
           <input
-            className={`w-full h-12 px-4 mb-2 text-lg rounded-lg border transition ease-out duration-200 focus:outline-none focus:ring-2 focus:ring-purple-600 disabled:border-gray-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:ring-purple-400 ${
+            className={`mb-2 h-12 w-full rounded-lg border px-4 text-lg transition duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-purple-600 disabled:border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:focus:ring-purple-400 ${
               statusCode === 400 ? 'border-orange-500' : 'border-gray-300'
             }`}
             type="email"
@@ -48,7 +48,7 @@ const Newsletter = () => {
         </div>
         <div className="flex justify-center">
           <button
-            className="w-full h-12 bg-purple-700 hover:bg-purple-500 text-white font-bold rounded-lg transition ease-out duration-200 focus:outline-none focus:ring-2 focus:ring-purple-600 disabled:bg-gray-400 disabled:cursor-not-allowed dark:focus:ring-purple-400"
+            className="h-12 w-full rounded-lg bg-purple-700 font-bold text-white transition duration-200 ease-out hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-600 disabled:cursor-not-allowed disabled:bg-gray-400 dark:focus:ring-purple-400"
             type="submit"
             disabled={status === 'loading'}
           >
