@@ -74,7 +74,7 @@ export default function Home() {
         {error && <p className="text-red-500">{error}</p>}
         {selectedCell && (
           <div
-            className="bg-indigo-100 border-l-4 border-indigo-500 text-indigo-700 p-4"
+            className="border-l-4 border-indigo-500 bg-indigo-100 p-4 text-indigo-700"
             role="alert"
           >
             <p>
@@ -83,15 +83,15 @@ export default function Home() {
           </div>
         )}
         <div
-          className="overflow-x-auto bg-white rounded-lg shadow overflow-y-auto "
+          className="overflow-auto rounded-lg bg-white shadow "
           style={{ height: '300px' }}
         >
-          <table className="border-collapse table-auto w-full whitespace-no-wrap bg-white table-striped">
+          <table className="whitespace-no-wrap table-striped w-full table-auto border-collapse bg-white">
             <thead>
               {excelData.length > 0 && (
                 <tr className="text-left">
                   {Object.keys(excelData[0]).map((header, index) => (
-                    <th key={index} className="bg-blue-500 text-white p-2">
+                    <th key={index} className="bg-blue-500 p-2 text-white">
                       {header}
                     </th>
                   ))}
@@ -104,7 +104,7 @@ export default function Home() {
                   {Object.keys(row).map((colKey) => (
                     <td
                       key={colKey}
-                      className="p-2 border-dashed border-t border-gray-200"
+                      className="border-t border-dashed border-gray-200 p-2"
                     >
                       <input
                         type="text"
@@ -115,7 +115,7 @@ export default function Home() {
                         onChange={(e) =>
                           editCell(rowIndex, colKey, e.target.value)
                         }
-                        className="w-full p-1 px-2 outline-none text-gray-700"
+                        className="w-full p-1 px-2 text-gray-700 outline-none"
                       />
                     </td>
                   ))}

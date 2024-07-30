@@ -34,15 +34,15 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="flex flex-col items-center justify-center h-screen">
-        <h2 className="text-2xl font-bold mb-4">Coin Toss</h2>
+      <div className="flex h-screen flex-col items-center justify-center">
+        <h2 className="mb-4 text-2xl font-bold">Coin Toss</h2>
         <div
-          className={`w-24 h-24 flex items-center justify-center rounded-full bg-yellow-400 font-bold text-xl shadow-lg ${flipping ? 'animate-spin' : ''}`}
+          className={`flex size-24 items-center justify-center rounded-full bg-yellow-400 text-xl font-bold shadow-lg ${flipping ? 'animate-spin' : ''}`}
         >
           {flipping ? '' : result}
         </div>
         <button
-          className="mt-4 bg-blue-500 text-white px-4 py-2 rounded shadow"
+          className="mt-4 rounded bg-blue-500 px-4 py-2 text-white shadow"
           onClick={flipCoin}
           disabled={flipping}
         >
