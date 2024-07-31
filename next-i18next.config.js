@@ -3,9 +3,12 @@
 
 module.exports = {
   i18n: {
-    defaultLocale: 'ko',
-    locales: ['ko', 'en'],
+    locales: ['default', 'en', 'ko'],
+    defaultLocale: 'default',
+    localeDetection: false,
   },
+  trailingSlash: true,
+
   // localePath: path.resolve('./public/locales'),
 
   reloadOnPrerender: process.env.NODE_ENV === 'development',

@@ -2,182 +2,181 @@
   "categories": [
     {
       "name": "Encryption Decryption",
-      "link": "/en/crypto",
+      "link": "/crypto",
       "emoji": "🔐",
       "subcategories": [
-        { "name": "PassWord Generate", "link": "/en/crypto/password" },
-        { "name": "UUID Generate", "link": "/en/crypto/uuid" },
-        { "name": "AES", "link": "/en/crypto/aes" },
-        { "name": "ASCII", "link": "/en/crypto/ascii" },
-        { "name": "Base64", "link": "/en/crypto/base64" },
-        { "name": "DES", "link": "/en/crypto/des" },
-        { "name": "HEX", "link": "/en/crypto/hex" },
-        { "name": "HMAC", "link": "/en/crypto/hmac" },
-        { "name": "Latin1", "link": "/en/crypto/latin1" },
-        { "name": "MD5", "link": "/en/crypto/md5" },
-        { "name": "Morse", "link": "/en/crypto/morse" },
-        { "name": "Rabbit", "link": "/en/crypto/rabbit" },
-        { "name": "RC4", "link": "/en/crypto/rc4" },
-        { "name": "RC4Drop", "link": "/en/crypto/rc4drop" },
-        { "name": "RIPEMD160", "link": "/en/crypto/ripemd160" },
-        { "name": "SHA1", "link": "/en/crypto/sha1" },
-        { "name": "SHA256", "link": "/en/crypto/sha256" },
-        { "name": "SHA3", "link": "/en/crypto/sha3" },
-        { "name": "SHA512", "link": "/en/crypto/sha512" },
-        { "name": "UTF16BE", "link": "/en/crypto/utf16be" },
-        { "name": "UTF16LE", "link": "/en/crypto/utf16le" },
-        { "name": "UTF8", "link": "/en/crypto/utf8" }
+        { "name": "PassWord Generate", "link": "/crypto/password" },
+        { "name": "UUID Generate", "link": "/crypto/uuid" },
+        { "name": "AES", "link": "/crypto/aes" },
+        { "name": "ASCII", "link": "/crypto/ascii" },
+        { "name": "Base64", "link": "/crypto/base64" },
+        { "name": "DES", "link": "/crypto/des" },
+        { "name": "HEX", "link": "/crypto/hex" },
+        { "name": "HMAC", "link": "/crypto/hmac" },
+        { "name": "Latin1", "link": "/crypto/latin1" },
+        { "name": "MD5", "link": "/crypto/md5" },
+        { "name": "Morse", "link": "/crypto/morse" },
+        { "name": "Rabbit", "link": "/crypto/rabbit" },
+        { "name": "RC4", "link": "/crypto/rc4" },
+        { "name": "RC4Drop", "link": "/crypto/rc4drop" },
+        { "name": "RIPEMD160", "link": "/crypto/ripemd160" },
+        { "name": "SHA1", "link": "/crypto/sha1" },
+        { "name": "SHA256", "link": "/crypto/sha256" },
+        { "name": "SHA3", "link": "/crypto/sha3" },
+        { "name": "SHA512", "link": "/crypto/sha512" },
+        { "name": "UTF16BE", "link": "/crypto/utf16be" },
+        { "name": "UTF16LE", "link": "/crypto/utf16le" },
+        { "name": "UTF8", "link": "/crypto/utf8" }
       ]
     },
     {
       "name": "Unit Converter",
-      "link": "/en/units",
+      "link": "/units",
       "emoji": "📏",
       "subcategories": [
-        { "name": "Angle", "link": "/en/units/angle" },
-        { "name": "Apparent Power", "link": "/en/units/apparent-power" },
-        { "name": "Area", "link": "/en/units/area" },
-        { "name": "Current", "link": "/en/units/current" },
-        { "name": "Data", "link": "/en/units/data" },
-        { "name": "Energy", "link": "/en/units/energy" },
-        { "name": "Frequency", "link": "/en/units/frequency" },
-        { "name": "Illuminance", "link": "/en/units/illuminance" },
-        { "name": "Length", "link": "/en/units/length" },
-        { "name": "Mass", "link": "/en/units/mass" },
-        { "name": "Pace", "link": "/en/units/pace" },
-        { "name": "Parts Per", "link": "/en/units/partsper" },
-        { "name": "Power", "link": "/en/units/power" },
-        { "name": "Pressure", "link": "/en/units/pressure" },
-        { "name": "Reactive Energy", "link": "/en/units/reactive-energy" },
-        { "name": "Reactive Power", "link": "/en/units/reactive-power" },
-        { "name": "Speed", "link": "/en/units/speed" },
-        { "name": "Temperature", "link": "/en/units/temperature" },
-        { "name": "Time", "link": "/en/units/time" },
-        { "name": "Voltage", "link": "/en/units/voltage" },
-        { "name": "Volume", "link": "/en/units/volume" },
-        { "name": "Volume Flow Rate", "link": "/en/units/volume-flow-rate" }
+        { "name": "Angle", "link": "/units/angle" },
+        { "name": "Apparent Power", "link": "/units/apparent-power" },
+        { "name": "Area", "link": "/units/area" },
+        { "name": "Current", "link": "/units/current" },
+        { "name": "Data", "link": "/units/data" },
+        { "name": "Energy", "link": "/unitsergy" },
+        { "name": "Frequency", "link": "/units/frequency" },
+        { "name": "Illuminance", "link": "/units/illuminance" },
+        { "name": "Length", "link": "/units/length" },
+        { "name": "Mass", "link": "/units/mass" },
+        { "name": "Pace", "link": "/units/pace" },
+        { "name": "Parts Per", "link": "/units/partsper" },
+        { "name": "Power", "link": "/units/power" },
+        { "name": "Pressure", "link": "/units/pressure" },
+        { "name": "Reactive Energy", "link": "/units/reactive-energy" },
+        { "name": "Reactive Power", "link": "/units/reactive-power" },
+        { "name": "Speed", "link": "/units/speed" },
+        { "name": "Temperature", "link": "/units/temperature" },
+        { "name": "Time", "link": "/units/time" },
+        { "name": "Voltage", "link": "/units/voltage" },
+        { "name": "Volume", "link": "/units/volume" },
+        { "name": "Volume Flow Rate", "link": "/units/volume-flow-rate" }
       ]
     },
     {
       "name": "Random Generator",
-      "link": "/en/random",
+      "link": "/random",
       "emoji": "🎲",
       "subcategories": [
-        { "name": "Coin Toss", "link": "/en/random/coin" },
-        { "name": "Dice", "link": "/en/random/dice" },
-        { "name": "Ladder Climbing", "link": "/en/random/ladder" },
-        { "name": "Lorem Ipsum", "link": "/en/random/lorem" },
-        { "name": "Lotto Numbers", "link": "/en/random/lotto" },
-        { "name": "Random Number", "link": "/en/random/number" },
+        { "name": "Coin Toss", "link": "/random/coin" },
+        { "name": "Dice", "link": "/random/dice" },
+        { "name": "Ladder Climbing", "link": "/random/ladder" },
+        { "name": "Lorem Ipsum", "link": "/random/lorem" },
+        { "name": "Lotto Numbers", "link": "/random/lotto" },
+        { "name": "Random Number", "link": "/random/number" },
         {
           "name": "Rock Paper Scissors",
-          "link": "/en/random/rock-paper-scissors"
+          "link": "/random/rock-paper-scissors"
         },
-        { "name": "Random English Word", "link": "/en/random/word-en" },
-        { "name": "Random Korean Word", "link": "/en/random/word-ko" }
+        { "name": "Random English Word", "link": "/random/word-en" },
+        { "name": "Random Korean Word", "link": "/random/word-ko" }
       ]
     },
     {
       "name": "Calculators",
-      "link": "/en/calculator",
+      "link": "/calculator",
       "emoji": "🧮",
       "subcategories": [
-        { "name": "Statistics", "link": "/en/calculator/statics" },
-        { "name": "BMI", "link": "/en/calculator/BMI" },
-        { "name": "AdSense Revenue", "link": "/en/calculator/adsense" },
-        { "name": "Effective Interest Rate", "link": "/en/calculator/EIR" },
+        { "name": "Statistics", "link": "/calculator/statics" },
+        { "name": "BMI", "link": "/calculator/BMI" },
+        { "name": "AdSense Revenue", "link": "/calculator/adsense" },
+        { "name": "Effective Interest Rate", "link": "/calculator/EIR" },
         {
           "name": "Compound Interest",
-          "link": "/en/calculator/compound-interest"
+          "link": "/calculator/compound-interest"
         },
         {
           "name": "Repayment Loan",
-          "link": "/en/calculator/repayment-loan"
+          "link": "/calculator/repayment-loan"
         },
         {
           "name": "Engineering Calc",
-          "link": "/en/calculator/engineering"
+          "link": "/calculatorgineering"
         }
       ]
     },
     {
       "name": "Convertors Generators",
-      "link": "/en/convert",
+      "link": "/convert",
       "emoji": "🔄",
       "subcategories": [
-        { "name": "Color Convert", "link": "/en/convert/color" },
-        { "name": "Barcode Generator", "link": "/en/convert/barcode" },
-        { "name": "QR Code Generator", "link": "/en/convert/qrcode" },
+        { "name": "Color Convert", "link": "/convert/color" },
+        { "name": "Barcode Generator", "link": "/convert/barcode" },
+        { "name": "QR Code Generator", "link": "/convert/qrcode" },
         {
           "name": "Birthday to Zodiac",
-          "link": "/en/convert/birthdayToZodiac"
+          "link": "/convert/birthdayToZodiac"
         },
-        { "name": "Roman Number Convert", "link": "/en/convert/roman" },
-        { "name": "Base N Convert", "link": "/en/convert/number" }
+        { "name": "Roman Number Convert", "link": "/convert/roman" },
+        { "name": "Base N Convert", "link": "/convert/number" }
       ]
     },
     {
       "name": "CharMap",
-      "link": "/en/charmap",
+      "link": "/charmap",
       "emoji": "🔤",
       "subcategories": [
-        { "name": "Emojis", "link": "/en/charmap/emojis" },
-        { "name": "Unicode Special", "link": "/en/charmap/unicode-special" }
+        { "name": "Emojis", "link": "/charmap/emojis" },
+        { "name": "Unicode Special", "link": "/charmap/unicode-special" }
       ]
     },
     {
       "name": "Text",
-      "link": "/en/text",
+      "link": "/text",
       "emoji": "📝",
       "subcategories": [
-        { "name": "NotePad", "link": "/en/text/notepad" },
-        { "name": "Character Count", "link": "/en/text/charcount" }
+        { "name": "NotePad", "link": "/text/notepad" },
+        { "name": "Character Count", "link": "/text/charcount" }
       ]
     },
     {
       "name": "Times",
-      "link": "/en/time",
+      "link": "/time",
       "emoji": "⏰",
       "subcategories": [
-        { "name": "D-Day Counter", "link": "/en/time/d-day" },
-        { "name": "Pomodoro", "link": "/en/time/pomodoro" },
-        { "name": "Timer", "link": "/en/time/timer" },
-        { "name": "Stopwatch", "link": "/en/time/stopwatch" },
-        { "name": "Countdown", "link": "/en/time/countdown" },
-        { "name": "Left Time", "link": "/en/time/lefttime" }
+        { "name": "D-Day Counter", "link": "/time/d-day" },
+        { "name": "Pomodoro", "link": "/time/pomodoro" },
+        { "name": "Timer", "link": "/time/timer" },
+        { "name": "Stopwatch", "link": "/time/stopwatch" },
+        { "name": "Countdown", "link": "/time/countdown" },
+        { "name": "Left Time", "link": "/time/lefttime" }
       ]
     },
     {
       "name": "Network",
-      "link": "/en/network",
+      "link": "/network",
       "emoji": "🌐",
-      "subcategories": [
-        { "name": "IP Address", "link": "/en/network/ipaddress" }
-      ]
+      "subcategories": [{ "name": "IP Address", "link": "/network/ipaddress" }]
     },
     {
       "name": "Image",
-      "link": "/en/image",
+      "link": "/image",
       "emoji": "🖼️",
       "subcategories": [
-        { "name": "Image Color Picker", "link": "/en/image/color-picker" },
-        { "name": "Image Compress", "link": "/en/image/compress" },
-        { "name": "Image Crop", "link": "/en/image/crop" },
-        { "name": "Image Flip", "link": "/en/image/flip" },
-        { "name": "Image Resize", "link": "/en/image/resize" }      ]
+        { "name": "Image Color Picker", "link": "/image/color-picker" },
+        { "name": "Image Compress", "link": "/image/compress" },
+        { "name": "Image Crop", "link": "/image/crop" },
+        { "name": "Image Flip", "link": "/image/flip" },
+        { "name": "Image Resize", "link": "/image/resize" }
+      ]
     },
     {
       "name": "SpreadSheet",
-      "link": "/en/spreadsheet",
+      "link": "/spreadsheet",
       "emoji": "📊",
       "subcategories": [
-        { "name": "CSV Editor", "link": "/en/spreadsheet/csv-editor" },
-        { "name": "JSON Editor", "link": "/en/spreadsheet/json-editor" },
-        { "name": "Excel Editor", "link": "/en/spreadsheet/excel-editor" },
-        { "name": "XML Editor", "link": "/en/spreadsheet/xml-editor" },
-        { "name": "CSV Convert", "link": "/en/spreadsheet/csv-convert" },
-        { "name": "JSON Convert", "link": "/en/spreadsheet/json-convert" },
-        { "name": "Excel Convert", "link": "/en/spreadsheet/excel-convert" }
+        { "name": "CSV Editor", "link": "/spreadsheet/csv-editor" },
+        { "name": "JSON Editor", "link": "/spreadsheet/json-editor" },
+        { "name": "Excel Editor", "link": "/spreadsheet/excel-editor" },
+        { "name": "XML Editor", "link": "/spreadsheet/xml-editor" },
+        { "name": "CSV Convert", "link": "/spreadsheet/csv-convert" },
+        { "name": "JSON Convert", "link": "/spreadsheet/json-convert" },
+        { "name": "Excel Convert", "link": "/spreadsheet/excel-convert" }
       ]
     }
   ]

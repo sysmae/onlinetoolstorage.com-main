@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Cookies from 'js-cookie'
 
 const LanguageSwitcher = () => {
   const router = useRouter()
@@ -23,8 +24,11 @@ const LanguageSwitcher = () => {
     } else {
       pathSegments.splice(1, 0, lang)
     }
-
     return pathSegments.join('/')
+  }
+
+  const handleCookie = (lang) => {
+    Cookies.set('NEXT_LOCALE', lang, { expires: 365 })
   }
 
   const handleClose = () => {
@@ -45,15 +49,15 @@ const LanguageSwitcher = () => {
   }, [])
 
   return (
-    <div className=" language-switcher">
+    <div className="language-switcher">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="px-4 py-2 text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-600 rounded-md focus:outline-none"
+        className="rounded-md bg-gray-100 px-4 py-2 text-gray-600 transition duration-150 ease-in-out hover:bg-gray-200 hover:text-gray-900 focus:outline-none dark:bg-gray-800 dark:hover:bg-gray-600"
       >
         🌐
       </button>
       {isOpen && (
-        <div className="absolute right-0 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+        <div className="absolute right-0 z-20 mt-2 w-48 rounded-md bg-white py-2 shadow-xl">
           {languages.map((lang) => (
             <Link
               key={lang.code}
@@ -62,9 +66,10 @@ const LanguageSwitcher = () => {
               passHref
             >
               <span
-                className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100 transition ease-in-out cursor-pointer"
+                className="block cursor-pointer px-4 py-2 text-sm text-gray-800 transition ease-in-out hover:bg-gray-100"
                 onClick={(e) => {
                   e.stopPropagation()
+                  handleCookie(lang.code)
                   handleClose()
                 }}
               >

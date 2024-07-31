@@ -45,6 +45,7 @@
     "fuse.js": "^7.0.0",
     "gray-matter": "^4.0.3",
     "i18next": "^23.11.1",
+    "js-cookie": "^3.0.5",
     "js2xmlparser": "^5.0.0",
     "jsbarcode": "^3.11.6",
     "lucide-react": "^0.408.0",
