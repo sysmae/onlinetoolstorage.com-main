@@ -14,6 +14,10 @@ module.exports = {
 
   transform: async (config, path) => {
     // // Filter out paths that contain '/ko'
+    if (path.includes('/ko')) {
+      return null
+    }
+
     if (path.includes('/en')) {
       return null
     }
