@@ -2,7 +2,7 @@
   "emojis": {
     "title": "Popular Emojis and Special Character Emoticons: Easy Copy and Download - Unicode Collection",
     "description": "Easily copy and download the latest emojis, special characters, and emoticons. Explore the usage, history, popular emojis, FAQs, etc., along with a collection of Unicode characters.",
-    "url": "/charmap/emojis",
+    "url": "/en/charmap/emojis",
     "sections": [
       {
         "title": "How to Use Emojis",
@@ -47,7 +47,7 @@
   "unicode-special": {
     "title": "Unicode Characters Collection: Special Characters & Emoticons",
     "description": "Easily copy and download the latest emojis, special characters, and emoticons. Explore the usage, history, and popular emojis with FAQs, all provided alongside the Unicode characters collection.",
-    "url": "/charmap/unicode-special",
+    "url": "/en/charmap/unicode-special",
     "sections": [
       {
         "title": "Unicode Character Collection",
