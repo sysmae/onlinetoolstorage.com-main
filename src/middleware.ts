@@ -11,14 +11,27 @@ export async function middleware(req: NextRequest) {
     return
   }
 
-  if (req.nextUrl.locale === 'default') {
-    const locale = req.cookies.get('NEXT_LOCALE')?.value || 'ko'
+  if (
+    req.nextUrl.locale === 'default' ||
+    (req.nextUrl.locale !== 'ko' && req.nextUrl.locale !== 'en')
+  ) {
+    let locale = req.cookies.get('NEXT_LOCALE')?.value || 'ko' // default locale
 
-    return NextResponse.redirect(
+    // If the locale is not valid, set the default locale
+    if (locale !== 'ko' && locale !== 'en') {
+      locale = 'ko'
+    }
+
+    const response = NextResponse.redirect(
       new URL(
         `/${locale}${req.nextUrl.pathname}${req.nextUrl.search}`,
         req.url,
       ),
     )
+
+    // Set the cookie in the response
+    response.cookies.set('NEXT_LOCALE', locale)
+
+    return response
   }
 }
