@@ -13,8 +13,12 @@ import LanguageSwitcher from '@/components/LanguageSwitcher'
 Modal.setAppElement('#__next') // Set the root element ID for accessibility
 
 const ModalNav = ({ categories, setCategories, handleLinkClick }) => {
+  const router = useRouter()
+  const locale = router.locale || 'ko'
+  console.log(locale)
+
   return (
-    <ul className="space-y-1 mb-20">
+    <ul className="mb-20 space-y-1">
       {categories.map((category, index) => (
         <li
           key={index}
@@ -31,7 +35,7 @@ const ModalNav = ({ categories, setCategories, handleLinkClick }) => {
                 })),
               )
             }}
-            className="w-full text-left flex mt-4 justify-between items-center px-4 py-2 text-2xl bg-purple-700 text-purple-100 hover:bg-purple-200 hover:text-purple-700 dark:bg-gray-600 dark:hover:bg-gray-700 focus:outline-none "
+            className="mt-4 flex w-full items-center justify-between bg-purple-700 px-4 py-2 text-left text-2xl text-purple-100 hover:bg-purple-200 hover:text-purple-700 focus:outline-none dark:bg-gray-600 dark:hover:bg-gray-700 "
           >
             {category.name}
             {category.isOpen ? (
@@ -45,10 +49,10 @@ const ModalNav = ({ categories, setCategories, handleLinkClick }) => {
           >
             {category.subcategories.map((sub, idx) => (
               <li key={idx}>
-                <Link href={sub.link}>
+                <Link href={sub.link} locale={locale}>
                   <span
                     onClick={handleLinkClick}
-                    className="text-purple-800 dark:text-gray-300 dark:hover:text-gray-500 hover:bg-purple-200 text-xl flex justify-between items-center p-1 pl-4 transition duration-300 ease-in-out"
+                    className="flex items-center justify-between p-1 pl-4 text-xl text-purple-800 transition duration-300 ease-in-out hover:bg-purple-200 dark:text-gray-300 dark:hover:text-gray-500"
                   >
                     {sub.name}
                   </span>
@@ -103,10 +107,10 @@ const Header = () => {
 
   return (
     <>
-      <div ref={ref} className="flex flex-col flex-grow">
-        <header className="flex flex-wrap justify-between items-center px-4 py-4 bg-gray-50 shadow-md dark:bg-gray-800 w-[100vw ] top-0 left-0 right-0 z-50">
-          <Link href="/" passHref>
-            <div className="flex flex-row justify-center items-center gap-x-2">
+      <div ref={ref} className="flex grow flex-col">
+        <header className="inset-x-0 top-0 z-50 flex w-screen flex-wrap items-center justify-between bg-gray-50 p-4 shadow-md dark:bg-gray-800">
+          <Link href="/" locale={locale}>
+            <div className="flex flex-row items-center justify-center gap-x-2">
               <Image
                 className="cursor-pointer dark:hidden"
                 src="/logo-header.png"
@@ -120,7 +124,7 @@ const Header = () => {
                 }}
               />
               <Image
-                className="cursor-pointer hidden dark:block"
+                className="hidden cursor-pointer dark:block"
                 src="/logo-header-dark.png"
                 alt="Logo"
                 objectFit="contain"
@@ -138,11 +142,11 @@ const Header = () => {
             <SearchComponent />
           </div> */}
           <div className="flex flex-row">
-            <ul className="flex flex-row flex-grow flex-wrap">
+            <ul className="flex grow flex-row flex-wrap">
               {categories.map((category, index) => (
                 <li
                   key={index}
-                  className="hidden lg:block border-b border-gray-300 dark:border-gray-700 lg:border-none hover:text-purple-700 dark:hover:text-purple-500"
+                  className="hidden border-b border-gray-300 hover:text-purple-700 dark:border-gray-700 dark:hover:text-purple-500 lg:block lg:border-none"
                 >
                   <button
                     aria-label="Toggle Category"
@@ -155,24 +159,24 @@ const Header = () => {
                         })),
                       )
                     }}
-                    className="flex items-center lg:p-2 hover:bg-purple-300"
+                    className="flex items-center hover:bg-purple-300 lg:p-2"
                   >
                     <div>{category.emoji}</div>
 
                     {category.isOpen ? (
-                      <MdExpandLess className="text-gray-400  ml-2" />
+                      <MdExpandLess className="ml-2  text-gray-400" />
                     ) : (
-                      <MdExpandMore className="text-gray-400  ml-2" />
+                      <MdExpandMore className="ml-2  text-gray-400" />
                     )}
                   </button>
                   <ul
                     className={`${
                       category.isOpen ? 'max-h-full' : 'max-h-0'
-                    } absolute bg-slate-50 dark:bg-gray-800 overflow-hidden transition-max-height `}
+                    } transition-max-height absolute overflow-hidden bg-slate-50 dark:bg-gray-800 `}
                   >
                     {category.subcategories.map((sub, idx) => (
                       <li key={idx}>
-                        <Link href={sub.link}>
+                        <Link href={sub.link} locale={locale}>
                           <span
                             onClick={() => {
                               handleLinkClick()
@@ -183,7 +187,7 @@ const Header = () => {
                                 })),
                               ) // 링크 클릭 시 모든 카테고리 닫힘
                             }}
-                            className="text-purple-800 dark:text-gray-300 dark:hover:text-gray-500 hover:bg-purple-200 text-xl flex justify-between items-center p-1 pl-4 transition duration-300 ease-in-out"
+                            className="flex items-center justify-between p-1 pl-4 text-xl text-purple-800 transition duration-300 ease-in-out hover:bg-purple-200 dark:text-gray-300 dark:hover:text-gray-500"
                           >
                             {sub.name}
                           </span>
@@ -195,9 +199,9 @@ const Header = () => {
               ))}
             </ul>
           </div>
-          <div className="flex items-center space-x-3 md:space-x-6 min-w-[200px]">
+          <div className="flex min-w-[200px] items-center space-x-3 md:space-x-6">
             <button
-              className="rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-600 p-2"
+              className="rounded-md bg-gray-100 p-2 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-600"
               onClick={toggleModal}
             >
               <CgMenuRound size="24px" />
@@ -210,7 +214,7 @@ const Header = () => {
             onRequestClose={toggleModal}
             contentLabel="Menu Modal"
             overlayClassName="fixed inset-0 bg-black bg-opacity-90 dark:bg-opacity-95 z-40"
-            className="absolute bottom-0 left-0 right-0 lg:left-96 lg:right-96 bg-white dark:bg-gray-800 p-5 z-50 rounded-t-lg dark:text-white overflow-auto"
+            className="absolute inset-x-0 bottom-0 z-50 overflow-auto rounded-t-lg bg-white p-5 dark:bg-gray-800 dark:text-white lg:inset-x-96"
             style={{
               content: {
                 height: '80vh', // 뷰포트 높이의 80%로 설정
@@ -220,11 +224,11 @@ const Header = () => {
           >
             <button
               onClick={toggleModal}
-              className="absolute top-0 right-0 p-2 text-lg font-semibold text-gray-600 bg-purple-300 dark:text-gray-200"
+              className="absolute right-0 top-0 bg-purple-300 p-2 text-lg font-semibold text-gray-600 dark:text-gray-200"
             >
               ✕
             </button>
-            <aside className="w-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white">
+            <aside className="w-full bg-white text-gray-900 dark:bg-gray-800 dark:text-white">
               <div className="h-full overflow-y-auto">
                 <ModalNav
                   categories={categories}

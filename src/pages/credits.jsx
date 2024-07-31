@@ -59,13 +59,13 @@ export async function getStaticProps() {
 
 export default function Credits({ dependencies, devDependencies }) {
   return (
-    <div className="max-w-4xl mx-auto my-8">
+    <div className="mx-auto my-8 max-w-4xl">
       <Head>
         <title>Credits & Licenses</title>
       </Head>
-      <h1 className="text-3xl font-bold mb-4">Credits & Licenses</h1>
-      <h2 className="text-2xl mb-2">Dependencies</h2>
-      <ul className="list-disc pl-5 mb-6">
+      <h1 className="mb-4 text-3xl font-bold">Credits & Licenses</h1>
+      <h2 className="mb-2 text-2xl">Dependencies</h2>
+      <ul className="mb-6 list-disc pl-5">
         {dependencies.length === 0 ? (
           <li>No dependencies found.</li>
         ) : (
@@ -86,7 +86,7 @@ export default function Credits({ dependencies, devDependencies }) {
           ))
         )}
       </ul>
-      <h2 className="text-2xl mb-2">Dev Dependencies</h2>
+      <h2 className="mb-2 text-2xl">Dev Dependencies</h2>
       <ul className="list-disc pl-5">
         {devDependencies.length === 0 ? (
           <li>No dev dependencies found.</li>

@@ -54,8 +54,8 @@ function CustomFlex({ children, ...props }) {
 
 function CenteredSeparator() {
   return (
-    <div className="flex justify-center items-center">
-      <Separator className="my-8 max-w-[1280px]" />
+    <div className="flex items-center justify-center">
+      <Separator className="my-8 max-w-screen-xl" />
     </div>
   )
 }
@@ -80,11 +80,11 @@ function Layout({ children }) {
       <CarouselSize />
 
       <CenteredSeparator />
-      <div className="lg:max-w-[1280px] mx-auto " id="comments">
-        <p className="text-lg font-bold text-center bg-violet-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300">
+      <div className="mx-auto lg:max-w-screen-xl " id="comments">
+        <p className="bg-violet-200 text-center text-lg font-bold text-gray-900 dark:bg-gray-700 dark:text-gray-300">
           개발자에게 건의(훈수)하기
         </p>
-        <p className="text-center bg-violet-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300">
+        <p className="bg-violet-200 text-center text-gray-900 dark:bg-gray-700 dark:text-gray-300">
           Communicate With Developer
         </p>
         <Giscus />
@@ -99,7 +99,7 @@ function MainContent({ children }) {
     <Container
       maxWidth={{ initial: '100%', lg: '768px' }}
       px={{ initial: '15px', lg: '30px' }}
-      className=" bg-violet-100 dark:bg-gray-700 p-8 rounded-lg"
+      className="rounded-lg bg-violet-100 p-8 dark:bg-gray-700"
     >
       <main>{children}</main>
     </Container>
