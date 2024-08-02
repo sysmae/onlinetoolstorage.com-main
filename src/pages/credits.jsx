@@ -82,9 +82,9 @@ export default function Credits({ dependencies, devDependencies }) {
   return (
     <div className="mx-auto my-8 max-w-4xl">
       <Head>
-        <title>Credits & Licenses</title>
+        <title>Open Source Library</title>
       </Head>
-      <h1 className="mb-4 text-3xl font-bold">Credits & Licenses</h1>
+      <h1 className="mb-4 text-3xl font-bold">Open Source Library</h1>
       <h2 className="mb-2 text-2xl">Dependencies</h2>
       <ul className="mb-6 list-disc pl-5">
         {dependencies.length === 0 ? (

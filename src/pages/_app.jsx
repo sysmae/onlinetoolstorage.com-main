@@ -6,6 +6,7 @@ import { Theme, Container, Flex } from '@radix-ui/themes'
 
 import { appWithTranslation } from 'next-i18next'
 import nextI18NextConfig from '../../next-i18next.config'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AppContent>
       <Component {...pageProps} />
+      <SpeedInsights />
     </AppContent>
   )
 }

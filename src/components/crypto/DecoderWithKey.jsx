@@ -34,18 +34,18 @@ const Decoder = ({ decode }) => {
         onChange={(e) => setInput(e.target.value)}
         placeholder="Enter text to decrypt..."
         rows="4"
-        className="w-full mb-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150"
+        className="mb-2 w-full rounded-md border border-gray-300 p-2 transition duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500"
       />
       <input
         type="text"
         value={key}
         onChange={(e) => setKey(e.target.value)}
         placeholder="Enter decryption key..."
-        className="w-full mb-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-150"
+        className="mb-2 w-full rounded-md border border-gray-300 p-2 transition duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500"
       />
       <button
         onClick={handleDecrypt}
-        className="mr-2 mb-2 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150"
+        className="mb-2 mr-2 rounded bg-blue-600 px-4 py-2 text-white transition duration-150 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         Decrypt
       </button>
@@ -54,11 +54,11 @@ const Decoder = ({ decode }) => {
         <>
           <div>
             <h3 className="font-semibold">Decryption Result:</h3>
-            <p className="mb-2 p-2 border border-gray-300 rounded">{output}</p>
+            <p className="mb-2 rounded border border-gray-300 p-2">{output}</p>
           </div>
           <button
             onClick={handleCopy}
-            className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-150"
+            className="rounded bg-green-500 px-4 py-2 text-white transition duration-150 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
           >
             Copy
           </button>
