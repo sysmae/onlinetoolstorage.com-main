@@ -4,7 +4,23 @@ import { useTranslation } from 'next-i18next'
 
 function useLocalizedPage(namespace) {
   const router = useRouter()
-  const { locale, pathname, asPath } = router
+  let { locale, pathname, asPath } = router
+
+  // 각 카테고리 index 페이지의 경우 경로를 /index로 변경
+  if (
+    pathname === '/' ||
+    pathname === '/business' ||
+    pathname === '/crypto' ||
+    pathname === '/design' ||
+    pathname === '/development' ||
+    pathname === '/finance' ||
+    pathname === '/general' ||
+    pathname === '/math-sciences' ||
+    pathname === '/random' ||
+    pathname === '/units'
+  ) {
+    pathname = '/index'
+  }
   const pageKey = pathname.split('/').pop()
   const { t } = useTranslation(namespace)
 

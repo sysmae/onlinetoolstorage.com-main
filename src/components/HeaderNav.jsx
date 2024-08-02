@@ -78,6 +78,7 @@ const HeaderNav = ({ handleLinkClick, locale }) => {
             className="flex items-center hover:bg-purple-300 lg:p-2"
           >
             <div>{category.emoji}</div>
+            <div className="hidden font-semibold xl:block">{category.name}</div>
 
             {category.isOpen ? (
               <MdExpandLess className="ml-2 text-gray-400" />

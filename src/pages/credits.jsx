@@ -1,22 +1,43 @@
-// credits.js
 import fs from 'fs'
 import path from 'path'
 import Head from 'next/head'
 
 // 의존성의 정보를 가져오는 함수
-async function fetchDependencyInfo(packageName) {
-  const response = await fetch(`https://registry.npmjs.org/${packageName}`)
-  if (!response.ok) {
-    // throw new Error(`Failed to fetch ${packageName}: ${response.statusText}`)
-    return {
-      license: 'License not available',
-      homepage: 'Homepage not available',
+async function fetchDependencyInfo(packageName, retries = 3, timeout = 5000) {
+  const controller = new AbortController()
+  const id = setTimeout(() => controller.abort(), timeout)
+
+  try {
+    const response = await fetch(`https://registry.npmjs.org/${packageName}`, {
+      signal: controller.signal,
+    })
+    clearTimeout(id)
+
+    if (!response.ok) {
+      return {
+        license: 'License not available',
+        homepage: 'Homepage not available',
+      }
     }
-  }
-  const data = await response.json()
-  return {
-    license: data.license,
-    homepage: data.homepage || 'Homepage not available',
+
+    const data = await response.json()
+    return {
+      license: data.license,
+      homepage: data.homepage || 'Homepage not available',
+    }
+  } catch (error) {
+    if (retries > 0) {
+      console.warn(
+        `Retrying fetch for ${packageName} (${retries} retries left)...`,
+      )
+      return fetchDependencyInfo(packageName, retries - 1, timeout)
+    } else {
+      console.error(`Failed to fetch ${packageName}: ${error.message}`)
+      return {
+        license: 'License not available',
+        homepage: 'Homepage not available',
+      }
+    }
   }
 }
 

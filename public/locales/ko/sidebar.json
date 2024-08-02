@@ -1,12 +1,104 @@
 {
   "categories": [
     {
+      "name": "개발",
+      "link": "/development",
+      "emoji": "💻",
+      "subcategories": [
+        { "name": "UUID 생성", "link": "/development/uuid" }
+      ]
+    },
+
+    {
+      "name": "디자인",
+      "link": "/design",
+      "emoji": "🎨",
+      "subcategories": [
+        { "name": "이미지 색상 선택", "link": "/design/color-picker" },
+        { "name": "색상 코드 변환기", "link": "/design/color-code-convert" },
+        { "name": "이미지 압축", "link": "/design/image-compress" },
+        { "name": "이미지 자르기", "link": "/design/image-crop" },
+        { "name": "이미지 뒤집기", "link": "/design/image-flip" },
+        { "name": "이미지 크기 조정", "link": "/design/image-resize" }
+      ]
+    },
+    {
+      "name": "비즈니스",
+      "link": "/business",
+      "emoji": "💼",
+      "subcategories": [
+        { "name": "QR 코드 생성기", "link": "/business/qrcode" },
+        { "name": "바코드 생성기", "link": "/business/barcode" },
+        { "name": "애드센스 수익 계산기", "link": "/business/adsense" },
+        { "name": "키워드 추출기", "link": "/business/keyword-extractor" }
+      ]
+    },
+    {
+      "name": "금융",
+      "link": "/finance",
+      "emoji": "💰",
+      "subcategories": [
+        {
+          "name": "복리 이자 계산기",
+          "link": "/finance/compound-interest"
+        },
+        {
+          "name": "대출 상환 계산기",
+          "link": "/finance/repayment-loan"
+        },
+        { "name": "유효이자율법 표 생성", "link": "/finance/EIR" }
+      ]
+    },
+    {
+      "name": "수학 과학",
+      "link": "/math-sciences",
+      "emoji": "🔬",
+      "subcategories": [
+        { "name": "통계 계산기", "link": "/math-sciences/statics" }
+      ]
+    },
+    {
+      "name": "일상 ",
+      "link": "/general",
+      "emoji": "🔧",
+      "subcategories": [
+        { "name": "비밀번호 생성", "link": "/general/password" },
+        { "name": "D-Day 계산기", "link": "/general/d-day" },
+        { "name": "타이머", "link": "/general/timer" },
+        { "name": "스탑워치", "link": "/general/stopwatch" },
+        { "name": "카운트다운", "link": "/general/countdown" },
+        { "name": "남은 시간 계산", "link": "/general/lefttime" },
+        { "name": "BMI 계산기", "link": "/general/BMI" },
+        { "name": "노트패드", "link": "/general/notepad" },
+        { "name": "글자수 세기", "link": "/general/charcount" },
+        { "name": "별자리 변환기", "link": "/general/birthdayToZodiac" },
+        { "name": "이모지 모음", "link": "/general/emojis" },
+        { "name": "유니코드 특수문자", "link": "/general/unicode-special" },
+        { "name": "IP 주소", "link": "/general/ipaddress" }
+      ]
+    },
+    {
+      "name": "랜덤",
+      "link": "/random",
+      "emoji": "🎲",
+      "subcategories": [
+        { "name": "코인 토스", "link": "/random/coin" },
+        { "name": "주사위", "link": "/random/dice" },
+        { "name": "사다리 타기", "link": "/random/ladder" },
+        { "name": "로렘 입숨", "link": "/random/lorem" },
+        { "name": "로또 번호", "link": "/random/lotto" },
+        { "name": "난수 생성", "link": "/random/number" },
+        { "name": "가위바위보", "link": "/random/rock-paper-scissors" },
+        { "name": "랜덤 영어 단어", "link": "/random/word-en" },
+        { "name": "랜덤 한글 단어", "link": "/random/word-ko" }
+      ]
+    },
+
+    {
       "name": "암호화 복호화",
       "link": "/crypto",
       "emoji": "🔐",
       "subcategories": [
-        { "name": "비밀번호 생성", "link": "/crypto/password" },
-        { "name": "UUID 생성", "link": "/crypto/uuid" },
         { "name": "AES", "link": "/crypto/aes" },
         { "name": "ASCII", "link": "/crypto/ascii" },
         { "name": "Base64", "link": "/crypto/base64" },
@@ -52,126 +144,12 @@
         { "name": "무효 전력", "link": "/units/reactive-power" },
         { "name": "속도", "link": "/units/speed" },
         { "name": "온도", "link": "/units/temperature" },
-        { "name": "시간", "link": "/units/time" },
+        { "name": "시간", "link": "/units/general" },
         { "name": "전압", "link": "/units/voltage" },
         { "name": "부피", "link": "/units/volume" },
-        { "name": "유량", "link": "/units/volume-flow-rate" }
-      ]
-    },
-    {
-      "name": "랜덤 생성기",
-      "link": "/random",
-      "emoji": "🎲",
-      "subcategories": [
-        { "name": "코인 토스", "link": "/random/coin" },
-        { "name": "주사위", "link": "/random/dice" },
-        { "name": "사다리 타기", "link": "/random/ladder" },
-        { "name": "로렘 입숨", "link": "/random/lorem" },
-        { "name": "로또 번호", "link": "/random/lotto" },
-        { "name": "난수 생성", "link": "/random/number" },
-        { "name": "가위바위보", "link": "/random/rock-paper-scissors" },
-        { "name": "랜덤 영어 단어", "link": "/random/word-en" },
-        { "name": "랜덤 한글 단어", "link": "/random/word-ko" }
-      ]
-    },
-    {
-      "name": "계산기",
-      "emoji": "🧮",
-      "link": "/calculator",
-      "subcategories": [
-        { "name": "통계 계산기", "link": "/calculator/statics" },
-        { "name": "BMI", "link": "/calculator/BMI" },
-        { "name": "애드센스 수익 계산기", "link": "/calculator/adsense" },
-        { "name": "유효이자율법 표 생성", "link": "/calculator/EIR" },
-        {
-          "name": "복리 이자 계산기",
-          "link": "/calculator/compound-interest"
-        },
-        {
-          "name": "대출 상환 계산기",
-          "link": "/calculator/repayment-loan"
-        },
-        {
-          "name": "공학용 계산기",
-          "link": "/calculator/engineering"
-        }
-      ]
-    },
-    {
-      "name": "변환기 생성기",
-      "emoji": "🔄",
-      "link": "/convert",
-      "subcategories": [
-        { "name": "색상 코드 변환기", "link": "/convert/color" },
-        { "name": "바코드 생성기", "link": "/convert/barcode" },
-        { "name": "QR 코드 생성기", "link": "/convert/qrcode" },
-        { "name": "별자리 변환기", "link": "/convert/birthdayToZodiac" },
-        { "name": "로마 숫자 변환기", "link": "/convert/roman" },
-        { "name": "진법 변환기", "link": "/convert/number" }
-      ]
-    },
-    {
-      "name": "특수 문자 모음",
-      "emoji": "🔤",
-      "link": "/charmap",
-      "subcategories": [
-        { "name": "이모지 모음", "link": "/charmap/emojis" },
-        { "name": "유니코드 특수문자", "link": "/charmap/unicode-special" }
-      ]
-    },
-    {
-      "name": "텍스트",
-      "emoji": "📝",
-      "link": "/text",
-      "subcategories": [
-        { "name": "노트패드", "link": "/text/notepad" },
-        { "name": "글자수 세기", "link": "/text/charcount" }
-      ]
-    },
-    {
-      "name": "시간 관련 도구",
-      "emoji": "⏰",
-      "link": "/time",
-      "subcategories": [
-        { "name": "D-Day 계산기", "link": "/time/d-day" },
-        { "name": "포모도로", "link": "/time/pomodoro" },
-        { "name": "타이머", "link": "/time/timer" },
-        { "name": "스탑워치", "link": "/time/stopwatch" },
-        { "name": "카운트다운", "link": "/time/countdown" },
-        { "name": "남은 시간 계산", "link": "/time/lefttime" }
-      ]
-    },
-    {
-      "name": "네트워크",
-      "emoji": "🌐",
-      "link": "/network",
-      "subcategories": [{ "name": "IP 주소", "link": "/network/ipaddress" }]
-    },
-    {
-      "name": "이미지",
-      "emoji": "🖼️",
-      "link": "/image",
-      "subcategories": [
-        { "name": "이미지 색상 선택", "link": "/image/color-picker" },
-        { "name": "이미지 압축", "link": "/image/compress" },
-        { "name": "이미지 자르기", "link": "/image/crop" },
-        { "name": "이미지 뒤집기", "link": "/image/flip" },
-        { "name": "이미지 크기 조정", "link": "/image/resize" }
-      ]
-    },
-    {
-      "name": "스프레드시트",
-      "emoji": "📊",
-      "link": "/spreadsheet",
-      "subcategories": [
-        { "name": "CSV 편집기", "link": "/spreadsheet/csv-editor" },
-        { "name": "JSON 편집기", "link": "/spreadsheet/json-editor" },
-        { "name": "엑셀 편집기", "link": "/spreadsheet/excel-editor" },
-        { "name": "XML 편집기", "link": "/spreadsheet/xml-editor" },
-
-        { "name": "CSV 변환", "link": "/spreadsheet/csv-convert" },
-        { "name": "JSON 변환", "link": "/spreadsheet/json-convert" },
-        { "name": "엑셀 변환", "link": "/spreadsheet/excel-convert" }
+        { "name": "유량", "link": "/units/volume-flow-rate" },
+        { "name": "로마 숫자 변환기", "link": "/units/roman" },
+        { "name": "진법 변환기", "link": "/units/number" }
       ]
     }
   ]

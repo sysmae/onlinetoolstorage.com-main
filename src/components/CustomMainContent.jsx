@@ -12,20 +12,20 @@ function CustomContent({ category }) {
         {t(`${pageKey}.sections`, { returnObjects: true }).map(
           (section, index) => (
             <div key={index} className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-3">
+              <h2 className="mb-3 text-2xl font-semibold text-gray-700 dark:text-gray-200">
                 {section.title}
               </h2>
               {Array.isArray(section.content) ? (
                 section.content.map((item, idx) => (
                   <p
                     key={idx}
-                    className="text-gray-600 dark:text-gray-300 mb-2"
+                    className="mb-2 text-gray-600 dark:text-gray-300"
                   >
                     {parseContentLink(item)}
                   </p>
                 ))
               ) : (
-                <p className="text-gray-600 dark:text-gray-300 mb-2">
+                <p className="mb-2 text-gray-600 dark:text-gray-300">
                   {parseContentLink(section.content)}
                 </p>
               )}

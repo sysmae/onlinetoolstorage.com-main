@@ -1,0 +1,301 @@
+{
+  "password": {
+    "title": "Random Password Generator: Easily create safe and complex passwords for strong security",
+    "description": "Use the random password generator to create strong passwords. This tool is essential for enhancing online security and protecting sensitive information.",
+    "url": "/en/general/password",
+    "sections": [
+      {
+        "title": "The Importance of the Random Password Generator",
+        "content": "A strong password is the key to online security. The random password generator helps users avoid simple patterns or words that are easy to remember, and instead use complex passwords that are difficult for hackers to guess."
+      },
+      {
+        "title": "How to Generate a Random Password",
+        "content": "The random password generator allows you to choose the desired password length and the types of characters to include (uppercase, lowercase, numbers, special characters). After selecting these options, users can click the generate button to get a new password."
+      },
+      {
+        "title": "User Experience",
+        "content": "Users can easily create strong passwords using the random password generator. These generated passwords greatly enhance the security of online accounts and are a great help in protecting personal information."
+      }
+    ]
+  },
+  "d-day": {
+    "title": "D-Day Calculator: Accurately Calculate Time Remaining to Important Dates for Event Planning and Celebration",
+    "description": "The D-Day calculator accurately calculates the time remaining to important events, anniversaries, and project deadlines. With an easy-to-use interface, manage all your planned events' dates effortlessly.",
+    "url": "/en/general/d-day",
+    "sections": [
+      {
+        "title": "How to Use the D-Day Calculator",
+        "content": "Use the D-Day Calculator to calculate the remaining time until a specific date. Simply input the target date and check the D-Day."
+      },
+      {
+        "title": "Importance of the D-Day Calculator",
+        "content": "The D-Day Calculator helps in checking the remaining time until important events or deadlines, aiding in visualizing the time remaining and planning accordingly."
+      }
+    ]
+  },
+  "pomodoro": {
+    "title": "Pomodoro Timer: Increase Productivity and Efficiency with the Pomodoro Technique",
+    "description": "The Pomodoro Timer is a productivity tool that helps in managing time effectively. With the Pomodoro Technique, increase productivity and efficiency in your work.",
+    "url": "/en/general/pomodoro",
+    "sections": [
+      {
+        "title": "How to Use the Pomodoro Timer",
+        "content": "The Pomodoro Timer is a time management technique that breaks work into intervals, traditionally 25 minutes in length, separated by short breaks. Use the Pomodoro Timer to manage your work effectively."
+      },
+      {
+        "title": "Benefits of the Pomodoro Technique",
+        "content": "The Pomodoro Technique helps in increasing productivity, focus, and efficiency by breaking work into manageable intervals and providing regular breaks to avoid burnout."
+      }
+    ]
+  },
+  "timer": {
+    "title": "Online Timer: Set a Timer for Accurate Time Management and Task Completion",
+    "description": "The Online Timer is a versatile tool that helps in setting timers for various tasks, ensuring accurate time management and task completion. Use the Online Timer for all your timing needs.",
+    "url": "/en/general/timer",
+    "sections": [
+      {
+        "title": "How to Use the Online Timer",
+        "content": "The Online Timer allows you to set a timer for specific durations, helping in managing time effectively for tasks, activities, and projects."
+      },
+      {
+        "title": "Benefits of Using an Online Timer",
+        "content": "The Online Timer helps in tracking time accurately, managing tasks efficiently, and improving productivity by setting time limits for various activities."
+      }
+    ]
+  },
+  "stopwatch": {
+    "title": "Stopwatch: Accurately Measure Time Elapsed for Activities, Sports, and Projects",
+    "description": "The Stopwatch is a versatile tool that accurately measures time elapsed for various activities, sports, and projects. Use the Stopwatch for precise time tracking and management.",
+    "url": "/en/general/stopwatch",
+    "sections": [
+      {
+        "title": "How to Use the Stopwatch",
+        "content": "The Stopwatch allows you to start, stop, and reset the timer to accurately measure time elapsed for activities, sports, and projects."
+      },
+      {
+        "title": "Benefits of Using a Stopwatch",
+        "content": "The Stopwatch helps in tracking time accurately, measuring performance in sports, and managing time effectively for various activities and projects."
+      }
+    ]
+  },
+  "countdown": {
+    "title": "Countdown Timer: Create a Countdown for Events, Holidays, and Special Occasions",
+    "description": "The Countdown Timer is a versatile tool that helps in creating countdowns for events, holidays, and special occasions. Use the Countdown Timer to track time remaining until important dates.",
+    "url": "/en/general/countdown",
+    "sections": [
+      {
+        "title": "How to Use the Countdown Timer",
+        "content": "The Countdown Timer allows you to set a countdown for specific dates, helping in tracking time remaining until events, holidays, and special occasions."
+      },
+      {
+        "title": "Benefits of Using a Countdown Timer",
+        "content": "The Countdown Timer helps in visualizing the time remaining until important dates, planning for events, and creating excitement for upcoming holidays and special occasions."
+      }
+    ]
+  },
+  "lefttime": {
+    "title": "Calculate Time Left: Accurately Calculate Time Remaining to Important Dates for Event Planning and Celebration",
+    "description": "The Calculate Time Left tool accurately calculates the time remaining to important events, anniversaries, and project deadlines. With an easy-to-use interface, manage all your planned events' dates effortlessly.",
+    "url": "/en/general/lefttime",
+    "sections": [
+      {
+        "title": "How to Use the Calculate Time Left Tool",
+        "content": "Use the Calculate Time Left tool to calculate the remaining time until a specific date. Simply input the target date and check the time remaining."
+      },
+      {
+        "title": "Importance of the Calculate Time Left Tool",
+        "content": "The Calculate Time Left tool helps in checking the remaining time until important events or deadlines, aiding in visualizing the time remaining and planning accordingly."
+      }
+    ]
+  },
+  "BMI": {
+    "title": "BMI Calculator for Body Fat and Health: Accurate Weight Management and Health Analysis",
+    "description": "Use the BMI calculator to quickly check your body mass index. This tool provides essential information for healthy weight management and obesity prevention.",
+    "url": "/en/general/BMI",
+    "sections": [
+      {
+        "title": "Basic Principles of BMI Calculation",
+        "content": "BMI is calculated using the following formula: BMI = Weight(kg) / (Height(m) * Height(m)). This value is used to assess an individual's weight status."
+      },
+      {
+        "title": "How to Calculate BMI",
+        "content": "To calculate your BMI, first accurately measure your height and weight. Then, input the values into the above formula to calculate your BMI."
+      },
+      {
+        "title": "BMI Categories and Health Status",
+        "content": "BMI values categorize an individual's weight status, serving as a benchmark for assessing health. Categories include underweight, normal weight, overweight, and obese, each corresponding to a specific BMI range."
+      },
+      {
+        "title": "Importance of BMI Calculator",
+        "content": "The BMI calculator is a useful tool for assisting with individual weight management and preventing health issues associated with obesity. It helps in setting realistic weight goals and monitoring progress."
+      },
+      {
+        "title": "Caution",
+        "content": "BMI calculation results consider only body mass index and do not reflect other health factors such as body fat distribution or muscle mass. Therefore, it should be used in conjunction with other health assessments."
+      }
+    ]
+  },
+  "notepad": {
+    "title": "Online Notepad: Quick, Easy Note-Taking Anywhere",
+    "description": "Effortlessly take notes, draft, and capture ideas with our Online Notepad. Available through your browser, it supports local saving for easy one use.",
+    "url": "/en/general/notepad",
+    "sections": [
+      {
+        "title": "Features of the Online Notepad",
+        "content": [
+          "Simple and User-Friendly Interface: Our notepad is designed to minimize distractions and maximize productivity, offering a clear and straightforward workspace for all your note-taking needs.",
+          "No Installation Required: Instantly access our notepad directly via your web browser, eliminating the need for additional software or installations.",
+          "Local Autosave Functionality: Notes are automatically saved to your browser's local storage as you type, ensuring you never lose your work, even without an internet connection.",
+          "Privacy and Security: We prioritize your privacy and security. Notes are stored locally on your device, not on our servers, to ensure they remain private and secure."
+        ]
+      },
+      {
+        "title": "How to Use the Online Notepad",
+        "content": [
+          "Accessing the Notepad: Easily navigate to the provided URL where the notepad interface will be immediately available for use.",
+          "Writing and Editing: Click anywhere on the clear interface to start typing. Editing functions are intuitive, similar to any basic text editor.",
+          "Local Saving of Notes: Utilize the save option to store your notes within local storage of your browser. Be aware that clearing your browser data may remove these notes.",
+          "Note Privacy: As notes are stored locally, you control your data entirely. Adjust your browser settings to manage data retention and privacy."
+        ]
+      },
+      {
+        "title": "Applications of the Online Notepad",
+        "content": [
+          "Meeting Notes: Efficiently jot down important points during meetings, accessible immediately on any device with browser access.",
+          "Creative Writing: Ideal for drafting poems, stories, or any creative writing piece directly in your browser.",
+          "Task Lists: Organize your daily tasks effectively using our straightforward notepad interface.",
+          "Research Notes: Perfect for students and researchers who need to compile their findings and references without the need for cloud-based storage solutions."
+        ]
+      }
+    ]
+  },
+  "charcount": {
+    "title": "Character Count: Enhance Text for Blogging, Research, and Social Media",
+    "description": "Use our Character Count Calculator to measure and refine your text's length for optimal blogging, academic research, and social media engagement.",
+    "url": "/en/general/charcount",
+    "sections": [
+      {
+        "title": "How to Use the Character Count Calculator",
+        "content": "By inputting text into the Character Count Calculator, you can easily determine the character count and character count excluding spaces. This allows for easy assessment and modification of content length as needed."
+      },
+      {
+        "title": "Importance of the Character Count Calculator",
+        "content": "The Character Count Calculator assists in managing content length and improving quality during content creation. Maintaining an appropriate character count enhances reader comprehension and clarity of information. Utilize the Character Count Calculator to optimize content length and analyze reader responses."
+      }
+    ]
+  },
+  "birthdayToZodiac": {
+    "title": "Zodiac Calculator: Analyzing Personality Traits and Personalized Fortune Predictions Based on Birthdays",
+    "description": "Enter your birthday into the Zodiac Calculator to discover your corresponding zodiac sign and its characteristics. Zodiac signs can provide intriguing insights into personality, destiny, love, and more.",
+    "url": "/en/general/birthdayToZodiac",
+    "sections": [
+      {
+        "title": "Zodiac Signs and Date Ranges",
+        "content": "Aquarius: January 20 - February 18\nPisces: February 19 - March 20\nAries: March 21 - April 19\nTaurus: April 20 - May 20\nGemini: May 21 - June 20\nCancer: June 21 - July 22\nLeo: July 23 - August 22\nVirgo: August 23 - September 22\nLibra: September 23 - October 22\nScorpio: October 23 - November 21\nSagittarius: November 22 - December 21\nCapricorn: December 22 - January 19"
+      },
+      {
+        "title": "Characteristics of Zodiac Signs",
+        "content": "Aquarius: Creative and independent, pursues ideals for friends and humanity.\nPisces: Emotional and creative, possesses deep emotions and empathy.\nAries: Brave and active, seeks leadership roles.\nTaurus: Practical and patient, values stability and comfort.\nGemini: Curious and adaptable, excels in communication.\nCancer: Emotional and nurturing, values deep emotions and responsibility.\nLeo: Confident and creative, exhibits leadership and generosity.\nVirgo: Analytical and meticulous, pursues practicality and attention to detail.\nLibra: Harmonious and sociable, emphasizes fairness and aesthetic sense.\nScorpio: Passionate and decisive, possesses profound insights.\nSagittarius: Free-spirited, optimistic, and loves adventure.\nCapricorn: Cautious and steady, goal-oriented and respects tradition."
+      },
+      {
+        "title": "Self-Understanding Through Zodiac Signs",
+        "content": "Zodiac signs offer deep insights into an individual's personality, relationships, and life path. Understanding one's own zodiac sign and its characteristics can enhance self-awareness, balance strengths and weaknesses, and provide insights into compatibility in love and relationships, as well as vocational inclinations. Utilizing this information can enrich one's life."
+      },
+      {
+        "title": "Tips for Applying Zodiac Signs in Daily Life",
+        "content": "Applying knowledge of zodiac signs in daily life can be highly beneficial. For instance, considering zodiac sign compatibility in interpersonal relationships can facilitate deeper understanding and communication. Additionally, it's important to consider one's zodiac tendencies in professional choices and decision-making within the workplace. Selecting activities aligned with zodiac characteristics or applying self-management tips based on zodiac signs can enhance daily efficiency and satisfaction. Utilize zodiac-based self-management tips to optimize daily life."
+      }
+    ]
+  },
+  "emojis": {
+    "title": "Popular Emojis and Special Character Emoticons: Easy Copy and Download - Unicode Collection",
+    "description": "Easily copy and download the latest emojis, special characters, and emoticons. Explore the usage, history, popular emojis, FAQs, etc., along with a collection of Unicode characters.",
+    "url": "/en/general/emojis",
+    "sections": [
+      {
+        "title": "How to Use Emojis",
+        "content": [
+          "Using emojis can make your digital communication richer and more colorful. Here, we cover everything from basic emoji copy and paste methods to effective communication strategies using emojis.",
+          "Category Navigation: Browse the emoji categories provided on the website to find the type of emoji you want. Categories are diverse, including emotions, animals, plants, food, etc.",
+          "Emoji Selection and Copy: When you click on the emoji you want, it is automatically copied to the clipboard. The copied emoji can be used on social media, messaging apps, emails, etc.",
+          "Harmony of Emoji and Text: Emojis are most effective when used with text. Use emojis to emphasize the tone and context of the message, or to express subtle emotions that are difficult to convey with text."
+        ]
+      },
+      {
+        "title": "Precautions When Using Emojis",
+        "content": [
+          "Use emojis appropriate for the target and situation: Emojis are useful for conveying emotions or nuances of messages, but they can be misunderstood depending on the situation. Therefore, it is important to choose emojis considering the relationship with the other person and the context of communication.",
+          "Consider cultural differences: The same emoji can be interpreted differently depending on the culture. In international communication, it is good to check the meaning of a specific emoji in advance and use it."
+        ]
+      },
+      {
+        "title": "History and Development of Emojis",
+        "content": [
+          "Emojis were first used in Japan in the 1990s and quickly gained worldwide popularity. The first emojis were designed as simple pictograms for mobile communication, and then began to be widely used on various platforms and devices.",
+          "The Unicode Consortium plays a crucial role in the international standardization of emojis. This organization provides standard codes for emojis to ensure compatibility across various operating systems, platforms, and devices. Thanks to the efforts of the Unicode Consortium, users can use consistent emojis on any device.",
+          "Emojis have evolved significantly over time. Initially, emojis were mostly simple expressions or everyday objects, but now there are thousands of emojis that encompass various races, cultures, jobs, foods, animals, etc. This diversity contributes to expanding social inclusiveness and cultural expression."
+        ]
+      },
+      {
+        "title": "Emoji Trends",
+        "content": [
+          "Popular emojis change over time and vary depending on social trends, important events, seasons, etc. For example, the use of related emojis increases during specific holidays or event periods. Currently, the most popular emojis include smiling face, heart, surprised face, etc., which are often used to express positive emotions and love.",
+          "Emoji usage trends reflect the emotions and topics that people most want to express in digital communication. Data obtained through social media analysis shows that emoji usage promotes communication focused on expressing positive emotions. Also, the popularity of a specific emoji indicates how much empathy the emotion or message it conveys is gaining from the public."
+        ]
+      },
+      {
+        "title": "References",
+        "content": [
+          "Emojipedia - A site that provides the latest emoji information and news. (https://emojipedia.org/)",
+          "Unicode Consortium - The official website of the organization responsible for emoji standardization. (http://unicode.org/)"
+        ]
+      }
+    ]
+  },
+  "unicode-special": {
+    "title": "Unicode Characters Collection: Special Characters & Emoticons",
+    "description": "Easily copy and download the latest emojis, special characters, and emoticons. Explore the usage, history, and popular emojis with FAQs, all provided alongside the Unicode characters collection.",
+    "url": "/en/general/unicode-special",
+    "sections": [
+      {
+        "title": "Unicode Character Collection",
+        "content": [
+          "Unicode is a standard coding system designed to represent all the characters of the world. It includes a wide range of languages, symbols, special characters, and emojis, each assigned a unique code point for efficient processing by computers.",
+          "The Unicode character collection is divided into various categories, each containing hundreds of characters. Explore and copy various types of characters such as special characters, symbols, arrows, mathematical symbols, and other signs for use.",
+          "Unicode characters can be used on websites, word processors, messaging apps, emails, and more. Simply copy a specific character to the clipboard and paste it wherever needed."
+        ]
+      },
+      {
+        "title": "How to Use Unicode Characters",
+        "content": [
+          "Unicode characters are versatile, offering a wide array of special characters, emojis, and symbols for use across different platforms. Using Unicode characters is straightforward.",
+          "Unicode characters are useful for handling various languages, cultures, and themes, and can enhance the impact of your text."
+        ]
+      },
+      {
+        "title": "Applications of Unicode Characters",
+        "content": [
+          "Unicode characters have a broad range of applications. Use special characters, emojis, and symbols to enhance text impact or to emphasize a specific theme or emotion.",
+          "Website Design: Use Unicode characters to enrich the design of your website. Utilize special characters, arrows, and symbols to improve user experience.",
+          "Social Media: Make your social media posts more engaging with Unicode characters. Use emojis, special characters, and symbols to emphasize your message or to assist in covering a topic.",
+          "Document Creation: Enhance the effectiveness of your documents using Unicode characters. Use special characters, emojis, and symbols to highlight content or assist in addressing a topic."
+        ]
+      }
+    ]
+  },
+  "ipaddress": {
+    "title": "IP Address Verification: Check your current IP address, location, and ISP information",
+    "description": "An IP address verification tool that allows you to check your current IP address, location, and ISP information. Check your current IP address and location information.",
+    "url": "/en/general/ipaddress",
+    "sections": [
+      {
+        "title": "How to Verify IP Address",
+        "content": "You can check your current IP address using the IP address verification tool. Check your IP address, location, and ISP information."
+      },
+      {
+        "title": "Importance of Verifying IP Address",
+        "content": "Verifying your IP address helps you check your current internet connection status and location information. Get help with security and privacy protection through IP address verification."
+      }
+    ]
+  }
+}

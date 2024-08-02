@@ -10,7 +10,7 @@ function CustomH1Content({ category }) {
       <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-200 ">
         {t(`${pageKey}.title`)}
       </h1>
-      <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+      <p className="mb-6 text-lg text-gray-600 dark:text-gray-300">
         {t(`${pageKey}.description`)}
       </p>
       {/* <ResponsiveAd

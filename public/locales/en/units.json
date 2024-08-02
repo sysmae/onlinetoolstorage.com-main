@@ -584,5 +584,51 @@
         "content": "When using an online volume flow rate converter, it is important to verify the accuracy of the conversion ratios provided by the tool."
       }
     ]
+  },
+  "roman": {
+    "title": "Roman Numeral Converter: An Interactive Online Tool for Converting Between Ancient Roman Numerals and Modern Arabic Numbers",
+    "description": "Easily convert Arabic numbers to Roman numerals or Roman numerals to Arabic numbers with this Roman numeral converter. This tool is useful in various situations including historical learning, document creation, and hobby activities.",
+    "url": "/en/units/roman",
+    "sections": [
+      {
+        "title": "How to Convert Roman Numerals",
+        "content": "Use the Roman numeral converter to change Arabic numbers into Roman numerals or Roman numerals into Arabic numbers. Simply click each button to perform the conversion and copy the results for use."
+      },
+      {
+        "title": "Examples of Using Roman Numeral Conversion",
+        "content": [
+          "Understanding Roman numerals in historical studies",
+          "Using Roman numerals in documents or artwork",
+          "Solving games or puzzles that use Roman numerals during hobby activities"
+        ]
+      },
+      {
+        "title": "Cautions",
+        "content": "The Roman numeral converter may not guarantee accurate conversions in certain special cases. It is designed for general use."
+      }
+    ]
+  },
+  "number": {
+    "title": "Number Base Converter: Easy and Fast Conversion Between Binary, Octal, Decimal, and Hexadecimal",
+    "description": "Easily convert numbers between various numerical bases such as binary, octal, decimal, and hexadecimal with this number base converter. This tool is useful in fields like programming, mathematical learning, and data processing.",
+    "url": "/en/units/number",
+    "sections": [
+      {
+        "title": "How to Use the Number Base Converter",
+        "content": "To use the number base converter, enter a number in your desired base and select the base to which you want to convert. Click the convert button, and the result will be displayed. You can copy the result if needed for further use."
+      },
+      {
+        "title": "Applications of the Number Base Converter",
+        "content": [
+          "Displaying variable values in different bases in programming",
+          "Understanding numbers in various bases for mathematical learning",
+          "Converting numerical formats in data processing"
+        ]
+      },
+      {
+        "title": "Cautions",
+        "content": "When converting bases, ensure the number entered is appropriate for the original base. Incorrect input may lead to errors."
+      }
+    ]
   }
 }

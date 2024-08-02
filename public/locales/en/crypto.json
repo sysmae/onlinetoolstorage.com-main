@@ -522,48 +522,5 @@
         "content": "UTF-8 encoding can encode characters in variable lengths of 1 to 4 bytes, enhancing data storage and transmission efficiency. However, the interpretation of UTF-8 encoded data requires a correct understanding of encoding rules. Appropriate verification and processing are necessary to avoid errors due to encoding confusion."
       }
     ]
-  },
-  "password": {
-      "title": "Random Password Generator: Easily create safe and complex passwords for strong security",
-      "description": "Use the random password generator to create strong passwords. This tool is essential for enhancing online security and protecting sensitive information.",
-      "url": "/en/crypto/password",
-      "sections": [
-        {
-          "title": "The Importance of the Random Password Generator",
-          "content": "A strong password is the key to online security. The random password generator helps users avoid simple patterns or words that are easy to remember, and instead use complex passwords that are difficult for hackers to guess."
-        },
-        {
-          "title": "How to Generate a Random Password",
-          "content": "The random password generator allows you to choose the desired password length and the types of characters to include (uppercase, lowercase, numbers, special characters). After selecting these options, users can click the generate button to get a new password."
-        },
-        {
-          "title": "User Experience",
-          "content": "Users can easily create strong passwords using the random password generator. These generated passwords greatly enhance the security of online accounts and are a great help in protecting personal information."
-        }
-      ]
-  },
-  "uuid":{
-    "title": "UUID Generator: A quick tool for generating unique identifiers for secure software development and data management",
-    "description": "Use the UUID generator to easily create unique identifiers for each data item or object. This tool is essential for database management, software development, and system integration projects.",
-    "url": "/en/crypto/uuid",
-    "sections": [
-      {
-        "title": "How to use the UUID generator",
-        "content": "Select the version and click the Generate button to create a UUID. You can copy the generated UUID to the clipboard for use."
-      },
-      {
-        "title": "Examples of using the UUID generator",
-        "content": [
-          "Database management: Use UUIDs to identify data items.",
-          "Software development: Use UUIDs as object identifiers.",
-          "System integration projects: Use UUIDs for data integration between various systems."
-        ]
-      },
-      {
-        "title": "Precautions",
-        "content": "UUIDs are unique identifiers, so duplication should be avoided. Be careful as it can affect database query performance."
-      }
-    ]
   }
-
 }

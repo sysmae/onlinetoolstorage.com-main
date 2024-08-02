@@ -1,12 +1,111 @@
 {
   "categories": [
     {
-      "name": "Encryption Decryption",
+      "name": "Development",
+      "link": "/development",
+      "emoji": "💻",
+      "subcategories": [
+        { "name": "UUID Generator", "link": "/development/uuid" }
+      ]
+    },
+    {
+      "name": "Design",
+      "link": "/design",
+      "emoji": "🎨",
+      "subcategories": [
+        { "name": "Image Color Picker", "link": "/design/color-picker" },
+        {
+          "name": "Color Code Converter",
+          "link": "/design/color-code-convert"
+        },
+        { "name": "Image Compressor", "link": "/design/image-compress" },
+        { "name": "Image Cropper", "link": "/design/image-crop" },
+        { "name": "Image Flipper", "link": "/design/image-flip" },
+        { "name": "Image Resizer", "link": "/design/image-resize" }
+      ]
+    },
+    {
+      "name": "Business",
+      "link": "/business",
+      "emoji": "💼",
+      "subcategories": [
+        { "name": "QR Code Generator", "link": "/business/qrcode" },
+        { "name": "Barcode Generator", "link": "/business/barcode" },
+        { "name": "AdSense Revenue Calculator", "link": "/business/adsense" },
+        { "name": "Keyword Extractor", "link": "/business/keyword-extractor" }
+      ]
+    },
+    {
+      "name": "Finance",
+      "link": "/finance",
+      "emoji": "💰",
+      "subcategories": [
+        {
+          "name": "Compound Interest Calculator",
+          "link": "/finance/compound-interest"
+        },
+        {
+          "name": "Loan Repayment Calculator",
+          "link": "/finance/repayment-loan"
+        },
+        { "name": "Effective Interest Rate Table", "link": "/finance/EIR" }
+      ]
+    },
+    {
+      "name": "Math & Sciences",
+      "link": "/math-sciences",
+      "emoji": "🔬",
+      "subcategories": [
+        { "name": "Statistics Calculator", "link": "/math-sciences/statics" }
+      ]
+    },
+    {
+      "name": "General",
+      "link": "/general",
+      "emoji": "🔧",
+      "subcategories": [
+        { "name": "Password Generator", "link": "/general/password" },
+        { "name": "D-Day Calculator", "link": "/general/d-day" },
+        { "name": "Timer", "link": "/general/timer" },
+        { "name": "Stopwatch", "link": "/general/stopwatch" },
+        { "name": "Countdown", "link": "/general/countdown" },
+        { "name": "Time Left Calculator", "link": "/general/lefttime" },
+        { "name": "BMI Calculator", "link": "/general/BMI" },
+        { "name": "Notepad", "link": "/general/notepad" },
+        { "name": "Character Counter", "link": "/general/charcount" },
+        { "name": "Zodiac Converter", "link": "/general/birthdayToZodiac" },
+        { "name": "Emoji Collection", "link": "/general/emojis" },
+        {
+          "name": "Unicode Special Characters",
+          "link": "/general/unicode-special"
+        },
+        { "name": "IP Address", "link": "/general/ipaddress" }
+      ]
+    },
+    {
+      "name": "Random",
+      "link": "/random",
+      "emoji": "🎲",
+      "subcategories": [
+        { "name": "Coin Toss", "link": "/random/coin" },
+        { "name": "Dice", "link": "/random/dice" },
+        { "name": "Ladder Game", "link": "/random/ladder" },
+        { "name": "Lorem Ipsum", "link": "/random/lorem" },
+        { "name": "Lotto Numbers", "link": "/random/lotto" },
+        { "name": "Random Number Generator", "link": "/random/number" },
+        {
+          "name": "Rock Paper Scissors",
+          "link": "/random/rock-paper-scissors"
+        },
+        { "name": "Random English Word", "link": "/random/word-en" },
+        { "name": "Random Korean Word", "link": "/random/word-ko" }
+      ]
+    },
+    {
+      "name": "Crypto",
       "link": "/crypto",
       "emoji": "🔐",
       "subcategories": [
-        { "name": "PassWord Generate", "link": "/crypto/password" },
-        { "name": "UUID Generate", "link": "/crypto/uuid" },
         { "name": "AES", "link": "/crypto/aes" },
         { "name": "ASCII", "link": "/crypto/ascii" },
         { "name": "Base64", "link": "/crypto/base64" },
@@ -39,144 +138,25 @@
         { "name": "Area", "link": "/units/area" },
         { "name": "Current", "link": "/units/current" },
         { "name": "Data", "link": "/units/data" },
-        { "name": "Energy", "link": "/unitsergy" },
+        { "name": "Energy", "link": "/units/energy" },
         { "name": "Frequency", "link": "/units/frequency" },
         { "name": "Illuminance", "link": "/units/illuminance" },
         { "name": "Length", "link": "/units/length" },
         { "name": "Mass", "link": "/units/mass" },
         { "name": "Pace", "link": "/units/pace" },
-        { "name": "Parts Per", "link": "/units/partsper" },
+        { "name": "Parts-Per", "link": "/units/partsper" },
         { "name": "Power", "link": "/units/power" },
         { "name": "Pressure", "link": "/units/pressure" },
         { "name": "Reactive Energy", "link": "/units/reactive-energy" },
         { "name": "Reactive Power", "link": "/units/reactive-power" },
         { "name": "Speed", "link": "/units/speed" },
         { "name": "Temperature", "link": "/units/temperature" },
-        { "name": "Time", "link": "/units/time" },
+        { "name": "Time", "link": "/units/general" },
         { "name": "Voltage", "link": "/units/voltage" },
         { "name": "Volume", "link": "/units/volume" },
-        { "name": "Volume Flow Rate", "link": "/units/volume-flow-rate" }
-      ]
-    },
-    {
-      "name": "Random Generator",
-      "link": "/random",
-      "emoji": "🎲",
-      "subcategories": [
-        { "name": "Coin Toss", "link": "/random/coin" },
-        { "name": "Dice", "link": "/random/dice" },
-        { "name": "Ladder Climbing", "link": "/random/ladder" },
-        { "name": "Lorem Ipsum", "link": "/random/lorem" },
-        { "name": "Lotto Numbers", "link": "/random/lotto" },
-        { "name": "Random Number", "link": "/random/number" },
-        {
-          "name": "Rock Paper Scissors",
-          "link": "/random/rock-paper-scissors"
-        },
-        { "name": "Random English Word", "link": "/random/word-en" },
-        { "name": "Random Korean Word", "link": "/random/word-ko" }
-      ]
-    },
-    {
-      "name": "Calculators",
-      "link": "/calculator",
-      "emoji": "🧮",
-      "subcategories": [
-        { "name": "Statistics", "link": "/calculator/statics" },
-        { "name": "BMI", "link": "/calculator/BMI" },
-        { "name": "AdSense Revenue", "link": "/calculator/adsense" },
-        { "name": "Effective Interest Rate", "link": "/calculator/EIR" },
-        {
-          "name": "Compound Interest",
-          "link": "/calculator/compound-interest"
-        },
-        {
-          "name": "Repayment Loan",
-          "link": "/calculator/repayment-loan"
-        },
-        {
-          "name": "Engineering Calc",
-          "link": "/calculatorgineering"
-        }
-      ]
-    },
-    {
-      "name": "Convertors Generators",
-      "link": "/convert",
-      "emoji": "🔄",
-      "subcategories": [
-        { "name": "Color Convert", "link": "/convert/color" },
-        { "name": "Barcode Generator", "link": "/convert/barcode" },
-        { "name": "QR Code Generator", "link": "/convert/qrcode" },
-        {
-          "name": "Birthday to Zodiac",
-          "link": "/convert/birthdayToZodiac"
-        },
-        { "name": "Roman Number Convert", "link": "/convert/roman" },
-        { "name": "Base N Convert", "link": "/convert/number" }
-      ]
-    },
-    {
-      "name": "CharMap",
-      "link": "/charmap",
-      "emoji": "🔤",
-      "subcategories": [
-        { "name": "Emojis", "link": "/charmap/emojis" },
-        { "name": "Unicode Special", "link": "/charmap/unicode-special" }
-      ]
-    },
-    {
-      "name": "Text",
-      "link": "/text",
-      "emoji": "📝",
-      "subcategories": [
-        { "name": "NotePad", "link": "/text/notepad" },
-        { "name": "Character Count", "link": "/text/charcount" }
-      ]
-    },
-    {
-      "name": "Times",
-      "link": "/time",
-      "emoji": "⏰",
-      "subcategories": [
-        { "name": "D-Day Counter", "link": "/time/d-day" },
-        { "name": "Pomodoro", "link": "/time/pomodoro" },
-        { "name": "Timer", "link": "/time/timer" },
-        { "name": "Stopwatch", "link": "/time/stopwatch" },
-        { "name": "Countdown", "link": "/time/countdown" },
-        { "name": "Left Time", "link": "/time/lefttime" }
-      ]
-    },
-    {
-      "name": "Network",
-      "link": "/network",
-      "emoji": "🌐",
-      "subcategories": [{ "name": "IP Address", "link": "/network/ipaddress" }]
-    },
-    {
-      "name": "Image",
-      "link": "/image",
-      "emoji": "🖼️",
-      "subcategories": [
-        { "name": "Image Color Picker", "link": "/image/color-picker" },
-        { "name": "Image Compress", "link": "/image/compress" },
-        { "name": "Image Crop", "link": "/image/crop" },
-        { "name": "Image Flip", "link": "/image/flip" },
-        { "name": "Image Resize", "link": "/image/resize" }
-      ]
-    },
-    {
-      "name": "SpreadSheet",
-      "link": "/spreadsheet",
-      "emoji": "📊",
-      "subcategories": [
-        { "name": "CSV Editor", "link": "/spreadsheet/csv-editor" },
-        { "name": "JSON Editor", "link": "/spreadsheet/json-editor" },
-        { "name": "Excel Editor", "link": "/spreadsheet/excel-editor" },
-        { "name": "XML Editor", "link": "/spreadsheet/xml-editor" },
-        { "name": "CSV Convert", "link": "/spreadsheet/csv-convert" },
-        { "name": "JSON Convert", "link": "/spreadsheet/json-convert" },
-        { "name": "Excel Convert", "link": "/spreadsheet/excel-convert" }
+        { "name": "Volume Flow Rate", "link": "/units/volume-flow-rate" },
+        { "name": "Roman Numeral Converter", "link": "/units/roman" },
+        { "name": "Number Base Converter", "link": "/units/number" }
       ]
     }
   ]

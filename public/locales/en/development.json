@@ -1,0 +1,25 @@
+{
+  "uuid": {
+    "title": "UUID Generator: A quick tool for generating unique identifiers for secure software development and data management",
+    "description": "Use the UUID generator to easily create unique identifiers for each data item or object. This tool is essential for database management, software development, and system integration projects.",
+    "url": "/en/development/uuid",
+    "sections": [
+      {
+        "title": "How to use the UUID generator",
+        "content": "Select the version and click the Generate button to create a UUID. You can copy the generated UUID to the clipboard for use."
+      },
+      {
+        "title": "Examples of using the UUID generator",
+        "content": [
+          "Database management: Use UUIDs to identify data items.",
+          "Software development: Use UUIDs as object identifiers.",
+          "System integration projects: Use UUIDs for data integration between various systems."
+        ]
+      },
+      {
+        "title": "Precautions",
+        "content": "UUIDs are unique identifiers, so duplication should be avoided. Be careful as it can affect database query performance."
+      }
+    ]
+  }
+}

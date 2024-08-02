@@ -1,0 +1,123 @@
+{
+  "color-picker": {
+    "title": "Color Picker: Choose a color from the color palette",
+    "description": "A color picker tool that allows you to choose a color from the color palette. Choose a color from the color palette.",
+    "url": "/en/design/color-picker",
+    "sections": [
+      {
+        "title": "How to Use Color Picker",
+        "content": "You can choose a color from the color palette using the color picker tool. Choose a color from the color palette."
+      },
+      {
+        "title": "Importance of Using Color Picker",
+        "content": "Using a color picker helps you choose the right color for your design projects. Get help with color selection and design creation through the color picker tool."
+      }
+    ]
+  },
+  "color-code-convert": {
+    "title": "Efficient Color Converter: Convert Between RGB, HEX, and HSL",
+    "description": "Use our Color Converter to effortlessly switch between RGB, HEX, and HSL formats, streamlining design and development tasks with precision.",
+    "url": "/en/convert/color-code-convert",
+    "sections": [
+      {
+        "title": "HEX Format",
+        "content": "HEX codes, essential in web design and digital media, are represented in a hexadecimal format, starting with a '#' followed by six characters, consisting of numbers (0-9) and letters (A-F). These parts define the intensities of red, green, and blue. This format is not only easy to use but also accepted universally across modern browsers and graphic design tools, ensuring consistency in digital projects."
+      },
+      {
+        "title": "RGB Format",
+        "content": "RGB, an acronym for Red, Green, and Blue, represents colors through the intensity of these three primary colors, with each component ranging from 0 to 255. This format is foundational in digital color representation, used in devices like scanners, cameras, and displays. It is particularly favored in applications requiring high vibrancy and a wide color spectrum, enabling precise color mixing and visual effects."
+      },
+      {
+        "title": "HSL Format",
+        "content": "HSL stands for Hue, Saturation, and Lightness. It provides a more intuitive approach to color manipulation, with Hue measured in degrees (0-360) reflecting the color wheel, Saturation as a percentage indicating deviation from gray, and Lightness representing the shade from black (0%) to white (100%). This format is especially beneficial for designers aiming to create specific color palettes or for subtle adjustments in themes."
+      },
+      {
+        "title": "Using the Converter",
+        "content": "The color converter is designed for ease of use. Users simply select their input format, enter the color code, choose the desired output format, and submit. The tool efficiently processes the input, converting it to the selected format and displaying both the new code and a visual representation. This functionality is crucial for rapid and accurate color conversion, streamlining the design and development process."
+      },
+      {
+        "title": "Common Use Cases",
+        "content": "Color converters are extremely beneficial across various applications such as web design, where quick adaptation of color formats is necessary; graphic design, ensuring consistent color across media; and print production, where accurate color representation is critical for quality control."
+      },
+      {
+        "title": "Advantages of Each Format",
+        "content": "Each color format offers unique advantages. HEX, with its simplicity and wide usage, is ideal for web design. RGB is essential for controlling digital display colors directly, enhancing media vibrancy. HSL excels in design flexibility, making it perfect for thematic adjustments and fine-tuning color properties like hue, saturation, and lightness."
+      }
+    ]
+  },
+  "compress": {
+    "title": "Compress: Compress your files to reduce their size",
+    "description": "A file compression tool that allows you to reduce the size of your files. Compress your files to reduce their size.",
+    "url": "/en/design/compress",
+    "sections": [
+      {
+        "title": "How to Use Compress",
+        "content": "You can compress your files using the file compression tool. Compress your files to reduce their size."
+      },
+      {
+        "title": "Importance of Using Compress",
+        "content": "Using a file compression tool helps you reduce the size of your files. Get help with file compression and storage optimization through the file compression tool."
+      }
+    ]
+  },
+  "crop": {
+    "title": "Crop: Crop your images to the desired size",
+    "description": "An design cropping tool that allows you to crop your images to the desired size. Crop your images to the desired size.",
+    "url": "/en/design/crop",
+    "sections": [
+      {
+        "title": "How to Use Crop",
+        "content": "You can crop your images using the design cropping tool. Crop your images to the desired size."
+      },
+      {
+        "title": "Importance of Using Crop",
+        "content": "Using an image cropping tool helps you crop your images to the desired size. Get help with design cropping and editing through the design cropping tool."
+      }
+    ]
+  },
+  "flip": {
+    "title": "Flip: Flip your images horizontally or vertically",
+    "description": "An image flipping tool that allows you to flip your images horizontally or vertically. Flip your images horizontally or vertically.",
+    "url": "/en/design/flip",
+    "sections": [
+      {
+        "title": "How to Use Flip",
+        "content": "You can flip your images horizontally or vertically using the design flipping tool. Flip your images horizontally or vertically."
+      },
+      {
+        "title": "Importance of Using Flip",
+        "content": "Using an design flipping tool helps you flip your images horizontally or vertically. Get help with design flipping and editing through the design flipping tool."
+      }
+    ]
+  },
+  "resize": {
+    "title": "Resize: Resize your images to the desired dimensions",
+    "description": "An design resizing tool that allows you to resize your images to the desired dimensions. Resize your images to the desired dimensions.",
+    "url": "/en/design/resize",
+    "sections": [
+      {
+        "title": "How to Use Resize",
+        "content": "You can resize your images to the desired dimensions using the design resizing tool. Resize your images to the desired dimensions."
+      },
+      {
+        "title": "Importance of Using Resize",
+        "content": "Using an design resizing tool helps you resize your images to the desired dimensions. Get help with design resizing and editing through the design resizing tool."
+      }
+    ]
+  },
+  "watermark": {
+    "title": "Watermark: Add a watermark to your images",
+    "description": "An design watermarking tool that allows you to add a watermark to your images. Add a watermark to your images.",
+    "url": "/en/design/watermark",
+    "sections": [
+      {
+        "title": "How to Use Watermark",
+        "content": "You can add a watermark to your images using the design watermarking tool. Add a watermark to your images."
+      },
+      {
+        "title": "Importance of Using Watermark",
+        "content": "Using an design watermarking tool helps you add a watermark to your images. Get help with design watermarking and branding through the design watermarking tool."
+      }
+    ]
+  }
+}

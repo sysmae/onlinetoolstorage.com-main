@@ -1,5 +1,10 @@
-import { NextSeo, WebPageJsonLd } from 'next-seo'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
+import CustomSEOContent from '@/components/CustomSEO'
+import CustomH1Content from '@/components/CustomH1Content'
+import CustomContent from '@/components/CustomMainContent'
+
+const category = 'common'
 
 export async function getStaticProps({ locale }) {
   return {
@@ -12,108 +17,9 @@ export async function getStaticProps({ locale }) {
 const HomePage = () => {
   return (
     <>
-      <NextSeo
-        title="온툴모 | 온라인 툴 모음 | 당신이 몰랐던 필수 온라인 도구 모음 사이트"
-        description="온툴모에서는 계산기, 변환기, 랜덤 생성기 등 현대 생활에 필요한 다양한 온라인 도구를 무료로 제공합니다. 일상과 업무의 효율을 높여보세요."
-        canonical="https://www.onlinetoolstorage.com"
-        openGraph={{
-          url: 'https://www.onlinetoolstorage.com',
-          title:
-            '온툴모 | 온라인 툴 모음 | 당신이 몰랐던 필수 온라인 도구 모음 사이트',
-          description:
-            '온툴모에서는 계산기, 변환기, 랜덤 생성기 등 현대 생활에 필요한 다양한 온라인 도구를 무료로 제공합니다. 일상과 업무의 효율을 높여보세요.',
-          images: [
-            {
-              url: 'https://www.onlinetoolstorage.com/favicon.png',
-              width: 800,
-              height: 600,
-              alt: '온툴모',
-            },
-          ],
-          site_name:
-            '온툴모 | 온라인 툴 모음 | 당신이 몰랐던 필수 온라인 도구 모음 사이트',
-        }}
-      />
-      <WebPageJsonLd
-        url="https://onlinetoolstorage.com"
-        title="온툴모 | 온라인 툴 모음 | 당신이 몰랐던 필수 온라인 도구 모음 사이트"
-        description="온툴모에서는 계산기, 변환기, 랜덤 생성기 등 현대 생활에 필요한 다양한 온라인 도구를 무료로 제공합니다. 일상과 업무의 효율을 높여보세요."
-      />
-
-      <div className="header">
-        <h1>온라인 툴 모음 | 온툴모</h1>
-        <p>
-          온라인 툴 모음 | 온툴모는 현대 생활의 다양한 요구에 맞춘 온라인
-          도구들을 제공하는 웹사이트입니다.사용자 친화적인 인터페이스와 효과적인
-          솔루션 제공을 통해 일상과 업무의 효율성을 극대화할 수 있도록
-          설계되었습니다.
-        </p>
-      </div>
-
-      <section>
-        <h2>주요 특징 및 도구</h2>
-        <p>
-          <strong>이모지, 특수문자, 이모티콘 복사:</strong> 커뮤니케이션은 현대
-          사회에서 중요한 역할을 차지하며, 온툴모는 소셜 미디어, 이메일, 문서
-          작성 등 다양한 커뮤니케이션 형태를 지원하기 위해 풍부한 이모지,
-          특수문자, 이모티콘을 제공합니다. 이를 통해 사용자는 메시지에 개성과
-          감정을 효과적으로 추가할 수 있습니다, 표현의 폭을 넓히고, 의사소통의
-          효과를 높일 수 있습니다.
-        </p>
-        <p>
-          <strong>계산기 도구들:</strong> 온툴모는 광범위한 계산 요구를
-          충족시키기 위해 다양한 계산기를 제공합니다. 통계 계산기는 데이터
-          분석에 필수적인 도구로, 애드센스 수익 계산기는 웹사이트의 경제적
-          가치를 평가하는 데 유용하며, 회계 계산기는 개인 재정이나 소규모 사업의
-          재정 관리에 도움을 줍니다. 이러한 계산기들은 복잡한 계산을 단순화하고,
-          정확하고 신뢰할 수 있는 결과를 제공하여 일과 생활을 더욱 효율적으로
-          만듭니다.
-        </p>
-        <p>
-          <strong>콘텐츠 생성 도구:</strong> 창의적인 작업을 위한 다양한 콘텐츠
-          생성 도구는 사용자가 자신의 아이디어를 실현할 수 있도록 돕습니다. 로렘
-          랜덤 문장 생성기는 디자인 프로젝트나 문서 작업에 필요한 가짜 텍스트를
-          제공하며, 랜덤 이름 생성기는 캐릭터 생성, 소설 작업, 사용자 이름 생성
-          등 다양한 목적에 사용됩니다. 랜덤 비밀번호 생성기는 강력한 보안을 위한
-          비밀번호를 제공하며, 로또 번호 생성기는 재미와 흥미를 더하는
-          엔터테인먼트 도구로 활용됩니다. 이러한 도구들은 사용자가 창의력을
-          발휘하고, 다양한 목적에 맞는 콘텐츠를 쉽게 생성할 수 있도록 합니다.
-        </p>
-      </section>
-
-      <section>
-        <h2>사용자 경험 중심 설계</h2>
-        <p>
-          온툴모는 최고의 사용자 경험을 제공하기 위해 지속적으로 노력합니다.
-          사용자 친화적인 인터페이스는 모든 연령대와 배경을 가진 사용자들이 쉽게
-          접근하고 이해할 수 있도록 설계되었습니다. 온툴모의 모든 도구는
-          사용자가 직관적으로 이해하고 사용할 수 있도록 간결하고 명확한 지침으로
-          구성되어 있습니다. 사용자의 피드백은 사이트 개선의 중요한 자원으로
-          활용되며, 사용자의 요구와 기대를 반영하기 위해 지속적으로
-          업데이트됩니다.
-        </p>
-      </section>
-
-      <section>
-        <h2>모두를 위한 온라인 도구</h2>
-        <p>
-          온툴모는 다양한 배경과 필요를 가진 사용자들을 위한 온라인 도구를
-          제공합니다. 학생부터 교사, 디자이너, 개발자, 마케터, 작가에 이르기까지
-          모든 사용자가 온툴모를 통해 자신의 목표를 달성할 수 있습니다. 온툴모의
-          도구들은 사용자들이 일상 생활과 전문 업무에서 더 큰 효율성과 창의력을
-          발휘할 수 있도록 설계되었습니다. 온툴모는 사용자의 성공을 지원하기
-          위해 여러분의 일상과 업무에 필요한 도구를 지속적으로 제공할 것입니다.
-        </p>
-      </section>
-      <section>
-        <h2>모두를 위한 온라인 도구</h2>
-        <p>
-          온툴모는 학생, 교사, 디자이너, 개발자, 마케터, 작가 등 다양한
-          사용자층을 대상으로 합니다. 사용자들이 필요로 하는 도구를 제공하여
-          일상 생활과 전문 업무에서 더 큰 효율성과 창의력을 발휘할 수 있도록
-          돕습니다.
-        </p>
-      </section>
+      <CustomSEOContent category={category} />
+      <CustomH1Content category={category} />
+      <CustomContent category={category} />
     </>
   )
 }

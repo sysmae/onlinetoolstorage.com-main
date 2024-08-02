@@ -131,39 +131,7 @@
       }
     ]
   },
-  "json-convert": {
-    "title": "JSON Converter: Online JSON Converter - Ontoolmo",
-    "description": "An online JSON converter that allows you to convert JSON files to various formats such as CSV, Excel, SQL, and more. You can upload a JSON file or enter data directly to convert it.",
-    "url": "/en/spreadsheet/json-converter",
-    "sections": [
-      {
-        "title": "How to Use the JSON Converter",
-        "content": [
-          "Upload JSON file: Click the 'Open File' button to upload a JSON file from your local computer. The uploaded file is displayed in the editor, and you can convert it to various formats.",
-          "Direct input: Select the 'Direct Input' tab to directly enter data into the text box. The JSON data should be in valid JSON format.",
-          "Convert data: Select the desired output format from the dropdown menu, and click the 'Convert' button to convert the data.",
-          "Export data: Click the 'Export' button to download the converted data in the selected format."
-        ]
-      },
-      {
-        "title": "JSON File Format",
-        "content": [
-          "JSON (JavaScript Object Notation) files are a file format that stores data in key-value pairs. JSON data is represented as objects and arrays, and is commonly used for data exchange between web servers and web clients.",
-          "JSON files are saved as text files and are human-readable. They are often used to store configuration data, API responses, and other structured data.",
-          "JSON data is written in a format similar to JavaScript objects, with keys and values separated by a colon (:), and key-value pairs separated by commas (,). Objects are enclosed in curly braces ({}) and arrays are enclosed in square brackets ([])."
-        ]
-      },
-      {
-        "title": "Use Cases for JSON Files",
-        "content": [
-          "API responses: When interacting with web APIs, JSON data is commonly used to send and receive data between the server and client.",
-          "Configuration data: JSON files are used to store configuration settings for applications, websites, and services.",
-          "Data exchange: JSON files are used to exchange structured data between different systems or applications.",
-          "Data storage: JSON files are used to store structured data in a human-readable format for easy access and manipulation."
-        ]
-      }
-    ]
-  },
+
   "xml-editor": {
     "title": "XML File Editor: Online XML Editor - Ontoolmo",
     "description": "An online XML editor that allows you to easily edit and save XML files online. You can upload an XML file or enter data directly to edit it, and you can export it in various formats.",
