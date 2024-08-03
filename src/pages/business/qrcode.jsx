@@ -4,6 +4,9 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
 const category = 'business'
 
 export async function getStaticProps({ locale }) {
@@ -34,19 +37,19 @@ export default function Home() {
       <CustomH1Content category={category} />
       <div className="container mx-auto p-4">
         <div className="flex flex-col items-center">
-          <input
+          <Input
             type="text"
             placeholder="Enter text to generate QR code"
             value={text}
             onChange={(e) => setText(e.target.value)}
           />
-          <button
+          <Button
             onClick={generateQRCode}
             disabled={isLoading}
             className="mt-4 rounded-md bg-blue-500 px-4 py-2 text-white transition duration-300 hover:bg-blue-700 disabled:bg-blue-300"
           >
             QR Code Generate
-          </button>
+          </Button>
         </div>
         <div
           className="mt-4 flex h-8 items-center justify-center rounded-md bg-slate-300 text-sm font-semibold text-white"
@@ -56,7 +59,7 @@ export default function Home() {
           {qrCode && (
             <>
               <img src={qrCode} alt="Generated QR Code" />
-              <button
+              <Button
                 onClick={() => {
                   const link = document.createElement('a')
                   link.href = qrCode
@@ -67,7 +70,7 @@ export default function Home() {
                 }}
               >
                 Download QR Code
-              </button>
+              </Button>
             </>
           )}
         </div>

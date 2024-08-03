@@ -6,6 +6,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const category = 'finance'
 
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
 export async function getStaticProps({ locale }) {
   return {
     props: {
@@ -49,9 +52,8 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
+      <div className="flex flex-col items-center justify-center xl:pt-12">
         <form onSubmit={handleSubmit} className="rounded p-8 shadow-md">
-          <h2 className="mb-6 text-2xl font-bold">Loan Repayment Calculator</h2>
           <div className="mb-4">
             <label
               htmlFor="loanAmount"
@@ -59,10 +61,9 @@ export default function Home() {
             >
               Loan Amount
             </label>
-            <input
+            <Input
               type="number"
               id="loanAmount"
-              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight shadow focus:outline-none"
               value={loanAmount}
               onChange={(e) => setLoanAmount(e.target.value)}
             />
@@ -74,10 +75,9 @@ export default function Home() {
             >
               Annual Interest Rate (%)
             </label>
-            <input
+            <Input
               type="number"
               id="interestRate"
-              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight shadow focus:outline-none"
               value={interestRate}
               onChange={(e) => setInterestRate(e.target.value)}
             />
@@ -86,20 +86,14 @@ export default function Home() {
             <label htmlFor="term" className="mb-2 block text-sm font-bold">
               Term (years)
             </label>
-            <input
+            <Input
               type="number"
               id="term"
-              className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight shadow focus:outline-none"
               value={term}
               onChange={(e) => setTerm(e.target.value)}
             />
           </div>
-          <button
-            type="submit"
-            className="focus:shadow-outline rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
-          >
-            Calculate
-          </button>
+          <Button type="submit">Calculate</Button>
           {monthlyPayment && (
             <div className="mt-4">
               <p className="text-lg">

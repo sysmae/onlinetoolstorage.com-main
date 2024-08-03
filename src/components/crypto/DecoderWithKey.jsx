@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 
+import { Textarea } from '@/components/ui/textarea'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
 const Decoder = ({ decode }) => {
   const [input, setInput] = useState('')
   const [key, setKey] = useState('')
@@ -28,41 +32,31 @@ const Decoder = ({ decode }) => {
   }
 
   return (
-    <div>
-      <textarea
+    <div className="flex flex-col xl:pt-12">
+      <Textarea
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Enter text to decrypt..."
         rows="4"
-        className="mb-2 w-full rounded-md border border-gray-300 p-2 transition duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        className="mb-2"
       />
-      <input
+      <Input
         type="text"
         value={key}
         onChange={(e) => setKey(e.target.value)}
         placeholder="Enter decryption key..."
-        className="mb-2 w-full rounded-md border border-gray-300 p-2 transition duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        className="mb-2"
       />
-      <button
-        onClick={handleDecrypt}
-        className="mb-2 mr-2 rounded bg-blue-600 px-4 py-2 text-white transition duration-150 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
+      <Button onClick={handleDecrypt} className="flex flex-1">
         Decrypt
-      </button>
+      </Button>
 
       {output && (
-        <>
-          <div>
-            <h3 className="font-semibold">Decryption Result:</h3>
-            <p className="mb-2 rounded border border-gray-300 p-2">{output}</p>
-          </div>
-          <button
-            onClick={handleCopy}
-            className="rounded bg-green-500 px-4 py-2 text-white transition duration-150 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500"
-          >
-            Copy
-          </button>
-        </>
+        <div className="flex items-center justify-center gap-4">
+          <p className="font-semibold">Encryption Result:</p>
+          <p className="mb-2 rounded border border-gray-300 p-2">{output}</p>
+          <Button onClick={handleCopy}>Copy</Button>
+        </div>
       )}
       {error && <p className="text-red-500">{error}</p>}
       {copySuccess && <p className="text-green-500">Copied successfully!</p>}

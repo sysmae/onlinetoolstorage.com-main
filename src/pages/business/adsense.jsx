@@ -5,6 +5,9 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
 const category = 'business'
 
 export async function getStaticProps({ locale }) {
@@ -37,7 +40,7 @@ export default function Home() {
           <label htmlFor="pageViews" className="mb-1 block">
             페이지뷰 (Page Views):
           </label>
-          <input
+          <Input
             type="number"
             id="pageViews"
             value={pageViews}
@@ -49,7 +52,7 @@ export default function Home() {
           <label htmlFor="ctr" className="mb-1 block">
             클릭률 (CTR) (%):
           </label>
-          <input
+          <Input
             type="number"
             id="ctr"
             value={ctr}
@@ -61,7 +64,7 @@ export default function Home() {
           <label htmlFor="cpc" className="mb-1 block">
             클릭당 비용 (CPC) ($):
           </label>
-          <input
+          <Input
             type="number"
             id="cpc"
             value={cpc}
@@ -69,12 +72,12 @@ export default function Home() {
             className="w-full rounded border border-gray-300 p-2"
           />
         </div>
-        <button
+        <Button
           onClick={calculateRevenue}
           className="rounded bg-blue-500 p-2 text-white"
         >
           수익 계산하기 (Calculate Revenue)
-        </button>
+        </Button>
         <div className="mt-4">
           <p>예상 수익 (Estimated Revenue): ${revenue}</p>
         </div>

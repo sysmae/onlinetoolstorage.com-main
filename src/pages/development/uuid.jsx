@@ -38,22 +38,23 @@ export default function Home() {
       <CustomH1Content category={category} />
       <div className="mx-auto my-8 p-4">
         <h2 className="mb-4 text-2xl font-bold">UUID Generator</h2>
-        <div className="mb-4">
+        <div className="mb-4 flex gap-2">
           <select
-            className="form-select mt-1 block w-full"
+            className="form-select mt-1 block w-full dark:text-gray-700"
             value={version}
             onChange={(e) => setVersion(e.target.value)}
           >
             <option value="v4">v4 (Random)</option>
             <option value="v1">v1 (Time Based)</option>
           </select>
+          <button
+            className="rounded bg-blue-500 px-4 py-2 text-white transition duration-300 hover:bg-blue-700"
+            onClick={generateUuid}
+          >
+            Generate
+          </button>
         </div>
-        <button
-          className="rounded bg-blue-500 px-4 py-2 text-white transition duration-300 hover:bg-blue-700"
-          onClick={generateUuid}
-        >
-          Generate
-        </button>
+
         {uuid && (
           <div className="mt-4 flex items-center justify-between">
             <span className="font-mono">{uuid}</span>

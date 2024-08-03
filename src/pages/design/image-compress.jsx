@@ -6,6 +6,8 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Input } from '@/components/ui/input'
+
 const category = 'design'
 
 export async function getStaticProps({ locale }) {
@@ -57,9 +59,9 @@ const ImageCompressor = () => {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="container">
-        <h2>Image Compress(이미지 압축 도구)</h2>
-        <input
+      <div className="container xl:pt-24">
+        <h2 className="pb-4">Image Compress(이미지 압축 도구)</h2>
+        {/* <input
           type="file"
           accept="image/*"
           className="block w-full cursor-pointer text-sm
@@ -70,17 +72,18 @@ const ImageCompressor = () => {
                      file:text-violet-700
                      hover:file:bg-violet-100"
           onChange={handleImageUpload}
-        />
+        /> */}
+        <Input type="file" accept="image/*" onChange={handleImageUpload} />
         {isLoading && <div>Loading...</div>}
         <div>
           {compressedImage && (
             <>
-              <h2 className="text-lg font-semibold text-gray-800">
+              <p className="text-lg font-semibold text-gray-800 dark:text-gray-300">
                 Original (원본 이미지 크기): {originalSize.toFixed(2)} MB
-              </h2>
-              <h2 className="text-lg font-semibold text-gray-800">
+              </p>
+              <p className="text-lg font-semibold text-gray-800 dark:text-gray-300">
                 Compressed (압축된 이미지 크기): {compressedSize.toFixed(2)} MB
-              </h2>
+              </p>
               <a
                 href={compressedImage}
                 download="compressed_image.jpg"
@@ -92,7 +95,7 @@ const ImageCompressor = () => {
                 <img
                   src={compressedImage}
                   alt="Compressed"
-                  className="h-auto max-w-[500px] rounded shadow-lg"
+                  className="h-auto max-w-[250px] rounded shadow-lg"
                 />
               </div>
             </>

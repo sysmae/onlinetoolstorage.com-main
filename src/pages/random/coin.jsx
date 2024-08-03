@@ -5,6 +5,8 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Button } from '@/components/ui/button'
+
 const category = 'random'
 
 export async function getStaticProps({ locale }) {
@@ -34,20 +36,20 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="flex h-screen flex-col items-center justify-center">
-        <h2 className="mb-4 text-2xl font-bold">Coin Toss</h2>
+      <div className="flex flex-col items-center justify-center xl:mt-24">
+        <h3 className="mb-4 text-2xl font-bold">Coin Toss</h3>
         <div
-          className={`flex size-24 items-center justify-center rounded-full bg-yellow-400 text-xl font-bold shadow-lg ${flipping ? 'animate-spin' : ''}`}
+          className={`flex size-24 items-center justify-center rounded-full bg-yellow-400 text-xl font-bold text-gray-700 shadow-lg ${flipping ? 'animate-spin' : ''}`}
         >
           {flipping ? '' : result}
         </div>
-        <button
-          className="mt-4 rounded bg-blue-500 px-4 py-2 text-white shadow"
+        <Button
+          className="mt-4 rounded bg-blue-500 px-4 py-2 text-white shadow "
           onClick={flipCoin}
           disabled={flipping}
         >
           Coin Toss
-        </button>
+        </Button>
       </div>
       <CustomContent category={category} />
     </>

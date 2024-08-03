@@ -5,6 +5,9 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+
 const category = 'random'
 
 const loremSentences = [
@@ -73,14 +76,6 @@ const koreanLoremSentences = [
   '크리에이티브 프로젝트의 컨셉 아이디어를 시험하는 문장.',
 ]
 
-const containerStyle = 'max-w-4xl mx-auto py-8 px-4'
-const headingStyle = 'text-xl font-bold mb-4'
-const inputStyle = 'border border-gray-300 p-2 mr-2'
-const buttonStyle =
-  'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-const copiedPopupStyle =
-  'p-2 text-white bg-green-500 rounded absolute top-2 right-2'
-
 function generateLoremSentences(count, isKorean = false) {
   let sentences = []
   const sourceArray = isKorean ? koreanLoremSentences : loremSentences
@@ -124,41 +119,30 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className={containerStyle}>
-        <h2 className={headingStyle}>Random Lorem Sentence Generator</h2>
-        <div>
-          <label>
-            Number of sentences to generate:
-            <input
-              className={inputStyle}
-              type="number"
-              value={count}
-              onChange={(e) => setCount(parseInt(e.target.value, 10))}
-            />
-          </label>
+      <div className="xl:mt-24">
+        <h3>Random Lorem Sentence Generator</h3>
+        <div className="flex items-center justify-center">
+          <Input
+            type="number"
+            value={count}
+            onChange={(e) => setCount(parseInt(e.target.value, 10))}
+          />
+          <Button onClick={() => handleGenerate(false)}>
+            Generate English Lorem
+          </Button>
+          <Button onClick={() => handleGenerate(true)}>
+            Generate Korean Lorem
+          </Button>
         </div>
-        <button
-          className={`${buttonStyle} mr-2`}
-          onClick={() => handleGenerate(false)}
-        >
-          Generate English Lorem
-        </button>
-        <button className={buttonStyle} onClick={() => handleGenerate(true)}>
-          Generate Korean Lorem
-        </button>
+
         {generatedSentence && (
-          <div className="relative mt-4">
-            <button
-              className={`${buttonStyle} mt-2`}
-              onClick={() => copyToClipboard(generatedSentence)}
-            >
+          <div className="mt-4 flex flex-col">
+            <Button onClick={() => copyToClipboard(generatedSentence)}>
               Copy
-            </button>
-            {showCopied && (
-              <div className={copiedPopupStyle}>Copied to clipboard!</div>
-            )}
+            </Button>
+            {showCopied && <div>Copied to clipboard!</div>}
             <div
-              className="p-4 border border-gray-300"
+              className="border border-gray-300 p-4"
               onClick={() => copyToClipboard(generatedSentence)}
             >
               {generatedSentence}

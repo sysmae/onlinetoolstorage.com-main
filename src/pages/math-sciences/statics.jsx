@@ -16,6 +16,9 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
 const category = 'math-sciences'
 
 export async function getStaticProps({ locale }) {
@@ -92,21 +95,21 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="mx-auto max-w-xl space-y-4 p-4">
+      <div className="mx-auto max-w-xl space-y-4 p-4 xl:pt-12">
         {/* 단일 데이터 세트 분석 */}
-        <form onSubmit={handleSingleDataSubmit} className="space-y-2">
-          <input
-            className="input input-bordered w-full max-w-xs px-4 py-2 text-lg" // 이 부분 추가
+        <form
+          onSubmit={handleSingleDataSubmit}
+          className="flex items-center justify-center gap-2 space-y-2"
+        >
+          <Input
             type="text"
             value={data}
             onChange={(e) => setData(e.target.value)}
             placeholder="단일 데이터 세트 입력 (띄어쓰기 또는 쉼표로 구분)"
           />
-          <button className="btn btn-primary px-4 py-2 text-lg" type="submit">
-            단일 데이터 계산
-          </button>
+          <Button type="submit">단일 데이터 계산</Button>
         </form>
-        <pre className="whitespace-pre-wrap rounded-md bg-gray-100 p-4">
+        <pre className="whitespace-pre-wrap rounded-md bg-gray-100 p-4 dark:bg-gray-800">
           {result ||
             '개수(n):\n평균:\n분산:\n표준편차:\n최빈값:\n범위:\n1사분위:\n중앙값:\n3사분위:'}
         </pre>
@@ -114,26 +117,28 @@ export default function Home() {
 
       {/* 이중 데이터 세트 분석 */}
       <div>
-        <form onSubmit={handleDualDataSubmit} className="space-y-2">
-          <input
-            className="input input-bordered w-full max-w-xs px-4 py-2 text-lg" // 이 부분 추가
-            type="text"
-            value={xData}
-            onChange={(e) => setXData(e.target.value)}
-            placeholder="X 데이터 세트 입력 (띄어쓰기 또는 쉼표로 구분)"
-          />
-          <input
-            className="input input-bordered w-full max-w-xs px-4 py-2 text-lg" // 이 부분 추가
-            type="text"
-            value={yData}
-            onChange={(e) => setYData(e.target.value)}
-            placeholder="Y 데이터 세트 입력 (띄어쓰기 또는 쉼표로 구분)"
-          />
-          <button className="btn btn-primary px-4 py-2 text-lg" type="submit">
-            이중 데이터 계산
-          </button>
+        <form
+          onSubmit={handleDualDataSubmit}
+          className="flex items-center space-y-2"
+        >
+          <div className="w-full">
+            <Input
+              type="text"
+              value={xData}
+              onChange={(e) => setXData(e.target.value)}
+              placeholder="X 데이터 세트 입력 (띄어쓰기 또는 쉼표로 구분)"
+            />
+            <Input
+              type="text"
+              value={yData}
+              onChange={(e) => setYData(e.target.value)}
+              placeholder="Y 데이터 세트 입력 (띄어쓰기 또는 쉼표로 구분)"
+            />
+          </div>
+
+          <Button type="submit">이중 데이터 계산</Button>
         </form>
-        <pre className="whitespace-pre-wrap rounded-md bg-gray-100 p-4">
+        <pre className="whitespace-pre-wrap rounded-md bg-gray-100 p-4 dark:bg-gray-800">
           {correlationResult || '공분산:\n상관계수:\n'}
         </pre>
       </div>

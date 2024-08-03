@@ -4,6 +4,7 @@ import CustomSEOContent from '@/components/CustomSEO'
 import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { Button } from '@/components/ui/button'
 
 const category = 'random'
 
@@ -58,23 +59,35 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="container mx-auto px-4 py-8">
-        <h2 className="text-xl font-bold mb-4">Rock Paper Scissors</h2>
-        <div className="mb-4">
+      <div className="container mx-auto flex flex-col items-center px-4 py-8">
+        <h3 className="mb-6 text-2xl font-bold text-gray-800 dark:text-gray-100">
+          Rock Paper Scissors
+        </h3>
+        <div className="mb-6 flex space-x-4">
           {choices.map((choice) => (
-            <button
+            <Button
               key={choice.name}
               onClick={() => playGame(choice)}
-              className="bg-gray-200 hover:bg-gray-300 text-black font-bold py-2 px-4 rounded m-2"
+              className="flex size-24 items-center justify-center rounded-full border border-gray-300 bg-gray-100 text-2xl font-semibold text-gray-800 transition duration-200 ease-in-out hover:bg-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100"
             >
-              {choice.emoji} {choice.name}
-            </button>
+              {choice.emoji}
+            </Button>
           ))}
         </div>
-        <div>
-          <p>Your Choice: {userChoice}</p>
-          <p>Computer&apos;s Choice: {computerChoice}</p>
-          <p className="text-xl mt-4">{result}</p>
+        <div className="text-center">
+          <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
+            Your Choice:{' '}
+            <span className="font-bold text-gray-900 dark:text-gray-100">
+              {userChoice}
+            </span>
+          </p>
+          <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
+            Computer&apos;s Choice:{' '}
+            <span className="font-bold text-gray-900 dark:text-gray-100">
+              {computerChoice}
+            </span>
+          </p>
+          <p className="mt-4 text-xl font-bold">{result}</p>
         </div>
       </div>
 

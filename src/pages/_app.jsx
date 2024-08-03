@@ -65,7 +65,7 @@ function Layout({ children }) {
   return (
     <Theme>
       <Header />
-      <div className="pb-[25px] xl:pb-[50px]"></div>
+      <div className="pb-[20px] xl:pb-[250px]"></div>
       <div className="block xl:hidden">
         <SearchComponent />
       </div>

@@ -1,4 +1,3 @@
-import dynamic from 'next/dynamic'
 import React, { useState, useRef, useEffect } from 'react'
 
 import CustomSEOContent from '@/components/CustomSEO'
@@ -6,12 +5,9 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
-const ReactQuill = dynamic(() => import('react-quill'), {
-  ssr: false,
-  loading: () => <p>Loading editor...</p>,
-})
-import 'react-quill/dist/quill.snow.css'
-// import 'react-quill/dist/quill.bubble.css'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 
 const category = 'general'
 
@@ -29,6 +25,7 @@ function Editor() {
   const [content, setContent] = useState('')
   const [isFullScreen, setIsFullScreen] = useState(false)
   const fileInputRef = useRef(null)
+  const textareaRef = useRef(null)
 
   useEffect(() => {
     const data = localStorage.getItem('editorData')
@@ -39,70 +36,59 @@ function Editor() {
     }
   }, [])
 
-  const handleChange = (contentValue) => {
-    setContent(contentValue, () => {
-      // Callback after state is updated
-      updateLocalStorage(title, contentValue)
-    })
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto'
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`
+    }
+  }, [content])
+
+  const handleChange = (e) => {
+    const contentValue = e.target.value
+    setContent(contentValue)
+    updateLocalStorage(title, contentValue)
   }
 
   const handleTitleChange = (e) => {
     const newTitle = e.target.value
-    setTitle(newTitle, () => {
-      // Callback after state is updated
-      updateLocalStorage(newTitle, content)
-    })
+    setTitle(newTitle)
+    updateLocalStorage(newTitle, content)
   }
 
   const handleDownload = () => {
     const element = document.createElement('a')
 
-    // Extend replacements to handle paragraph tags as newlines
     let plainText = content
-      .replace(/<\/p>/gi, '\n') // Converts closing paragraph tags to newlines
-      .replace(/<br\s*\/?>/gi, '\n') // Convert HTML <br> to newline characters
-      .replace(/&nbsp;/gi, ' ') // Convert non-breaking spaces to regular spaces
-      .replace(/<[^>]+>/g, '') // Remove any remaining HTML tags
+      .replace(/<\/p>/gi, '\n')
+      .replace(/<br\s*\/?>/gi, '\n')
+      .replace(/&nbsp;/gi, ' ')
+      .replace(/<[^>]+>/g, '')
 
-    const file = new Blob([plainText], {
-      type: 'text/plain',
-    })
-
+    const file = new Blob([plainText], { type: 'text/plain' })
     element.href = URL.createObjectURL(file)
     element.download = `${title || 'notepad-content'}.txt`
     document.body.appendChild(element)
     element.click()
   }
 
-  function handleFileUpload(e) {
+  const handleFileUpload = (e) => {
     if (e.target.files && e.target.files.length > 0) {
-      const file = e.target.files[0] // Get the first file, assuming there's at least one file selected
-      if (file instanceof Blob) {
-        const reader = new FileReader()
-        reader.onload = (event) => {
-          let text = event.target.result
-          text = text.replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;') // Replace tabs with four non-breaking spaces
-          text = text.replace(/\n/g, '<br>') // Replace newline characters with HTML <br> tags for correct rendering in Quill
-          setContent(text)
-          let titleWithoutExtension = file.name.replace(/\..+$/, '') // Sets the title to the file name without the extension
-          setTitle(titleWithoutExtension, () => {
-            updateLocalStorage(titleWithoutExtension, text)
-          })
-          localStorage.setItem(
-            'editorData',
-            JSON.stringify({ title: titleWithoutExtension, content: text }),
-          )
-        }
-        reader.readAsText(file)
-      } else {
-        console.error('The chosen file is not a valid Blob.')
+      const file = e.target.files[0]
+      const reader = new FileReader()
+      reader.onload = (event) => {
+        let text = event.target.result
+        text = text.replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;')
+        text = text.replace(/\n/g, '<br>')
+        setContent(text)
+        const titleWithoutExtension = file.name.replace(/\..+$/, '')
+        setTitle(titleWithoutExtension)
+        updateLocalStorage(titleWithoutExtension, text)
       }
-    } else {
-      console.error('No file was selected.')
+      reader.readAsText(file)
     }
   }
 
-  function updateLocalStorage(title, content) {
+  const updateLocalStorage = (title, content) => {
     localStorage.setItem('editorData', JSON.stringify({ title, content }))
   }
 
@@ -120,6 +106,8 @@ function Editor() {
         zIndex: 9999,
         backgroundColor: 'white',
         padding: '20px',
+        marginTop: '0rem',
+        backgroundColor: 'gray',
       }
     : {}
 
@@ -139,40 +127,42 @@ function Editor() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div
-        style={editorStyle}
-        className="editor-container overflow-auto rounded-lg bg-white shadow-lg"
-      >
-        <input
-          type="text"
-          value={title}
-          onChange={handleTitleChange}
-          className="w-full rounded border border-gray-300 text-xl font-semibold"
-          placeholder="Enter the filename here..."
-        />
+      <div style={editorStyle} className="overflow-auto xl:mt-32">
         <div className="my-2 flex space-x-4">
-          <button
+          <Input
+            type="text"
+            value={title}
+            onChange={handleTitleChange}
+            className="w-full rounded border border-gray-300 text-xl font-semibold"
+            placeholder="Enter the filename here..."
+          />
+          <Button
             onClick={handleDownload}
             className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
           >
             Download as TXT
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => fileInputRef.current.click()}
             className="rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700"
           >
             Load TXT File
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={toggleFullScreen}
             className={`${isFullScreen ? 'bg-red-600 hover:bg-red-800' : 'bg-purple-600 hover:bg-purple-800'} rounded px-4 py-2 font-semibold text-white transition duration-300 ease-in-out`}
           >
             {isFullScreen ? 'Exit Full Screen' : 'Enter Full Screen'}
-          </button>
+          </Button>
         </div>
-        <ReactQuill theme="snow" value={content} onChange={handleChange} />
+        <Textarea
+          ref={textareaRef}
+          value={content}
+          onChange={handleChange}
+          className="w-full resize-none overflow-hidden rounded border border-gray-300"
+        />
       </div>
-      <input
+      <Input
         type="file"
         ref={fileInputRef}
         onChange={handleFileUpload}

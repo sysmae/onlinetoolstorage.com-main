@@ -5,6 +5,9 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+
 const category = 'general'
 
 const upperCaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -55,20 +58,26 @@ export default function Home() {
 
   const copyToClipboard = (password) => {
     navigator.clipboard.writeText(password).then(
-      () => setCopySuccess('Copied!'),
-      () => setCopySuccess('Copy failed.'),
+      () => {
+        setCopySuccess('Copied!')
+        setTimeout(() => setCopySuccess(''), 3000) // 3초 후에 알림 사라짐
+      },
+      () => {
+        setCopySuccess('Copy failed.')
+        setTimeout(() => setCopySuccess(''), 3000) // 3초 후에 알림 사라짐
+      },
     )
   }
+
   return (
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="mx-auto p-4">
+      <div className="mx-auto flex flex-col gap-4 p-4 xl:mt-12">
         <div className="mb-2">
           <label className="inline-flex items-center">
             <input
               type="checkbox"
-              className="form-checkbox"
               checked={includeUpperCase}
               onChange={(e) => setIncludeUpperCase(e.target.checked)}
             />
@@ -79,7 +88,6 @@ export default function Home() {
           <label className="inline-flex items-center">
             <input
               type="checkbox"
-              className="form-checkbox"
               checked={includeNumbers}
               onChange={(e) => setIncludeNumbers(e.target.checked)}
             />
@@ -90,44 +98,34 @@ export default function Home() {
           <label className="inline-flex items-center">
             <input
               type="checkbox"
-              className="form-checkbox"
               checked={includeSpecialChars}
               onChange={(e) => setIncludeSpecialChars(e.target.checked)}
             />
             <span className="ml-2">Include special characters</span>
           </label>
         </div>
-        <div className="mb-4">
-          <label className="block">
-            <span className="text-gray-700">Password length:</span>
-            <input
-              type="number"
-              className="form-input mt-1 block w-full"
-              value={passwordLength}
-              onChange={(e) => setPasswordLength(parseInt(e.target.value, 10))}
-              min="4"
-              max="20"
-            />
-          </label>
+        <div className="mb-4 flex flex-col">
+          <span>Password length:</span>
+          <Input
+            type="number"
+            value={passwordLength}
+            onChange={(e) => setPasswordLength(parseInt(e.target.value, 10))}
+            min="4"
+            max="20"
+          />
+          <Button onClick={handleGenerate}>Generate</Button>
         </div>
-        <button
-          className="focus:shadow-outline mr-2 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700 focus:outline-none"
-          onClick={handleGenerate}
-        >
-          Generate
-        </button>
+
         {generatedPassword && (
           <>
-            <div className="mt-4 rounded border bg-gray-100 p-2">
+            <div className="mt-4 p-2">
               Generated password:
               <span className="font-bold">{generatedPassword}</span>
             </div>
-            <button
-              className="focus:shadow-outline mt-2 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700 focus:outline-none"
-              onClick={() => copyToClipboard(generatedPassword)}
-            >
+            <Button onClick={() => copyToClipboard(generatedPassword)}>
               Copy to clipboard
-            </button>
+            </Button>
+
             {copySuccess && (
               <div className="mt-2 text-sm text-green-500">{copySuccess}</div>
             )}

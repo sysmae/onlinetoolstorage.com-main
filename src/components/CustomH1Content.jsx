@@ -6,11 +6,11 @@ function CustomH1Content({ category }) {
   const { t, pageKey } = useLocalizedPage(category)
 
   return (
-    <div className="break-words">
+    <div className="break-words xl:-mt-[200px]">
       <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-200 ">
         {t(`${pageKey}.title`)}
       </h1>
-      <p className="mb-6 text-lg text-gray-600 dark:text-gray-300">
+      <p className="mb-6 text-sm text-gray-500 dark:text-gray-500">
         {t(`${pageKey}.description`)}
       </p>
       {/* <ResponsiveAd

@@ -8,6 +8,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const category = 'business'
 
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
 export async function getStaticProps({ locale }) {
   return {
     props: {
@@ -93,9 +96,8 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="container mx-auto px-4">
-        <h2 className="my-4 text-xl font-bold">Free Barcode Generate</h2>
-        <input
+      <div className="container mx-auto px-4 xl:pt-12">
+        <Input
           type="text"
           value={input}
           onChange={handleInput}
@@ -103,19 +105,19 @@ export default function Home() {
           className="mb-4 w-full border-2 border-gray-300 p-2"
           placeholder="바코드로 변환할 텍스트를 입력하세요"
         />
-        <button
+        <Button
           onClick={generateBarcode}
           disabled={loading}
           className="mr-2 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
         >
           Generate
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={downloadBarcode}
           className="rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700"
         >
           Download
-        </button>
+        </Button>
         <div
           className="mt-4 flex h-8 items-center justify-center rounded-md bg-slate-300 text-sm font-semibold text-white"
           style={{ minHeight: '200px' }}

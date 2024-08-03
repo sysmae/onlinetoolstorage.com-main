@@ -37,8 +37,8 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="flex min-h-screen flex-col items-center justify-center">
-        <h1 className="text-3xl font-bold">Your IP Address:</h1>
+      <div className="flex flex-col items-center justify-center xl:mt-24">
+        <h3 className="text-3xl font-bold">Your IP Address:</h3>
         <p className="text-xl">{ipAddress}</p>
       </div>
       <CustomContent category={category} />

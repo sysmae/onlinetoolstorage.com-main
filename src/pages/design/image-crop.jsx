@@ -14,6 +14,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 import 'react-image-crop/dist/ReactCrop.css'
 
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
 const category = 'design'
 const TO_RADIANS = Math.PI / 180
 
@@ -264,9 +267,10 @@ const Home = () => {
       <CustomH1Content category={category} />
 
       <div className="App">
-        <div className="Crop-Controls">
-          <input type="file" accept="image/*" onChange={onSelectFile} />
-          {/* <div>
+        <div className="Crop-Controls xl:mt-24">
+          <div className="flex pb-4">
+            <Input type="file" accept="image/*" onChange={onSelectFile} />
+            {/* <div>
             <label htmlFor="scale-input">Scale: </label>
             <input
               id="scale-input"
@@ -289,10 +293,11 @@ const Home = () => {
               }
             />
           </div> */}
-          <div>
-            <button onClick={handleToggleAspectClick}>
-              Toggle aspect {aspect ? 'off' : 'on'}
-            </button>
+            <div>
+              <Button onClick={handleToggleAspectClick}>
+                16:9 fix {aspect ? 'off' : 'on'}
+              </Button>
+            </div>
           </div>
         </div>
         {!!imgSrc && (
@@ -316,7 +321,7 @@ const Home = () => {
         )}
         {!!completedCrop && (
           <>
-            <div>
+            <div className="flex">
               <canvas
                 ref={previewCanvasRef}
                 style={{
@@ -326,9 +331,10 @@ const Home = () => {
                   height: completedCrop.height,
                 }}
               />
+
+              <Button onClick={onDownloadCropClick}>Download Crop</Button>
             </div>
             <div>
-              <button onClick={onDownloadCropClick}>Download Crop</button>
               <div style={{ fontSize: 12, color: '#666' }}>
                 If you get a security error when downloading try opening the
                 Preview in a new tab (icon near top right).

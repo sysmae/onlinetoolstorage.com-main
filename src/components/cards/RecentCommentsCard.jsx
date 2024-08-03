@@ -22,11 +22,11 @@ export function RecentCommentsCard({ className, ...props }) {
 
   useEffect(() => {
     if (locale === 'en') {
-      setTitle('Recent Comments')
+      setTitle('💬 Recent Comments')
       setDescription('Check out the latest comments from our community.')
     }
     if (locale === 'ko') {
-      setTitle('최근 댓글')
+      setTitle('💬 최근 댓글')
       setDescription('커뮤니티의 최신 댓글을 확인하세요.')
     }
 
@@ -83,7 +83,7 @@ export function RecentCommentsCard({ className, ...props }) {
         ) : (
           comments.map((comment) => (
             <a href={`/${comment.title}#comments`} key={comment.id}>
-              <div className="p-1 border rounded-lg hover:hover:text-violet-400 transition">
+              <div className="rounded-lg border p-1 transition hover:hover:text-violet-400">
                 <p className="text-sm">
                   <strong>{comment.author.login}</strong> at{' '}
                   {new Date(comment.createdAt).toLocaleString()}

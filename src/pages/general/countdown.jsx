@@ -54,10 +54,10 @@ const CountdownTimer = ({ targetDate }) => {
   }, [targetDate])
 
   return (
-    <div className="mt-10 text-center">
-      <h2 className="mb-6 text-5xl font-bold text-blue-700">
+    <div className="m-10 text-center">
+      <h3 className=" mb-6 text-5xl font-bold text-blue-600 dark:text-blue-100">
         Countdown to Event
-      </h2>
+      </h3>
       <div className="space-y-4 rounded-xl bg-gradient-to-r from-blue-500 to-teal-500 p-8 text-4xl font-bold text-white shadow-xl">
         <div className="flex items-center justify-center space-x-2">
           <span className="rounded bg-white px-3 py-1 text-blue-800 shadow">
@@ -112,7 +112,7 @@ export default function Home() {
           type="datetime-local"
           value={date}
           onChange={handleDateChange}
-          className="form-input block w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-lg leading-tight text-gray-700 shadow-sm placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="block w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-lg leading-tight text-gray-700 shadow-sm placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-blue-500"
         />
         <CountdownTimer targetDate={targetDate} />
       </div>

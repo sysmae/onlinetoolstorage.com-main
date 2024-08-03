@@ -18,13 +18,13 @@ export function NewsletterCard({ className, ...props }) {
 
   useEffect(() => {
     if (locale === 'en') {
-      setTitle('Newsletter Subscription')
+      setTitle('✉️ Newsletter Subscription')
       setDescription(
         'Subscribe to our newsletter to get the latest tool and updates.',
       )
     }
     if (locale === 'ko') {
-      setTitle('뉴스레터 구독')
+      setTitle('✉️ 뉴스레터 구독')
       setDescription('최신 툴 및 업데이트를 받으려면 뉴스레터를 구독하세요.')
     }
   }, [locale])

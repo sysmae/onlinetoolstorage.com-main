@@ -6,6 +6,8 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Input } from '@/components/ui/input'
+
 const category = 'design'
 
 export async function getStaticProps({ locale }) {
@@ -70,9 +72,9 @@ const ImageColorPicker = () => {
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
       <div className="flex flex-col items-center justify-center p-4">
-        <h2 className="mb-4 text-2xl font-bold">Image Color Picker</h2>
+        <h2 className="mb-4 text-2xl font-bold xl:pt-32">Image Color Picker</h2>
         <div className="mt-4">
-          <label className="block">
+          {/* <label className="block">
             <span className="sr-only">Choose profile photo</span>
             <input
               type="file"
@@ -86,7 +88,13 @@ const ImageColorPicker = () => {
                  file:text-violet-700
                  hover:file:bg-violet-100"
             />
-          </label>
+          </label> */}
+          <Input
+            id="picture"
+            type="file"
+            onChange={handleImageChange}
+            accept="image/*"
+          />
         </div>
         {image && (
           <>

@@ -4,6 +4,7 @@ import CustomSEOContent from '@/components/CustomSEO'
 import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { Input } from '@/components/ui/input'
 
 const category = 'general'
 
@@ -31,16 +32,21 @@ const TimeUntilEvent = ({ targetDate }) => {
       return {
         formatted: (
           <>
-            <span>{days} Days</span>
-            <br />
-            <span>{hours} Hours</span>
-            <br />
-            <span>{minutes} Minutes</span>
-            <br />
-            <span>{seconds} Seconds</span>
+            <div>
+              {days} <span className="text-lg font-normal">Days</span>
+            </div>
+            <div>
+              {hours} <span className="text-lg font-normal">Hours</span>
+            </div>
+            <div>
+              {minutes} <span className="text-lg font-normal">Minutes</span>
+            </div>
+            <div>
+              {seconds} <span className="text-lg font-normal">Seconds</span>
+            </div>
           </>
         ),
-        hoursMinutes: `Or: ${totalHours} hours and ${minutes} minutes`, // 새로운 속성 추가
+        hoursMinutes: `Or: ${totalHours} hours and ${minutes} minutes`,
         minSec: `Or: ${Math.floor(totalSeconds / 60)} minutes and ${totalSeconds % 60} seconds`,
         totalSeconds: `Or: ${totalSeconds} seconds`,
       }
@@ -48,25 +54,24 @@ const TimeUntilEvent = ({ targetDate }) => {
       return {
         formatted: 'The event has already occurred.',
         hoursMinutes: '',
-        totalSeconds: '',
         minSec: '',
-        hoursMinutes: '', // 이벤트가 이미 발생한 경우 빈 문자열 반환
+        totalSeconds: '',
       }
     }
   }
 
-  const { formatted, hoursMinutes, totalSeconds, minSec } = calculateTimeLeft() // Destructure for easier use
+  const { formatted, hoursMinutes, minSec, totalSeconds } = calculateTimeLeft()
 
   return (
     <div className="mt-12 px-6 text-center sm:px-8 lg:px-10">
-      <h2 className="mb-10 text-6xl font-bold text-blue-900">
+      <h3 className="mb-6 text-4xl font-bold text-blue-900 dark:text-blue-200">
         Time Until Event
-      </h2>
-      <div className="space-y-4 rounded-3xl bg-violet-500 p-12 text-5xl font-bold shadow-2xl">
-        <p className="mb-4">{formatted}</p>
-        <p className="text-4xl">{hoursMinutes}</p>
-        <p className="text-4xl">{minSec}</p>
-        <p className="text-4xl">{totalSeconds}</p>
+      </h3>
+      <div className="rounded-xl bg-violet-500 p-8 text-white shadow-lg">
+        <p className="mb-4 text-3xl">{formatted}</p>
+        <p className="text-xl">{hoursMinutes}</p>
+        <p className="text-xl">{minSec}</p>
+        <p className="text-xl">{totalSeconds}</p>
       </div>
     </div>
   )
@@ -79,18 +84,18 @@ export default function Home() {
     setDate(e.target.value)
   }
 
-  const targetDate = new Date(date) // Convert string to Date object
+  const targetDate = new Date(date)
 
   return (
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="flex min-h-screen flex-col items-center justify-center">
-        <input
+      <div className="flex min-h-screen flex-col items-center justify-center p-4">
+        <Input
           type="datetime-local"
           value={date}
           onChange={handleDateChange}
-          className="form-input block w-full rounded-md border border-gray-300 bg-white px-4 py-3 text-lg leading-tight text-gray-700 shadow-sm placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="mb-6 w-full max-w-xs rounded-lg border border-gray-300 p-3 dark:bg-gray-700 dark:text-gray-200"
         />
         <TimeUntilEvent targetDate={targetDate} />
       </div>

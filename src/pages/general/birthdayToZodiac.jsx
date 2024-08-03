@@ -5,6 +5,10 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Button } from '@/components/ui/button'
+
+import { Input } from '@/components/ui/input'
+
 const category = 'general'
 
 export async function getStaticProps({ locale }) {
@@ -61,20 +65,17 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="container mx-auto px-4 py-8">
-        <input
-          type="date"
-          value={birthday}
-          onChange={(e) => setBirthday(e.target.value)}
-          className="rounded-lg border border-gray-300 p-2"
-        />
-        <button
-          onClick={handleCalculateZodiac}
-          className="ml-2 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-        >
-          Calculate (계산하기)
-        </button>
-        {zodiac && <p className="mt-4">Zodiac (별자리): {zodiac}</p>}
+      <div className=" flex flex-col items-center justify-center">
+        <div className="flex gap-4 px-4 py-8">
+          <Input
+            type="date"
+            value={birthday}
+            onChange={(e) => setBirthday(e.target.value)}
+            className="rounded-lg border border-gray-300 px-4 py-1 dark:text-gray-700"
+          />
+          <Button onClick={handleCalculateZodiac}>Calculate (계산하기)</Button>
+        </div>
+        {zodiac && <p className="mt-2 text-3xl">{zodiac}</p>}
       </div>
 
       <CustomContent category={category} />

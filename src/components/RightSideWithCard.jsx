@@ -14,7 +14,7 @@ export default function RightSideWithCard() {
         <div className="hidden xl:block">
           <SearchComponent />
         </div>
-        <div className="pb-[100px]"></div>
+        <div className="pb-[30px]"></div>
         <PopularCard />
         <div className="pb-[30px]"></div>
         <ResponsiveAd

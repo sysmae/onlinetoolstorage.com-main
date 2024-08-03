@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import convert from 'convert-units'
 
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+
 const UnitConverter = ({ units }) => {
   const [value, setValue] = useState('')
   const [fromUnit, setFromUnit] = useState(units[0])
@@ -27,54 +30,58 @@ const UnitConverter = ({ units }) => {
   }
 
   return (
-    <div className="space-y-4 bg-white p-6 rounded-lg shadow dark:bg-gray-800 dark:text-gray-200">
+    <div className="space-y-4 rounded-lg bg-white p-6 shadow dark:bg-gray-800 dark:text-gray-200 xl:mt-16">
       <div>
         <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
           Value:
         </label>
-        <input
+        <Input
           type="number"
           value={value}
           onChange={(e) => setValue(e.target.value)}
           placeholder="Enter value to convert"
-          className="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-lg py-3 px-4 dark:border-gray-600 dark:bg-gray-700 dark:focus:border-indigo-400 dark:focus:ring-indigo-400"
         />
       </div>
-      <div className="grid grid-cols-2 gap-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
-            From Unit:
-          </label>
-          <select
-            value={fromUnit}
-            onChange={(e) => setFromUnit(e.target.value)}
-            className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm dark:border-gray-600 dark:bg-gray-700 dark:focus:border-indigo-400 dark:focus:ring-indigo-400"
-          >
-            {units.map((unit) => (
-              <option key={unit} value={unit}>
-                {unit}
-              </option>
-            ))}
-          </select>
+
+      <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+              From Unit:
+            </label>
+            <select
+              value={fromUnit}
+              onChange={(e) => setFromUnit(e.target.value)}
+              className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:focus:border-indigo-400 dark:focus:ring-indigo-400 sm:text-sm"
+            >
+              {units.map((unit) => (
+                <option key={unit} value={unit}>
+                  {unit}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
+              To Unit:
+            </label>
+            <select
+              value={tempToUnit}
+              onChange={(e) => setTempToUnit(e.target.value)}
+              className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 dark:border-gray-600 dark:bg-gray-700 dark:focus:border-indigo-400 dark:focus:ring-indigo-400 sm:text-sm"
+            >
+              {units.map((unit) => (
+                <option key={unit} value={unit}>
+                  {unit}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 dark:text-gray-200">
-            To Unit:
-          </label>
-          <select
-            value={tempToUnit}
-            onChange={(e) => setTempToUnit(e.target.value)}
-            className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm dark:border-gray-600 dark:bg-gray-700 dark:focus:border-indigo-400 dark:focus:ring-indigo-400"
-          >
-            {units.map((unit) => (
-              <option key={unit} value={unit}>
-                {unit}
-              </option>
-            ))}
-          </select>
-        </div>
+        <Button className=" flex flex-1" onClick={handleConvert}>
+          Convert
+        </Button>
       </div>
-      <button onClick={handleConvert}>Convert</button>
       {result && (
         <p className="text-sm text-gray-500 dark:text-gray-400">
           Result: {result} {toUnit}

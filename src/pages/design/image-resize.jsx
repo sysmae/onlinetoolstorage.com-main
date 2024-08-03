@@ -7,6 +7,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const category = 'design'
 
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
 export async function getStaticProps({ locale }) {
   return {
     props: {
@@ -75,9 +78,8 @@ const Home = () => {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="App">
-        <h1>Image Resizer</h1>
-        <input type="file" accept="image/*" onChange={onSelectFile} />
+      <div className="App xl:mt-24">
+        <Input type="file" accept="image/*" onChange={onSelectFile} />
         <div>
           <label>
             Original Size: {originalSize.width} x {originalSize.height}
@@ -88,24 +90,30 @@ const Home = () => {
           </label>
         </div>
         <div>
-          <label>Width:</label>
-          <input
-            type="number"
-            value={width}
-            onChange={(e) => setWidth(parseInt(e.target.value, 10))}
-          />
-          <label>Height:</label>
-          <input
-            type="number"
-            value={height}
-            onChange={(e) => setHeight(parseInt(e.target.value, 10))}
-          />
+          <div className="flex items-center py-2">
+            <label>Width:</label>
+            <Input
+              type="number"
+              value={width}
+              onChange={(e) => setWidth(parseInt(e.target.value, 10))}
+            />
+          </div>
+          <div className="flex items-center py-2">
+            <label>Height:</label>
+            <Input
+              type="number"
+              value={height}
+              onChange={(e) => setHeight(parseInt(e.target.value, 10))}
+            />
+          </div>
         </div>
-        <button onClick={resizeImage}>Resize Image</button>
+        <Button onClick={resizeImage}>Resize Image</Button>
         {downloadUrl && (
-          <a href={downloadUrl} download="resized-image.png">
-            Download Resized Image
-          </a>
+          <Button asChild>
+            <a href={downloadUrl} download="resized-image.png">
+              Download Resized Image
+            </a>
+          </Button>
         )}
         {imgSrc && (
           <div style={{ margin: '20px' }}>

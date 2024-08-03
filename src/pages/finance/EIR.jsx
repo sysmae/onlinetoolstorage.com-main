@@ -7,6 +7,19 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const category = 'finance'
 
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+
 export async function getStaticProps({ locale }) {
   return {
     props: {
@@ -110,83 +123,89 @@ export default function Home() {
       <div className="mx-auto max-w-4xl py-8">
         <form onSubmit={handleSubmit} className="mb-6">
           <div className="mb-4">
-            <label className="block text-gray-700">기간 (년)</label>
-            <input
+            <label className="block text-gray-700 dark:text-gray-300">
+              기간 (년)
+            </label>
+            <Input
               type="number"
               name="period"
-              className="mt-1 block w-full rounded-md border border-gray-300 p-2"
               value={input.period}
               onChange={handleChange}
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700">액면 금액</label>
-            <input
+            <label className="block text-gray-700 dark:text-gray-300">
+              액면 금액
+            </label>
+            <Input
               type="number"
               name="faceAmount"
-              className="mt-1 block w-full rounded-md border border-gray-300 p-2"
               value={input.faceAmount}
               onChange={handleChange}
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700">유효 이자율 (%)</label>
-            <input
+            <label className="block text-gray-700 dark:text-gray-300">
+              유효 이자율 (%)
+            </label>
+            <Input
               type="number"
               name="effectiveInterestRate"
-              className="mt-1 block w-full rounded-md border border-gray-300 p-2"
               value={input.effectiveInterestRate}
               onChange={handleChange}
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700">액면 이자율 (%)</label>
-            <input
+            <label className="block text-gray-700 dark:text-gray-300">
+              액면 이자율 (%)
+            </label>
+            <Input
               type="number"
               name="faceInterestRate"
-              className="mt-1 block w-full rounded-md border border-gray-300 p-2"
               value={input.faceInterestRate}
               onChange={handleChange}
             />
           </div>
-          <button
-            type="submit"
-            className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-          >
-            상각표 생성
-          </button>
+          <Button type="submit">상각표 생성</Button>
         </form>
         {amortizationSchedule.length > 0 && (
           <div className="overflow-x-auto">
-            <table className="w-full table-auto">
-              <thead className="bg-gray-200">
-                <tr>
-                  <th className="px-4 py-2">년도</th>
-                  <th className="px-4 py-2">기초 장부금액</th>
-                  <th className="px-4 py-2">유효 이자</th>
-                  <th className="px-4 py-2">액면 이자</th>
-                  <th className="px-4 py-2">상각액</th>
-                  <th className="px-4 py-2">기말 장부금액</th>
-                </tr>
-              </thead>
-              <tbody>
+            <Table className="w-full table-auto">
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="px-4 py-2">년도</TableHead>
+                  <TableHead className="px-4 py-2">기초 장부금액</TableHead>
+                  <TableHead className="px-4 py-2">유효 이자</TableHead>
+                  <TableHead className="px-4 py-2">액면 이자</TableHead>
+                  <TableHead className="px-4 py-2">상각액</TableHead>
+                  <TableHead className="px-4 py-2">기말 장부금액</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
                 {amortizationSchedule.map((row, index) => (
-                  <tr
-                    key={index}
-                    className={index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}
-                  >
-                    <td className="border px-4 py-2">{row.year}</td>
-                    <td className="border px-4 py-2">{row.bookValueAtStart}</td>
-                    <td className="border px-4 py-2">
+                  <TableRow key={index}>
+                    <TableCell className="border px-4 py-2">
+                      {row.year}
+                    </TableCell>
+                    <TableCell className="border px-4 py-2">
+                      {row.bookValueAtStart}
+                    </TableCell>
+                    <TableCell className="border px-4 py-2">
                       {row.effectiveInterest}
-                    </td>
-                    <td className="border px-4 py-2">{row.faceInterest}</td>
-                    <td className="border px-4 py-2">{row.amortization}</td>
-                    <td className="border px-4 py-2">{row.bookValueAtEnd}</td>
-                  </tr>
+                    </TableCell>
+                    <TableCell className="border px-4 py-2">
+                      {row.faceInterest}
+                    </TableCell>
+                    <TableCell className="border px-4 py-2">
+                      {row.amortization}
+                    </TableCell>
+                    <TableCell className="border px-4 py-2">
+                      {row.bookValueAtEnd}
+                    </TableCell>
+                  </TableRow>
                 ))}
-              </tbody>
-            </table>
+              </TableBody>
+            </Table>
           </div>
         )}
       </div>

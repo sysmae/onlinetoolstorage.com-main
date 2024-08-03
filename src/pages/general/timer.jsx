@@ -5,6 +5,9 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
 const category = 'general'
 
 export async function getStaticProps({ locale }) {
@@ -22,11 +25,10 @@ export const TimeInput = forwardRef(
       <p className="text-center text-lg font-semibold">
         {placeholder.charAt(0).toUpperCase() + placeholder.slice(1)}
       </p>
-      <input
+      <Input
         type="number"
         value={value}
         onChange={onChange}
-        className="mx-2 rounded border border-gray-300 p-3 text-lg transition duration-150 ease-in-out focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
         placeholder={placeholder}
         min="0"
         max={max}
@@ -39,31 +41,37 @@ export const TimeInput = forwardRef(
 TimeInput.displayName = 'TimeInput'
 
 export default function Home() {
-  const [hours, setHours] = useState(null)
-  const [minutes, setMinutes] = useState(null)
-  const [seconds, setSeconds] = useState(null)
+  const [hours, setHours] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+  const [seconds, setSeconds] = useState(0)
   const [secondsLeft, setSecondsLeft] = useState(0)
   const [isActive, setIsActive] = useState(false)
   const endTime = useRef(null)
   const minutesRef = useRef(null)
   const secondsRef = useRef(null)
+  const interval = useRef(null)
 
   useEffect(() => {
-    let interval = null
-    if (isActive) {
-      interval = setInterval(() => {
-        const now = Date.now()
-        const seconds = Math.round((endTime.current - now) / 1000)
-        if (seconds > 0) {
-          setSecondsLeft(seconds)
-        } else {
-          clearInterval(interval)
-          setIsActive(false)
-          alert('Time’s up!') // Notify user that time has expired
-        }
-      }, 500) // Update every 500 milliseconds to check the timer
+    const updateTimer = () => {
+      const now = Date.now()
+      const seconds = Math.round((endTime.current - now) / 1000)
+      if (seconds >= 0) {
+        setSecondsLeft(seconds)
+      } else {
+        clearInterval(interval.current)
+        setIsActive(false)
+        alert('Time’s up!')
+      }
     }
-    return () => clearInterval(interval)
+
+    if (isActive) {
+      interval.current = setInterval(updateTimer, 500)
+      updateTimer()
+    } else {
+      clearInterval(interval.current)
+    }
+
+    return () => clearInterval(interval.current)
   }, [isActive])
 
   const handleStart = () => {
@@ -85,11 +93,12 @@ export default function Home() {
 
   const handleReset = () => {
     setIsActive(false)
-    setSecondsLeft(0) // Reset seconds left
+    setSecondsLeft(0)
     setHours(0)
     setMinutes(0)
     setSeconds(0)
   }
+
   const handleChange = (setter, nextRef) => (e) => {
     const value = e.target.value.replace(/^0+/, '') || '0'
     setter(value)
@@ -110,7 +119,7 @@ export default function Home() {
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
       <div className="flex min-h-screen flex-col items-center justify-center">
-        <h2 className="text-4xl font-bold">Online Timer</h2>
+        <h3 className="text-4xl font-bold">Online Timer</h3>
         <div className="my-4 flex justify-center space-x-3">
           <TimeInput
             value={hours}
@@ -136,26 +145,26 @@ export default function Home() {
         </div>
         <p className="text-2xl">{formatTime()}</p>
         <div className="mt-4 space-x-4">
-          <button
+          <Button
             onClick={handleStart}
             disabled={isActive}
             className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
           >
             Start
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={handlePauseResume}
             disabled={!isActive}
             className="rounded bg-yellow-500 px-4 py-2 font-bold text-white hover:bg-yellow-700"
           >
             {isActive ? 'Pause' : 'Resume'}
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={handleReset}
             className="rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
           >
             Reset
-          </button>
+          </Button>
         </div>
       </div>
       <CustomContent category={category} />

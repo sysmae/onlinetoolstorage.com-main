@@ -5,6 +5,9 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
 const category = 'general'
 
 export async function getStaticProps({ locale }) {
@@ -47,27 +50,27 @@ export default function Home() {
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
       <div className="py-8">
-        <div className="mb-4">
-          <input
-            type="number"
-            value={weight}
-            onChange={(e) => setWeight(e.target.value)}
-            className=" mr-2 p-2"
-            placeholder="Weight (kg) / 체중 (kg)"
-          />
-          <input
-            type="number"
-            value={height}
-            onChange={(e) => setHeight(e.target.value)}
-            className=" p-2"
-            placeholder="Height (cm) / 키 (cm)"
-          />
-          <button
-            className="rounded bg-blue-500 p-2 text-white"
-            onClick={calculateBMI}
-          >
-            Calculate / 계산하기
-          </button>
+        <div className="flex flex-col space-y-4">
+          <div className="flex items-center justify-center gap-3">
+            <Input
+              type="number"
+              value={height}
+              onChange={(e) => setHeight(e.target.value)}
+              placeholder="Height (cm) / 키 (cm)"
+            />
+            <p>cm</p>
+          </div>
+          <div className="flex items-center justify-center gap-3">
+            <Input
+              type="number"
+              value={weight}
+              onChange={(e) => setWeight(e.target.value)}
+              placeholder="Weight (kg) / 체중 (kg)"
+            />
+            <p>kg</p>
+          </div>
+
+          <Button onClick={calculateBMI}>Calculate / 계산하기</Button>
         </div>
 
         {bmi && (

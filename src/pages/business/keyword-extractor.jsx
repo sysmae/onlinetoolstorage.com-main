@@ -7,6 +7,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 const category = 'business'
 
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
+
 export async function getStaticProps({ locale }) {
   return {
     props: {
@@ -46,23 +49,22 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="container mx-auto p-4">
-        <h2 className="mb-4 text-xl font-bold">Keyword Extractor</h2>
-        <textarea
+      <div className="container mx-auto p-4 xl:pt-12">
+        <Textarea
           className="mb-4 w-full rounded border border-gray-300 p-2"
           rows="6"
           placeholder="Type or paste text here..."
           value={text}
           onChange={(e) => setText(e.target.value)}
-        ></textarea>
-        <button
+        ></Textarea>
+        <Button
           className="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
           onClick={() => extractKeywords(text)}
         >
           Extract Keywords
-        </button>
+        </Button>
         <div className="mt-4">
-          <h2 className="text-lg font-semibold">Extracted Keywords:</h2>
+          <p className="text-lg font-semibold">Extracted Keywords:</p>
           <ul>
             {keywords.map(([keyword, count], index) => (
               <li key={index}>

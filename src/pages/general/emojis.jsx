@@ -7,6 +7,9 @@ import CustomContent from '@/components/CustomMainContent'
 import CustomH1Content from '@/components/CustomH1Content'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+
 const category = 'general'
 
 export async function getStaticProps({ locale }) {
@@ -57,20 +60,23 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="flex min-h-[50vh] flex-col items-center justify-center bg-gray-200">
+      <div className="flex flex-col items-center justify-center xl:pt-20">
         <Picker data={data} onEmojiSelect={handleEmojiSelect} />
-        <input
-          type="text"
-          value={inputValue}
-          onChange={handleInputChange}
-          className="mt-4 w-full max-w-xs rounded border border-gray-300 p-2"
-        />
-        <button
-          onClick={() => copyToClipboard(inputValue)}
-          className="mt-4 rounded bg-blue-500 p-2 text-white hover:bg-blue-600"
-        >
-          Copy Emojis
-        </button>
+
+        <div className="flex w-full flex-col gap-4 pt-4">
+          <Input
+            type="text"
+            value={inputValue}
+            onChange={handleInputChange}
+            className="flex-1 rounded border border-gray-300 p-2"
+          />
+          <Button
+            onClick={() => copyToClipboard(inputValue)}
+            className="flex-1 rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+          >
+            Copy Emojis
+          </Button>
+        </div>
       </div>
       {showToast && (
         <div className="fixed bottom-0 right-0 m-4 rounded bg-green-500 p-2 text-white shadow-lg">

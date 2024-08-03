@@ -6,6 +6,8 @@ import { useDebounce } from 'use-debounce'
 import { FiSearch, FiX } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next'
 
+import { Input } from '@/components//ui/input'
+
 function SearchComponent() {
   const { i18n } = useTranslation()
   const [query, setQuery] = useState('')
@@ -38,15 +40,14 @@ function SearchComponent() {
 
     async function fetchAllData() {
       const dataTypes = [
-        'calculator',
-        'charmap',
-        'convert',
+        'business',
         'crypto',
-        'image',
-        'network',
+        'design',
+        'development',
+        'finance',
+        'general',
+        'math-sciences',
         'random',
-        'text',
-        'time',
         'units',
       ]
 
@@ -104,12 +105,12 @@ function SearchComponent() {
 
   return (
     <div className="relative w-full">
-      <div className={`flex items-center border-b border-gray-300 w-full`}>
+      <div className={`flex w-full items-center border-b border-gray-300`}>
         <FiSearch
           onClick={toggleSearchInput}
-          className="text-gray-400 w-5 h-5 cursor-pointer absolute left-0 ml-3 transform -translate-y-1/2 top-1/2"
+          className="absolute left-0 top-1/2 ml-3 size-5 -translate-y-1/2 cursor-pointer text-gray-400"
         />
-        <input
+        <Input
           ref={inputRef}
           type="text"
           placeholder="Search"
@@ -121,16 +122,16 @@ function SearchComponent() {
         {query && (
           <FiX
             onClick={handleClear}
-            className="text-gray-400 w-5 h-5 cursor-pointer absolute right-0 mr-3 transform -translate-y-1/2 top-1/2"
+            className="absolute right-0 top-1/2 mr-3 size-5 -translate-y-1/2 cursor-pointer text-gray-400"
           />
         )}
       </div>
 
       {isOpen && (
-        <div className="absolute z-10 top-10 bg-white shadow-lg max-h-60 overflow-auto transition-opacity duration-300 ease-in-out">
+        <div className="absolute top-10 z-10 max-h-60 overflow-auto bg-white shadow-lg transition-opacity duration-300 ease-in-out">
           <ul>
             {results.length === 0 && (
-              <li className="p-2 text-gray-500 dark:text-gray-400 w-full">
+              <li className="w-full p-2 text-gray-500 dark:text-gray-400">
                 <a
                   className="hover:text-violet-400"
                   href="/#comments"
@@ -143,7 +144,7 @@ function SearchComponent() {
             {results.map((page) => (
               <li
                 key={page.id}
-                className="p-2 hover:bg-purple-100 dark:bg-gray-500 dark:hover:bg-purple-500 dark:text-gray-100"
+                className="p-2 hover:bg-purple-100 dark:bg-gray-500 dark:text-gray-100 dark:hover:bg-purple-500"
               >
                 <Link
                   onClick={() => {

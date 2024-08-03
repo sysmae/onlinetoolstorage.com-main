@@ -45,10 +45,10 @@
       }
     ]
   },
-  "compress": {
+  "image-compress": {
     "title": "Compress: Compress your files to reduce their size",
     "description": "A file compression tool that allows you to reduce the size of your files. Compress your files to reduce their size.",
-    "url": "/en/design/compress",
+    "url": "/en/design/image-compress",
     "sections": [
       {
         "title": "How to Use Compress",
@@ -60,10 +60,10 @@
       }
     ]
   },
-  "crop": {
+  "image-crop": {
     "title": "Crop: Crop your images to the desired size",
     "description": "An design cropping tool that allows you to crop your images to the desired size. Crop your images to the desired size.",
-    "url": "/en/design/crop",
+    "url": "/en/design/image-crop",
     "sections": [
       {
         "title": "How to Use Crop",
@@ -75,10 +75,10 @@
       }
     ]
   },
-  "flip": {
+  "image-flip": {
     "title": "Flip: Flip your images horizontally or vertically",
     "description": "An image flipping tool that allows you to flip your images horizontally or vertically. Flip your images horizontally or vertically.",
-    "url": "/en/design/flip",
+    "url": "/en/design/image-flip",
     "sections": [
       {
         "title": "How to Use Flip",
@@ -90,10 +90,10 @@
       }
     ]
   },
-  "resize": {
+  "image-resize": {
     "title": "Resize: Resize your images to the desired dimensions",
     "description": "An design resizing tool that allows you to resize your images to the desired dimensions. Resize your images to the desired dimensions.",
-    "url": "/en/design/resize",
+    "url": "/en/design/image-resize",
     "sections": [
       {
         "title": "How to Use Resize",

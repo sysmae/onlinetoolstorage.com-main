@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <CustomSEOContent category={category} />
       <CustomH1Content category={category} />
-      <div className="flex items-center justify-center bg-gray-200 p-12 text-lg">
+      <div className="flex items-center justify-center  p-12 text-lg dark:text-gray-200">
         ~ ! @ # $ % ^ &amp; * \ &quot; &apos; + = ` | ( ) [ ] {} : ; - _ - ＃ ＆
         ＆ ＠ § ※ ☆ ★ ○ ● ◎ ◇ ◆ □ ■ △ ▲ ▽ ▼ → ← ← ↑ ↓ ↔ 〓 ◁ ◀ ▷ ▶ ♤ ♠ ♡ ♥
         ♧ ♣ ⊙ ◈ ▣ ◐ ◑ ▒ ▤ ▥ ▨ ▧ ▦ ▩ ♨ ☏ ☎ ☜ ☞ ¶ † ‡ ↕ ↗ ↙ ↖ ↘ ♭ ♩ ♪ ♬ ㉿
