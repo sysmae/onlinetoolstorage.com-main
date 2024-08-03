@@ -33,7 +33,6 @@ function AppContent({ children }) {
   return (
     <>
       <AdsenseScript />
-      {/* <GiscusScript /> */}
       {/* 메인 레이아웃 */}
       <Layout>{children}</Layout>
     </>
@@ -66,7 +65,7 @@ function Layout({ children }) {
   return (
     <Theme>
       <Header />
-      <div className="pb-[50px] xl:pb-[100px]"></div>
+      <div className="pb-[25px] xl:pb-[50px]"></div>
       <div className="block xl:hidden">
         <SearchComponent />
       </div>

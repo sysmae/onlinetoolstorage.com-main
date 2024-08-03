@@ -75,7 +75,7 @@ const Header = () => {
             <HeaderNav handleLinkClick={handleLinkClick} locale={locale} />
           </div>
 
-          <div className="flex min-w-[200px] items-center space-x-3 md:space-x-6">
+          <div className="flex min-w-[200px] items-center space-x-3 pr-4 md:space-x-6">
             <button
               className="rounded-md bg-gray-100 p-2 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-600"
               onClick={toggleModal}
