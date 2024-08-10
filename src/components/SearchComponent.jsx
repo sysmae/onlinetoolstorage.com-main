@@ -1,8 +1,6 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import Fuse from 'fuse.js'
-import { useDebounce } from 'use-debounce'
 import { FiSearch, FiX } from 'react-icons/fi'
 import { useTranslation } from 'react-i18next'
 
@@ -11,13 +9,24 @@ import { Input } from '@/components//ui/input'
 function SearchComponent() {
   const { i18n } = useTranslation()
   const [query, setQuery] = useState('')
-  const [debouncedQuery] = useDebounce(query, 500)
+  const [debouncedQuery, setDebouncedQuery] = useState(query)
   const [results, setResults] = useState([])
   const [isOpen, setIsOpen] = useState(false)
   const [showSearchInput, setShowSearchInput] = useState(false)
   const [notFoundMsg, setNotFoundMsg] = useState('')
   const inputRef = useRef(null)
   const locale = i18n.language
+
+  // Custom debounce implementation
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedQuery(query)
+    }, 500)
+
+    return () => {
+      clearTimeout(handler)
+    }
+  }, [query])
 
   useEffect(() => {
     async function fetchData(languageCode, dataType) {
@@ -132,13 +141,13 @@ function SearchComponent() {
           <ul>
             {results.length === 0 && (
               <li className="w-full p-2 text-gray-500 dark:text-gray-400">
-                <a
+                <Link
                   className="hover:text-violet-400"
                   href="/#comments"
                   onClick={handleClear}
                 >
                   {notFoundMsg}
-                </a>
+                </Link>
               </li>
             )}
             {results.map((page) => (

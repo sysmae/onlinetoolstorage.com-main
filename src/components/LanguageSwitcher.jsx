@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Cookies from 'js-cookie'
 
 const LanguageSwitcher = () => {
   const router = useRouter()
@@ -28,7 +27,17 @@ const LanguageSwitcher = () => {
   }
 
   const handleCookie = (lang) => {
-    Cookies.set('NEXT_LOCALE', lang, { expires: 365 })
+    const setCookie = (name, value, days) => {
+      let expires = ''
+      if (days) {
+        const date = new Date()
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000)
+        expires = '; expires=' + date.toUTCString()
+      }
+      document.cookie = name + '=' + (value || '') + expires + '; path=/'
+    }
+
+    setCookie('NEXT_LOCALE', lang, 365)
   }
 
   const handleClose = () => {
@@ -49,6 +58,7 @@ const LanguageSwitcher = () => {
   }, [])
 
   return (
+    // eslint-disable-next-line tailwindcss/no-custom-classname
     <div className="language-switcher">
       <button
         onClick={() => setIsOpen(!isOpen)}
