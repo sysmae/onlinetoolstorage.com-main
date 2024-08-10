@@ -39,7 +39,6 @@
     "embla-carousel-autoplay": "^8.1.7",
     "embla-carousel-react": "^8.1.6",
     "emoji-mart": "^5.5.2",
-    "fs": "^0.0.1-security",
     "fuse.js": "^7.0.0",
     "i18next": "^23.11.1",
     "jsbarcode": "^3.11.6",

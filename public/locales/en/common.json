@@ -1,12 +1,31 @@
 {
   "index": {
-    "title": "Ontoolmo | Online Tool Collection | Essential Online Tools You Didn't Know You Needed",
-    "description": "Ontoolmo offers a variety of online tools necessary for modern life, such as calculators, converters, and random generators, all for free. Enhance your daily life and work efficiency.",
+    "title": "Online Tool Storage | A Site Where You Can Advise Developers",
+    "description": "The online tool collection site provides various online tools needed by everyone, including developers, designers, marketers, businessmen, students, and office workers. If you are looking for an online tool you need, try using Ontoolmo.",
     "url": "/en",
     "sections": [
       {
-        "title": "Online Tool Collection | Ontoolmo",
-        "content": "Online Tool Collection | Ontoolmo is a website that provides online tools tailored to the diverse needs of modern life. It is designed to maximize efficiency in daily life and work through a user-friendly interface and effective solutions."
+        "title": "Introduction",
+        "content": [
+          "The online tool collection site started with a small inconvenience and a question.",
+          "'What if we provide the necessary tools online in one place?'",
+          "This project, which started with such a question and a simple idea, was officially launched online on May 8, 2024, after several trials and efforts, and has been operating as you see now."
+        ]
+      },
+      {
+        "title": "Categories",
+        "content": [
+          "Ontoolmo is broadly divided into categories such as 'Developer', 'Designer', 'Businessman', 'Finance', 'Math Sciences', 'Daily Life', 'Random', 'Encryption Decryption', and 'Unit Converter'.",
+          "However, some tools are difficult to classify or can belong to multiple categories. Therefore, please use the categories as a reference and use the search to find the tools you need.",
+          "The developer has done their best to create the tools, but there are many shortcomings. As explained below, we await your feedback and suggestions."
+        ]
+      },
+      {
+        "title": "Advise the Developer",
+        "content": [
+          "Ontoolmo awaits your feedback and suggestions.\nWe welcome all opinions, such as inconveniences while using the tools, features you would like to see added, and improvements you would like to see.\nIf you also share reference sites or tools, it will be a great help to the developer.",
+          "If there are any improvements on any page, please leave a comment at the bottom of the page.\nWe will reflect your opinions to develop a better online tool site."
+        ]
       }
     ]
   },
