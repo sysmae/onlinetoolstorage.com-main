@@ -23,11 +23,12 @@ function useLocalizedPage(namespace) {
   }
   const pageKey = pathname.split('/').pop()
   const { t } = useTranslation(namespace)
+  const formattedAsPath = asPath === '/' ? '' : asPath
 
   const seoData = {
     title: t(`${pageKey}.title`),
     description: t(`${pageKey}.description`),
-    url: `https://www.onlinetoolstorage.com/${locale}${asPath}`,
+    url: `https://www.onlinetoolstorage.com/${locale}${formattedAsPath}`,
   }
 
   return { t, seoData, pageKey }
