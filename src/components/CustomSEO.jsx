@@ -34,8 +34,11 @@ function CustomSEOContent({ category }) {
           target: `${seoData.url}?q={search_term_string}`,
           'query-input': 'required name=search_term_string',
         }}
-      />  
-    <meta name='impact-site-verification' value='1a93cb38-7ef5-4b5c-a289-0e73f4169c18'/>
+      />
+      <meta
+        name="impact-site-verification"
+        value="1a93cb38-7ef5-4b5c-a289-0e73f4169c18"
+      />
     </div>
   )
 }
